@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealer Hyundai Makassar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS untuk menampilkan dropdown pada hover */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,9 +26,26 @@
                     <li class="nav-item">
                         <a class="nav-link me-4" href="{{ url('/') }}">Beranda</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-4" href="{{ url('/models') }}">Tipe Mobil</a>
+
+                    <!-- Dropdown Tipe Mobil dengan Hover -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-4" href="#" id="tipeMobilDropdown" role="button" aria-expanded="false">
+                            Tipe Mobil
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tipeMobilDropdown">
+                            <li><a class="dropdown-item" href="{{ url('/product/stargazer') }}">Hyundai STARGAZER</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/creta') }}">Hyundai CRETA</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/stargazer-x') }}">Hyundai STARGAZER X</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/kona-electric') }}">Hyundai KONA ELECTRIC</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/santa-fe') }}">Hyundai SANTA FE</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/ioniq-5') }}">Hyundai IONIQ 5</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/palisade') }}">Hyundai PALISADE</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/ioniq-6') }}">Hyundai IONIQ 6</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/all-new-santa-fe') }}">Hyundai ALL NEW SANTA FE</a></li>
+                        </ul>
+
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link me-4" href="{{ url('/pricelist') }}">Pricelist</a>
                     </li>
