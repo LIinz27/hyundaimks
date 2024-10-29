@@ -41,7 +41,7 @@
         /* CSS untuk header */
         .navbar {
             background-color: white; /* Set background color to white */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3); /* Add shadow effect */
         }
         /* CSS untuk mengubah warna ikon pencarian */
         .btn-outline-secondary i {
@@ -53,7 +53,7 @@
 
     <header class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container d-flex justify-content-center">
-            <a class="navbar-brand me-auto" href="{{ url('/') }}">Dealer Hyundai Makassar</a>
+            <img src="{{ asset('images\LOGO-HYUNDAI.png') }}" alt="Gambar logo" class="img-fluid" style="max-height: 30px; object-fit: cover; margin-left: 100px" />
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
