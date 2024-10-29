@@ -2,7 +2,6 @@
 
 @include('header')
 
-
 <div class="container-fluid mt-4">
     <div class="text-center mb-4">
         <img src="{{ asset('images/SAMPUL-WEB-1.png') }}" alt="Gambar Sampul" class="img-fluid rounded w-100" style="max-height: 600px; object-fit: cover;" />
@@ -12,7 +11,13 @@
         <h2 class="text-center mb-5">Promo Terbaru 2024</h2>
 
         <!-- Carousel Promo Cards -->
-        <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="promoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <!-- Bullet Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+
             <div class="carousel-inner">
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
@@ -44,18 +49,19 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
 
     @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+<!-- Custom CSS untuk mengubah warna bullet -->
+<style>
+    .carousel-indicators [data-bs-target] {
+        background-color: #000; /* Warna hitam */
+    }
+    .carousel-indicators .active {
+        background-color: #000; /* Warna hitam untuk bullet aktif */
+    }
+</style>
