@@ -6,47 +6,45 @@
     <title>Dealer Hyundai Makassar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Manrope', sans-serif; /* Set the font to Manrope */
+            font-family: 'Manrope', sans-serif; 
         }
-        /* CSS untuk menampilkan dropdown pada hover */
         .nav-item.dropdown:hover .dropdown-menu {
             display: block;
             margin-top: 0;
         }
-        /* CSS untuk modal pencarian */
+        
         .search-modal .modal-content {
             max-width: 500px;
             margin: auto;
         }
-        /* CSS untuk navbar font size */
+        
         .navbar-nav .nav-link {
-            font-size: 14px; /* Set font size to 14px */
-            color: black; /* Set font color to black */
-            font-weight: 600; /* Set font weight to semi-bold */
+            font-size: 14px; 
+            color: black; 
+            font-weight: 600; 
         }
-        /* CSS untuk tombol unduh */
         .btn-unduh {
-            background-color: #1C4682; /* Set the background color */
-            color: white; /* Set the text color to white */
+            background-color: #1C4682; 
+            color: white; 
         }
         .btn-unduh:hover {
-            background-color: #163d6a; /* Optional: Darken color on hover */
+            background-color: #163d6a; 
         }
-        /* CSS untuk menghilangkan border pada tombol pencarian */
         .btn-outline-secondary {
-            border: none; /* Remove border */
+            border: none; 
         }
-        /* CSS untuk header */
+        
         .navbar {
-            background-color: white; /* Set background color to white */
-            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+            background-color: white; 
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3); 
         }
-        /* CSS untuk mengubah warna ikon pencarian */
         .btn-outline-secondary i {
-            color: black; /* Set icon color to black */
+            color: black; 
         }
     </style>
 </head>
@@ -83,12 +81,10 @@
                     <li class="nav-item"><a class="nav-link me-3" href="{{ url('/kontak') }}">Kontak</a></li>
                 </ul>
 
-                <!-- Ikon Pencarian yang membuka modal -->
                 <button class="btn btn-outline-secondary ms-3" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="bi bi-search"></i>
                 </button>
 
-                <!-- Tombol Unduh Pricelist dengan kelas khusus -->
                 <a href="{{ url('/pricelist-download') }}" class="btn btn-unduh ms-3">Unduh Pricelist</a>
             </div>
         </div>
@@ -110,8 +106,4 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-</body>
-</html>
+          

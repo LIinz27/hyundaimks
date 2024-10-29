@@ -1,9 +1,7 @@
-<!-- resources/views/footer.blade.php -->
 
 <footer class="text-center text-lg-start" style="background-color: #1C4682; color: white;">
     <div class="container p-4">
         <div class="row">
-            <!-- Tentang Kami -->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Tentang Kami</h5>
                 <p>
@@ -11,7 +9,6 @@
                 </p>
             </div>
 
-            <!-- Kontak -->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Kontak Kami</h5>
                 <ul class="list-unstyled">
@@ -21,7 +18,6 @@
                 </ul>
             </div>
 
-            <!-- Sosial Media -->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Ikuti Kami</h5>
                 <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
@@ -35,7 +31,25 @@
     <div class="text-center p-3 bg-dark text-white">
         © 2024 Dealer Hyundai Makassar. All rights reserved.
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        loop: true, 
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
 </footer>
+</body>
+</html>
 
-<!-- Pastikan Bootstrap Icons di-include di head untuk ikon -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
