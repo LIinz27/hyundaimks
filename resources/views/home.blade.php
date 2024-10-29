@@ -1,6 +1,7 @@
 <!-- resources/views/home.blade.php -->
 
-@include('header') <!-- Menyertakan header -->
+@include('header')
+
 
 <div class="container-fluid mt-4">
     <div class="text-center mb-4">
@@ -56,4 +57,5 @@
         </div>
     </div>
 
+    @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
