@@ -80,8 +80,73 @@
         color: white;
     }
 
-    
-
 </style>
+
 @include('card')
+
+<div class="text-center mb-3 full-bg" style="margin-top: 100px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
+    <h2 class="heading-title" style="font-size: 35px; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">GALERI DEALER HYUNDAI MAKASSAR</h2>
+    <p class="heading-subtitle" style="margin-bottom: 60px;">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p> 
+
+    <div class="swiper newSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-1.png') }}" alt="Slide 1" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-2.png') }}" alt="Slide 2" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-3.png') }}" alt="Slide 3" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-4.png') }}" alt="Slide 4" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-5.png') }}" alt="Slide 5" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-6.png') }}" alt="Slide 6" class="img-fluid">
+            </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('images/Galeri-Hyundai-7.png') }}" alt="Slide 7" class="img-fluid">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<style>
+    .full-bg {
+        width: 100vw;
+        margin-left: calc(50% - 50vw); 
+        padding: 20px 0;
+    }
+
+    .newSwiper {
+        width: 75%;
+        height: 80%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .newSwiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .newSwiper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px; 
+    }
+</style>
+
+@include('benefit')
 @include('footer')

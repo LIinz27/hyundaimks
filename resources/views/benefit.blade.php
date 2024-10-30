@@ -1,0 +1,240 @@
+<!-- benefit -->
+<div class="benefit-section">
+    <div class="benefit-container">
+        <ul class="benefit-list">
+            <h3 class="benefit-heading">Keuntungan membeli di Hyundai Makassar</h3>
+            <li>Transaksi online aman 100%</li>
+            <li>Melayani cash, kredit, tukar tambah atau COP kantor</li>
+            <li>Data & BI CHECKING dibantu sampai approve</li>
+            <li>Unit Ready Stok</li>
+            <li>Free home test drive & fast respond 24 jam</li>
+            <li>Jika ditolak leasing uang kembali 100%</li>
+        </ul>
+
+        <ul class="bonus-list">
+            <h3 class="bonus-heading">Free Bonus Aksesoris</h3>
+            <li>Kaca Film Smith</li>
+            <li>Karpet Original Bludru</li>
+            <li>Mini Alat Pemadam</li>
+            <li>Segitiga Pengaman</li>
+            <li>Kotak P3K</li>
+            <li>Lisensi Plat</li>
+            <li>Merchandise Hyundai</li>
+        </ul>
+
+        <ul class="after-sales-list">
+            <h3 class="after-sales-heading">Program After Sales Terbaik</h3>
+            <li>Waranty 3 Tahun /100.000KM</li>
+            <li>Free Jasa Service 5 Tahun /75.000KM</li>
+            <li>Trade In All Merk</li>
+            <li>Best Service</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Reason -->
+<div class="reason-section">
+    <div class="reason-heading text-center">
+        <h2>ALASAN MENGAPA KAMI MERUPAKAN DEALER YANG TEPAT UNTUK ANDA</h2>
+        <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
+    </div>
+    
+    <div class="reason-container d-flex justify-content-center gap-4">
+        <div class="reason-item text-center">
+            <i class="bi bi-check-circle promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Proses Mudah & Cepat</h3>
+            <p>Proses Kredit Mudah & Cepat menjadi hal terbaik yang kami persembahkan untuk anda.</p>
+        </div>
+        <div class="reason-item text-center">
+            <i class="bi bi-people promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Sales Berpengalaman</h3>
+            <p>Pengalaman menjadi modal utama kami untuk terus memberikan pelayanan terbaik kepada konsumen.</p>
+        </div>
+        <div class="reason-item text-center">
+            <i class="bi bi-wallet2 promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Harga Fleksibel</h3>
+            <p>Kami menawarkan harga yang cocok sesuai anggaran belanja Anda untuk mendapatkan mobil impian Anda.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PROMO KREDIT -->
+<div class="promo-section">
+    <div class="promo-heading text-center">
+        <h2>PROMO KREDIT UNIT HYUNDAI</h2>
+        <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
+    </div>
+    
+    <div class="promo-container d-flex justify-content-center gap-4">
+        <div class="promo-item text-center">
+            <i class="bi bi-list-task promo-icon"></i>
+            <h3>Pricelist Terbaru</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
+        <div class="promo-item text-center">
+            <i class="bi bi-credit-card promo-icon"></i>
+            <h3>Proses Kredit</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
+        <div class="promo-item text-center">
+            <i class="bi bi-pencil-square promo-icon"></i>
+            <h3>Simulasi Kredit</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Benefit CSS -->
+<style>
+    .benefit-section {
+        padding: 40px 0;
+        background-color: #1C4682;
+        width: 100vw;
+        margin-top: -2%;
+        margin-left: calc(50% - 50vw); 
+    }
+
+    .benefit-heading, .bonus-heading, .after-sales-heading {
+        color: #ffffff;
+        margin-bottom: 35px;
+        font-size: 25px;
+        font-weight: bold; 
+        font-family: 'Manrope';
+        text-align: left; 
+    }
+
+    .benefit-container {
+        display: flex;
+        justify-content: center; 
+        gap: 20px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .benefit-list, .bonus-list, .after-sales-list {
+        width: 30%;
+        list-style-type: disc;
+        background-color: transparent;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #ffffff;
+        font-family: 'Manrope', sans-serif;
+        text-align: left; 
+    }
+
+    .benefit-list li, .bonus-list li, .after-sales-list li {
+        margin-bottom: 10px;
+        text-align: left; 
+        
+    }
+</style>
+
+<!-- Reason CSS -->
+<style>
+    .reason-section {
+        padding: 40px 0;
+        }
+
+    .reason-heading h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+    .reason-heading p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+    .reason-container .reason-item h3 {
+        font-size: 20px;
+        margin: 5%; 
+        font-weight: bold;
+        color: #333;
+    }
+
+    .reason-container .reason-item p {
+        font-size: 15px;
+        color: #666;
+        margin-top: 0; 
+        margin-bottom: 10%;     }
+</style>
+
+<!-- Promo CSS -->
+<style>
+    .promo-section {
+        position: relative; 
+        padding: 40px 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        background-image: url('/images/photo_2023-06-06_20-05-30.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .promo-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(28, 70, 130, 0.9);
+        z-index: 1;
+    }
+
+    .promo-heading h2, .promo-heading p {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        margin: 2%;
+    }
+
+    .promo-container .promo-item {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px 90px;
+        transition: transform 0.3s;
+        position: relative;
+        z-index: 2;
+        margin: 10px;
+    }
+
+    .promo-item h3 {
+        margin-top: 10%;
+        margin-bottom: 35%;
+        font-weight: 900;
+    }
+
+    .promo-button {
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .promo-button:hover {
+        background-color: #163b5a;
+    }
+
+    /* Icon hover effect */
+    .promo-icon {
+        font-size: 3rem;
+        color: #163b5a;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    .promo-icon:hover {
+        transform: scale(1.1);
+        color: #1C4682;
+    }
+</style>
