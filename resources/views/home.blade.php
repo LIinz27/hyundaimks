@@ -149,5 +149,5 @@
     }
 </style>
 
-
+@include('benefit')
 @include('footer')
