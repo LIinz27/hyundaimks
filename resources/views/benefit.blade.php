@@ -41,17 +41,17 @@
     
     <div class="reason-container d-flex justify-content-center gap-4">
         <div class="reason-item text-center">
-            <i class="bi bi-check-circle" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-check-circle promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Proses Mudah & Cepat</h3>
             <p>Proses Kredit Mudah & Cepat menjadi hal terbaik yang kami persembahkan untuk anda.</p>
         </div>
         <div class="reason-item text-center">
-            <i class="bi bi-people" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-people promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Sales Berpengalaman</h3>
             <p>Pengalaman menjadi modal utama kami untuk terus memberikan pelayanan terbaik kepada konsumen.</p>
         </div>
         <div class="reason-item text-center">
-            <i class="bi bi-wallet2" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-wallet2 promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Harga Fleksibel</h3>
             <p>Kami menawarkan harga yang cocok sesuai anggaran belanja Anda untuk mendapatkan mobil impian Anda.</p>
         </div>
@@ -61,29 +61,30 @@
 <!-- PROMO KREDIT -->
 <div class="promo-section">
     <div class="promo-heading text-center">
-        <h2>PROMO KREDIT HYUNDAI</h2>
+        <h2>PROMO KREDIT UNIT HYUNDAI</h2>
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
     
     <div class="promo-container d-flex justify-content-center gap-4">
         <div class="promo-item text-center">
-            <i class="bi bi-list-task" style="font-size: 3rem; color: #1C4682;"></i>
-            <h3>Priceist Terbaru</h3>
+            <i class="bi bi-list-task promo-icon"></i>
+            <h3>Pricelist Terbaru</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
         </div>
         <div class="promo-item text-center">
-            <i class="bi bi-credit-card" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-credit-card promo-icon"></i>
             <h3>Proses Kredit</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
         </div>
         <div class="promo-item text-center">
-            <i class="bi bi-pencil-square" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-pencil-square promo-icon"></i>
             <h3>Simulasi Kredit</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
         </div>
     </div>
 </div>
 
+<!-- Benefit CSS -->
 <style>
     .benefit-section {
         padding: 40px 0;
@@ -128,28 +129,28 @@
     }
 </style>
 
+<!-- Reason CSS -->
 <style>
-        .reason-section {
+    .reason-section {
         padding: 40px 0;
         }
 
-        .reason-heading h2 {
+    .reason-heading h2 {
             font-size: 28px;
             font-weight: bold;
             color: #000;
         }
 
-        .reason-heading p {
+    .reason-heading p {
             font-size: 16px;
             color: #333;
             margin-top: 2%;
             margin-bottom: 5%;
         }
 
-        .reason-container .reason-item h3 {
+    .reason-container .reason-item h3 {
         font-size: 20px;
-        margin-top: 5%; 
-        margin-bottom: 5%; 
+        margin: 5%; 
         font-weight: bold;
         color: #333;
     }
@@ -161,6 +162,7 @@
         margin-bottom: 10%;     }
 </style>
 
+<!-- Promo CSS -->
 <style>
     .promo-section {
         position: relative; 
@@ -189,6 +191,7 @@
         position: relative;
         z-index: 2;
         color: #ffffff;
+        margin: 2%;
     }
 
     .promo-container .promo-item {
@@ -205,6 +208,7 @@
     .promo-item h3 {
         margin-top: 10%;
         margin-bottom: 35%;
+        font-weight: 900;
     }
 
     .promo-button {
@@ -221,5 +225,16 @@
     .promo-button:hover {
         background-color: #163b5a;
     }
-</style>
 
+    /* Icon hover effect */
+    .promo-icon {
+        font-size: 3rem;
+        color: #163b5a;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    .promo-icon:hover {
+        transform: scale(1.1);
+        color: #1C4682;
+    }
+</style>
