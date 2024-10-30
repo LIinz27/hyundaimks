@@ -1,10 +1,7 @@
-<div class="benefit-section text-center">
-    <h2 class="benefit-heading" style="font-size: 35px; font-weight: bolder; margin-bottom: 30px;">
-        Keuntungan membeli di Hyundai Jakarta
-    </h2>
-    
+<div class="benefit-section">
     <div class="benefit-container">
         <ul class="benefit-list">
+            <h3 class="benefit-heading">Keuntungan membeli di Hyundai Makassar</h3>
             <li>Transaksi online aman 100%</li>
             <li>Melayani cash, kredit, tukar tambah atau COP kantor</li>
             <li>Data & BI CHECKING dibantu sampai approve</li>
@@ -36,40 +33,44 @@
 
 <style>
     .benefit-section {
-        padding: 20px;
-        background-color: #e0f7ff; /* Light blue background */
+        padding: 40px 0;
+        background-color: #1C4682;
+        width: 100vw;
+        margin-top: -2%;
+        margin-left: calc(50% - 50vw); 
     }
 
-    .benefit-heading {
-        color: #333;
-        margin-bottom: 30px;
+    .benefit-heading, .bonus-heading, .after-sales-heading {
+        color: #ffffff;
+        margin-bottom: 35px;
+        font-size: 25px;
+        font-weight: bold; 
+        font-family: 'Manrope';
+        text-align: left; 
     }
 
     .benefit-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center; 
         gap: 20px;
-        margin-top: 20px;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .benefit-list, .bonus-list, .after-sales-list {
         width: 30%;
         list-style-type: disc;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        font-size: 18px;
+        background-color: transparent;
+        font-size: 15px;
         line-height: 1.6;
+        color: #ffffff;
+        font-family: 'Manrope', sans-serif;
+        text-align: left; 
     }
 
     .benefit-list li, .bonus-list li, .after-sales-list li {
         margin-bottom: 10px;
-    }
-
-    .bonus-heading, .after-sales-heading {
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 15px;
+        text-align: left; 
+        
     }
 </style>

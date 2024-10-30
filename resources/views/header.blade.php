@@ -46,6 +46,7 @@
         .btn-outline-secondary i {
             color: black; 
         }
+        
     </style>
 </head>
 <body>
