@@ -11,7 +11,7 @@
     
     <style>
         body {
-            font-family: 'Manrope', sans-serif; 
+            font-family: 'Manrope'; 
         }
         .nav-item.dropdown:hover .dropdown-menu {
             display: block;

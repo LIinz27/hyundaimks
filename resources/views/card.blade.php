@@ -99,13 +99,13 @@
 
 
     .heading-title {
-        font-family: 'Manrope', sans-serif;
-        font-size: 29px;
+        font-family: 'Manrope';
+        font-size: 30px;
         font-weight: 600;
     }
 
     .heading-subtitle {
-        font-family: 'Manrope', sans-serif;
+        font-family: 'Manrope';
         font-size: 15px;
     }
 

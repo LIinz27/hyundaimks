@@ -48,8 +48,24 @@
             clickable: true,
         },
         });
+
+        var newSwiper = new Swiper(".newSwiper", {
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 40, 
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+        
     </script>
-    
+
 </footer>
 </body>
 </html>
