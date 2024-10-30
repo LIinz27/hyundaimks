@@ -1,3 +1,4 @@
+<!-- benefit -->
 <div class="benefit-section">
     <div class="benefit-container">
         <ul class="benefit-list">
@@ -28,6 +29,58 @@
             <li>Trade In All Merk</li>
             <li>Best Service</li>
         </ul>
+    </div>
+</div>
+
+<!-- Reason -->
+<div class="reason-section">
+    <div class="reason-heading text-center">
+        <h2>ALASAN MENGAPA KAMI MERUPAKAN DEALER YANG TEPAT UNTUK ANDA</h2>
+        <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
+    </div>
+    
+    <div class="reason-container d-flex justify-content-center gap-4">
+        <div class="reason-item text-center">
+            <i class="bi bi-check-circle" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Proses Mudah & Cepat</h3>
+            <p>Proses Kredit Mudah & Cepat menjadi hal terbaik yang kami persembahkan untuk anda.</p>
+        </div>
+        <div class="reason-item text-center">
+            <i class="bi bi-people" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Sales Berpengalaman</h3>
+            <p>Pengalaman menjadi modal utama kami untuk terus memberikan pelayanan terbaik kepada konsumen.</p>
+        </div>
+        <div class="reason-item text-center">
+            <i class="bi bi-wallet2" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Harga Fleksibel</h3>
+            <p>Kami menawarkan harga yang cocok sesuai anggaran belanja Anda untuk mendapatkan mobil impian Anda.</p>
+        </div>
+    </div>
+</div>
+
+<!-- PROMO KREDIT -->
+<div class="promo-section">
+    <div class="promo-heading text-center">
+        <h2>PROMO KREDIT HYUNDAI</h2>
+        <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
+    </div>
+    
+    <div class="promo-container d-flex justify-content-center gap-4">
+        <div class="promo-item text-center">
+            <i class="bi bi-list-task" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Priceist Terbaru</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
+        <div class="promo-item text-center">
+            <i class="bi bi-credit-card" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Proses Kredit</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
+        <div class="promo-item text-center">
+            <i class="bi bi-pencil-square" style="font-size: 3rem; color: #1C4682;"></i>
+            <h3>Simulasi Kredit</h3>
+            <button class="promo-button">Selengkapnya &rarr;</button>
+        </div>
     </div>
 </div>
 
@@ -74,3 +127,99 @@
         
     }
 </style>
+
+<style>
+        .reason-section {
+        padding: 40px 0;
+        }
+
+        .reason-heading h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .reason-heading p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+        .reason-container .reason-item h3 {
+        font-size: 20px;
+        margin-top: 5%; 
+        margin-bottom: 5%; 
+        font-weight: bold;
+        color: #333;
+    }
+
+    .reason-container .reason-item p {
+        font-size: 15px;
+        color: #666;
+        margin-top: 0; 
+        margin-bottom: 10%;     }
+</style>
+
+<style>
+    .promo-section {
+        position: relative; 
+        padding: 40px 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        background-image: url('/images/photo_2023-06-06_20-05-30.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .promo-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(28, 70, 130, 0.9);
+        z-index: 1;
+    }
+
+    .promo-heading h2, .promo-heading p {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    .promo-container .promo-item {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px 90px;
+        transition: transform 0.3s;
+        position: relative;
+        z-index: 2;
+        margin: 10px;
+    }
+
+    .promo-item h3 {
+        margin-top: 10%;
+        margin-bottom: 35%;
+    }
+
+    .promo-button {
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .promo-button:hover {
+        background-color: #163b5a;
+    }
+</style>
+
