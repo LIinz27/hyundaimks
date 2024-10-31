@@ -63,7 +63,19 @@
         },
     });
 
-        
+        var PartnerSwiper = new Swiper(".PartnerSwiper", {
+        autoplay: {
+            delay: 1000, 
+            disableOnInteraction: false,
+        },
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 10, 
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
     </script>
 
 </footer>

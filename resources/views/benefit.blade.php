@@ -335,6 +335,7 @@
         background-size: cover;
         background-position: center;
         z-index: 0;
+        margin-top: -2%;
     }
 
     .pricelist-section::before {
@@ -356,6 +357,7 @@
         text-align: left;
         padding: 0% 20% 1%;
         margin-bottom: 20px;
+        font-weight: bolder;
     }
 
     .btn-container {
