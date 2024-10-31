@@ -61,7 +61,7 @@
 <!-- PROMO KREDIT -->
 <div class="promo-section">
     <div class="promo-heading text-center">
-        <h2>PROMO KREDIT UNIT HYUNDAI</h2>
+        <h2 style="font-weight: bolder;">PROMO KREDIT UNIT HYUNDAI</h2>
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
     
@@ -83,6 +83,84 @@
         </div>
     </div>
 </div>
+
+
+<!-- Test Drive -->
+<div class="text-center mb-3 full-bg d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="content-container d-flex align-items-center justify-content-center">
+        <div class="image-container">
+            <img style="border-radius: 2%" src="{{ asset('images/hyundai-creta-fitur-5.webp') }}" alt="Hyundai Creta Feature" class="img-fluid">
+        </div>
+        <div class="text-container">
+            <h3>Test Drive Hyundai</h3>
+            <p>Yuk Test Drive Sebelum Membeli, Rasakan Pengalaman Mengendarai <strong>Mobil Hyundai</strong>, Ajak Serta Keluarga Anda.</p>
+            <button class="testdrive-button">
+                <i class="bi bi-whatsapp"></i> Daftar Test Drive
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Test Drive CSS -->
+<style>
+    .full-bg {
+        padding: 40px 0;
+    }
+
+    .content-container {
+        max-width: 1200px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .image-container {
+        flex: 1;
+        text-align: left;
+        margin: 3%;
+    }
+
+    .text-container {
+        flex: 1;
+        text-align: left;
+        color: #333;
+    }
+
+    .text-container h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #163b5a;
+        margin-bottom: 5%;
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .testdrive-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 60px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 5%;
+    }
+
+    .testdrive-button i {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+
+    .testdrive-button:hover {
+        background-color: #163b5a;
+    }
+</style>
+
+
 
 <!-- Benefit CSS -->
 <style>
@@ -198,7 +276,7 @@
         border: 2px solid #ffffff;
         background-color: #ffffff;
         border-radius: 10px;
-        padding: 30px 90px;
+        padding: 10px 90px;
         transition: transform 0.3s;
         position: relative;
         z-index: 2;
