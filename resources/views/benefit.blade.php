@@ -380,7 +380,8 @@
     }
 
     .btn-download:hover {
-        background-color: #163b70;
+        background-color: #000;
+        color: #ffffff
     }
 
     .btn-download i {
