@@ -146,6 +146,9 @@
         object-fit: cover;
         border-radius: 15px; 
     }
+        body {
+        overflow-x: hidden;
+    }
 </style>
 
 @include('benefit')
