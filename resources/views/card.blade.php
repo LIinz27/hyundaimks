@@ -189,7 +189,8 @@
     }
 
     .card-text {
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .card .btn-full {
