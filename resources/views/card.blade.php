@@ -3,8 +3,6 @@
     <p class="heading-subtitle">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
 </div>
 
-<!-- Navigation tabs styled like buttons -->
-
     <ul class="nav nav-tabs justify-content-center mt-4" id="categoryTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
@@ -22,7 +20,7 @@
 
 <!-- Tab content for Car Categories -->
     <div class="tab-content mt-4" id="categoryTabContent">
-        <!-- All Category (shows all cars) -->
+        <!-- All Category -->
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
             <div class="row justify-content-center" id="allCars"></div>
         </div>
@@ -46,21 +44,63 @@
 <script>
     const cars = [
         {
-            name: "Hyundai Stargazer",
+            name: "HYUNDAI STARGAZER",
             price: "Rp249.600.000",
             image: "{{ asset('images/Hyundai-Stargazer.png') }}",
             categories: ["mpv"]
         },
         {
-            name: "Hyundai Creta",
+            name: "HYUNDAI CRETA",
             price: "Rp297.000.000",
             image: "{{ asset('images/Hyundai-Creta.png') }}",
             categories: ["suv"]
         },
         {
-            name: "Hyundai Ioniq",
+            name: "HYUNDAI STARGAZER X",
+            price: "Rp335.800.000",
+            image: "{{ asset('images/Stargazer-X.png') }}",
+            categories: ["mpv"]
+        },
+        {
+            name: "HYUNDAI KONA ELECTRIC",
+            price: "Rp297.000.000",
+            image: "{{ asset('images/Hyundai-kona.png') }}",
+            categories: ["eco"]
+        },
+        {
+            name: "HYUNDAI SANTA FE",
+            price: "Rp625.000.000",
+            image: "{{ asset('images/Hyundai-SANTA-Fe.png') }}",
+            categories: ["suv"]
+        },
+        {
+            name: "HYUNDAI IONIQ 5",
             price: "Rp399.000.000",
             image: "{{ asset('images/Hyundai-ioniq-5.png') }}",
+            categories: ["eco"]
+        },
+        {
+            name: "ALL NEW SANTA FE",
+            price: "Rp869.600.000",
+            image: "{{ asset('images/ALL-NEW-SANTA.png') }}",
+            categories: ["suv"]
+        },
+        {
+            name: "HYUNDAI PALISADE",
+            price: "Rp910.000.000",
+            image: "{{ asset('images/Hyundai-Palisade.png') }}",
+            categories: ["suv"]
+        },
+        {
+            name: "HYUNDAI STARIA",
+            price: "Rp924.000.000",
+            image: "{{ asset('images/Hyundai-Staria.png') }}",
+            categories: ["mpv"]
+        },
+        {
+            name: "HYUNDAI IONIQ 6",
+            price: "Rp1.220.000.000",
+            image: "{{ asset('images/Hyundai-IONIQ-6.png') }}",
             categories: ["eco"]
         }
     ];
@@ -109,7 +149,6 @@
         font-size: 15px;
     }
 
-    /* Style tabs like buttons */
     .nav-tabs .nav-item .nav-link {
         background-color: #ffffff;
         border: 1px solid #ddd;
@@ -147,7 +186,8 @@
     }
 
     .card-text {
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .card .btn-full {
