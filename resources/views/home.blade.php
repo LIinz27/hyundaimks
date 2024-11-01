@@ -310,7 +310,7 @@
 
     .button-group {
         display: flex;
-        gap: 10px; /* Space between buttons */
+        gap: 10px; 
     }
 
     .wa-button {

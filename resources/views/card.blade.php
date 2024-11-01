@@ -3,8 +3,6 @@
     <p class="heading-subtitle">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
 </div>
 
-<!-- Navigation tabs styled like buttons -->
-
     <ul class="nav nav-tabs justify-content-center mt-4" id="categoryTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
@@ -22,7 +20,7 @@
 
 <!-- Tab content for Car Categories -->
     <div class="tab-content mt-4" id="categoryTabContent">
-        <!-- All Category (shows all cars) -->
+        <!-- All Category -->
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
             <div class="row justify-content-center" id="allCars"></div>
         </div>
@@ -151,7 +149,6 @@
         font-size: 15px;
     }
 
-    /* Style tabs like buttons */
     .nav-tabs .nav-item .nav-link {
         background-color: #ffffff;
         border: 1px solid #ddd;

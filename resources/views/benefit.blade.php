@@ -224,7 +224,6 @@
         background-color: #163b5a;
     }
 
-    /* Icon hover effect */
     .promo-icon {
         font-size: 3rem;
         color: #163b5a;
