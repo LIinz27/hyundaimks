@@ -684,7 +684,7 @@
         overflow: hidden;
         width: 100vw;
         margin-left: calc(50% - 50vw);
-        background-image: url('images/photo_2023-06-06_20-02-43.jpg');
+        background-image: url('/images/photo_2023-06-06_20-02-43.jpg');
         background-size: cover;
         background-position: center;
         z-index: 0;
