@@ -1,7 +1,8 @@
+<!-- Footer -->
 <footer class="footer">
     <div class="container p-4">
-        <div class="row text-center">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 d-flex flex-column ">
+        <div class="row text-center text-md-left">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Hyundai Mobil Pettarani</h5>
                 <p>
                     Jl. A. P. Pettarani No.55, Bua Kana, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90231, Indonesia
@@ -10,7 +11,7 @@
                         width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tautan Cepat</h5>
                 <ul class="list-unstyled">
                     <li><i class="bi bi-arrow-right"></i> <a href="/beranda">Beranda</a></li>
@@ -23,7 +24,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 d-flex flex-column ">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tipe Mobil</h5>
                 <ul class="list-unstyled">
                     <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-stargazer">Hyundai Stargazer</a></li>
@@ -37,7 +38,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 d-flex flex-column ">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Total Pengunjung</h5>
                 <p class="visitor-counter">006383</p>
                 <ul class="list-unstyled">
@@ -111,70 +112,28 @@
     .footer a:hover {
         text-decoration: underline;
     }
-</style>
 
-<!-- Bubble Head HTML -->
-<div class="bubble-head" onclick="toggleDropup()">
-    <i class="bi bi-chat-dots"></i> Hubungi Kami
-</div>
+    /* Media Query untuk tampilan mobile */
+    @media (max-width: 768px) {
+        .footer .container {
+            text-align: left;
+        }
 
-<div class="dropup-content" id="dropup">
-    <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-    <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i> Email</a>
-    <a href="tel:+1234567890"><i class="bi bi-telephone"></i> Telepon</a>
-</div>
+        .footer .row {
+            text-align: left;
+        }
 
-<style>
-    .bubble-head {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #1C4682;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 30px;
-        font-size: 16px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    }
+        .footer .row > div {
+            text-align: left;
+            margin-bottom: 20px;
+        }
 
-    .bubble-head i {
-        margin-right: 8px;
-        font-size: 20px;
-    }
-
-    .dropup-content {
-        display: none;
-        position: fixed;
-        bottom: 70px;
-        right: 20px;
-        background-color: #ffffff;
-        color: #1C4682;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .dropup-content a {
-        color: #1C4682;
-        padding: 10px 20px;
-        text-decoration: none;
-        display: block;
-        font-weight: bold;
-    }
-
-    .dropup-content a:hover {
-        background-color: #f1f1f1;
-    }
-
-    .dropup-content a i {
-        margin-right: 5px;
+        .footer ul {
+            padding-left: 20px; /* Menambahkan indentasi agar bullet point terlihat */
+        }
     }
 </style>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -253,7 +212,7 @@
             },
             // when window width is >= 640px
             640: {
-            slidesPerView: 3  ,
+            slidesPerView: 3,
             spaceBetween: 40
             }
 
@@ -275,17 +234,17 @@
             // when window width is >= 320px
             320: {
             slidesPerView: 1,
-            spaceBetween: 20
+            spaceBetween: 10
             },
             // when window width is >= 480px
             480: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 10
             },
             // when window width is >= 640px
             640: {
-            slidesPerView: 3  ,
-            spaceBetween: 40
+            slidesPerView: 5,
+            spaceBetween: 10
             }
 
         }});
