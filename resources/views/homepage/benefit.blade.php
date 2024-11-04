@@ -75,6 +75,24 @@
         text-align: left; 
         
     }
+
+    @media (max-width: 768px) {
+        .benefit-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; 
+        }
+
+        .benefit-list, .bonus-list, .after-sales-list {
+            width: 100%; 
+        }
+
+        .benefit-heading, .bonus-heading, .after-sales-heading {
+            text-align: center;
+            font-size: 20px; 
+        }
+    }
+
 </style>
 
 <!-- Reason -->
@@ -132,7 +150,38 @@
         font-size: 15px;
         color: #666;
         margin-top: 0; 
-        margin-bottom: 10%;     }
+        margin-bottom: 10%;    
+    }
+
+    @media (max-width: 768px) {
+        .reason-container {
+            flex-direction: column; 
+            align-items: center;
+            gap: 20px; 
+        }
+
+        .reason-container .reason-item {
+            width: 100%; 
+            text-align: center;
+        }
+
+        .reason-heading h2 {
+            font-size: 24px; 
+        }
+
+        .reason-heading p {
+            font-size: 14px; 
+        }
+
+        .reason-container .reason-item h3 {
+            font-size: 18px; 
+        }
+
+        .reason-container .reason-item p {
+            font-size: 14px; 
+        }
+    }
+
 </style>
 
 <!-- PROMO KREDIT -->
@@ -234,6 +283,37 @@
         transform: scale(1.1);
         color: #1C4682;
     }
+
+    @media (max-width: 768px) {
+        .promo-container {
+            flex-direction: column; 
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .promo-container .promo-item {
+            width: 70%; 
+            padding: 10px 20px; 
+            text-align: center;
+        }
+
+        .promo-icon {
+            margin-bottom: 10px; 
+        }
+
+        .promo-item h3 {
+            margin-top: 5%; 
+            margin-bottom: 10%; 
+            font-size: 18px; 
+        }
+
+        .promo-button {
+            font-size: 14px; 
+            margin-top: 5%;
+        }
+    }
+
+
 </style>
 
 <!-- Test Drive -->
@@ -309,6 +389,51 @@
     .testdrive-button:hover {
         background-color: #163b5a;
     }
+
+    @media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
+        align-items: center;
+        text-align: center; /* Menjaga teks di tengah */
+    }
+
+    .image-container, .text-container {
+        margin: 0; /* Menghilangkan margin pada tampilan mobile */
+        width: 87%; /* Menyesuaikan lebar pada tampilan mobile */
+    }
+
+    .text-container {
+        display: flex; /* Menambahkan display flex */
+        flex-direction: column; /* Mengatur arah konten menjadi kolom */
+        align-items: center; /* Menyelaraskan item ke tengah */
+        text-align: center; /* Menjaga teks di tengah */
+    }
+
+    .text-container h3 {
+        font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+    }
+
+    .text-container p {
+        font-size: 16px; /* Menyesuaikan ukuran font pada mobile */
+    }
+
+    .testdrive-button {
+        display: flex; /* Menjadikan tombol sebagai flex container */
+        justify-content: center; /* Menyelaraskan konten secara horizontal di tengah */
+        align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+        width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
+        padding: 10px; /* Menyusun padding tombol */
+        font-size: 14px;
+        margin: 10px 0; /* Menambahkan margin vertikal untuk tombol */
+        border: none; /* Menghilangkan border jika ada */
+        border-radius: 5px; /* Menjaga sudut tombol tetap melengkung */
+        background-color: #1C4682; /* Warna latar belakang */
+        color: #ffffff; /* Warna teks tombol */
+        cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang dapat diklik */
+        transition: background-color 0.3s; /* Transisi saat hover */
+    }
+}
+
 </style>
 
 <!-- Pricelist -->
@@ -352,7 +477,7 @@
         position: relative;
         z-index: 2;
         color: #ffffff;
-        font-size: 250%;
+        font-size: 200%;
         text-align: left;
         padding: 0% 20% 1%;
         margin-bottom: 20px;

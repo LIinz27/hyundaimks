@@ -275,7 +275,7 @@
 
     .contact-image {
         flex: 1;
-        text-align: left;
+        text-align: center; /* Menempatkan gambar di tengah */
         margin: 3%;
         border: 3px #163b5a solid;
         border-radius: 2%;
@@ -283,7 +283,7 @@
 
     .contact-text {
         flex: 1;
-        text-align: left;
+        text-align: center; /* Menempatkan teks di tengah */
         color: #333;
     }
 
@@ -302,10 +302,11 @@
     }
 
     .contact-details {
-        list-style-type: disc;
+        list-style-type: disc; /* Menambahkan bullet */
         padding-left: 20px;
         margin-bottom: 10%;
         font-weight: 700;
+        text-align: left; /* Menyelaraskan daftar ke kiri */
     }
 
     .button-group {
@@ -313,23 +314,22 @@
         gap: 10px; 
     }
 
-    .wa-button {
+    .wa-button, .contact-button {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
+        width: 100%; /* Memperpanjang tombol dari kiri ke kanan */
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .wa-button {
         background-color: #1C4682;
         color: #ffffff;
         border: none;
         border-radius: 5px;
-        padding: 10px 60px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin-top: 5%;
-    }
-
-    .wa-button i {
-        font-size: 1.2rem;
-        margin-right: 8px;
     }
 
     .wa-button:hover {
@@ -337,30 +337,61 @@
     }
 
     .contact-button {
-        display: inline-flex;
-        align-items: center;
         background-color: #fff;
         color: #163b5a;
         border: 2px solid #163b5a;
         border-radius: 5px;
-        padding: 10px 60px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin-top: 5%;
-    }
-
-    .contact-button i {
-        font-size: 1.2rem;
-        margin-right: 8px;
     }
 
     .contact-button:hover {
         background-color: #000;
         color: #fff;
     }
-</style>
 
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
+            align-items: center; /* Menyelaraskan item ke tengah */
+            text-align: center; /* Menjaga teks di tengah */
+        }
+
+        .contact-image {
+            margin: 0; /* Menghilangkan margin pada tampilan mobile */
+            width: 90%; /* Menyesuaikan lebar gambar pada tampilan mobile */
+        }
+
+        .contact-text {
+            margin: 0; /* Menghilangkan margin pada tampilan mobile */
+            width: 80%; /* Menyesuaikan lebar teks pada tampilan mobile */
+        }
+
+        .contact-text h3 {
+            font-size: 32px; /* Menyesuaikan ukuran font pada mobile */
+        }
+
+        .contact-text p {
+            font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+        }
+
+        .contact-details {
+            padding-left: 20px; /* Menyelaraskan daftar dengan bullet tetap rata kiri */
+            margin: 10px 0; /* Menyesuaikan margin pada daftar */
+            text-align: left; /* Menyelaraskan daftar tetap rata kiri pada mobile */
+        }
+
+        .button-group {
+            flex-direction: column; /* Mengatur tombol dalam kolom */
+            gap: 5px; /* Mengurangi jarak antar tombol */
+            width: 100%;
+            align-items: center;
+        }
+
+        .wa-button, .contact-button {
+            width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
+            padding: 10px; /* Menyusun padding tombol */
+        }
+    }
+</style>
 
 
 @include('footer')
