@@ -82,7 +82,7 @@
 
 </style>
 
-@include('card')
+@include('homepage/card')
 
 <div class="text-center mb-3 full-bg" style="margin-top: 100px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
     <h2 class="heading-title" style="font-size: 35px; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">GALERI DEALER HYUNDAI MAKASSAR</h2>
@@ -151,7 +151,7 @@
     }
 </style>
 
-@include('benefit')
+@include('homepage/benefit')
 
 <div class="container mt-4 ">
     <h2 class="text-center mb-5">OUR PARTNER FINANCE & LEASING</h2>
