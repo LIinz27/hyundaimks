@@ -60,3 +60,18 @@
         margin-right: 5px;
     }
 </style>
+
+<script>
+    function toggleDropup() {
+        var dropup = document.getElementById("dropup");
+        dropup.style.display = (dropup.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        var dropup = document.getElementById("dropup");
+        var bubbleHead = document.querySelector(".bubble-head");
+        if (event.target !== bubbleHead && !bubbleHead.contains(event.target)) {
+            dropup.style.display = "none";
+        }
+    };
+</script>
