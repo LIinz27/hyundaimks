@@ -7,7 +7,7 @@
 
     <div class="container mt-4">
         <h2 class="text-center mb-5">Promo Terbaru 2024</h2>
-
+<!-- Buat perulangan -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">

@@ -84,18 +84,18 @@
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
     
-    <div class="reason-container d-flex justify-content-center gap-4">
-        <div class="reason-item text-center">
+    <div class="reason-container d-flex justify-content-center gap-4 ">
+        <div class="reason-item text-center col-sm-4 col-12">
             <i class="bi bi-check-circle promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Proses Mudah & Cepat</h3>
             <p>Proses Kredit Mudah & Cepat menjadi hal terbaik yang kami persembahkan untuk anda.</p>
         </div>
-        <div class="reason-item text-center">
+        <div class="reason-item text-center col-sm-4 col-12">
             <i class="bi bi-people promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Sales Berpengalaman</h3>
             <p>Pengalaman menjadi modal utama kami untuk terus memberikan pelayanan terbaik kepada konsumen.</p>
         </div>
-        <div class="reason-item text-center">
+        <div class="reason-item text-center col-sm-4 col-12">
             <i class="bi bi-wallet2 promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
             <h3>Harga Fleksibel</h3>
             <p>Kami menawarkan harga yang cocok sesuai anggaran belanja Anda untuk mendapatkan mobil impian Anda.</p>
@@ -142,18 +142,18 @@
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
     
-    <div class="promo-container d-flex justify-content-center gap-4">
-        <div class="promo-item text-center">
+    <div class="promo-container d-flex justify-content-center gap-4 ">
+        <div class="promo-item text-center col ">
             <i class="bi bi-list-task promo-icon"></i>
             <h3>Pricelist Terbaru</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
         </div>
-        <div class="promo-item text-center">
+        <div class="promo-item text-center col">
             <i class="bi bi-credit-card promo-icon"></i>
             <h3>Proses Kredit</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
         </div>
-        <div class="promo-item text-center">
+        <div class="promo-item text-center col">
             <i class="bi bi-pencil-square promo-icon"></i>
             <h3>Simulasi Kredit</h3>
             <button class="promo-button">Selengkapnya &rarr;</button>
