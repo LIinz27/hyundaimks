@@ -10,31 +10,10 @@
 <!-- Buat perulangan -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0001.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0002.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0004.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0005.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0006.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0008.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{{ asset('images/IMG-20240911-WA0009.jpg') }}" alt="Slide Image" class="img-fluid">
-                </div>
+                <!-- Konten gambar Untuk Promo -->
             </div>
             <div class="swiper-pagination"></div>
         </div>
-
         <div class="text-center mt-4">
             <button class="btn btn-primary" style="background-color: #1C4682; border: none; padding: 15px 40px; font-size: 16px;">Klik di sini</button>
         </div>
@@ -44,33 +23,12 @@
 <div class="text-center mb-3 full-bg" style="margin-top: 100px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
     <h2 class="heading-title" style="font-size: 35px; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">GALERI DEALER HYUNDAI MAKASSAR</h2>
     <p class="heading-subtitle" style="margin-bottom: 60px;">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p> 
-
     <div class="swiper newSwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-1.png') }}" alt="Slide 1" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-2.png') }}" alt="Slide 2" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-3.png') }}" alt="Slide 3" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-4.png') }}" alt="Slide 4" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-5.png') }}" alt="Slide 5" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-6.png') }}" alt="Slide 6" class="img-fluid">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/Galeri-Hyundai-7.png') }}" alt="Slide 7" class="img-fluid">
-            </div>
+            <!-- Gambar Untuk Galeri -->
         </div>
         <div class="swiper-pagination"></div>
-    </div>
+    </div>    
 </div>
 
 @include('homepage/benefit')

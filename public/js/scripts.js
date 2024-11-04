@@ -1,66 +1,3 @@
-        // Swiper Script
-        var swiper = new Swiper(".mySwiper", {
-        autoplay: {
-            delay: 3000, 
-            disableOnInteraction: false,
-        },
-        loop: true, 
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 2,
-            spaceBetween: 30
-            },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 3  ,
-            spaceBetween: 40
-            }
-
-        }});
-
-        var newSwiper = new Swiper(".newSwiper", {
-        autoplay: {
-            delay: 3000, 
-            disableOnInteraction: false,
-        },
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 40, 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 1,
-            spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 2,
-            spaceBetween: 30
-            },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 3,
-            spaceBetween: 40
-            }
-
-        }});
-
         var PartnerSwiper = new Swiper(".PartnerSwiper", {
         autoplay: {
             delay: 1000, 
@@ -185,3 +122,104 @@
         }
     
         document.addEventListener('DOMContentLoaded', displayCars);
+
+
+        // Promo Images
+        const promoImages = [];
+        for (let i = 1; i <= 7; i++) {
+            const formattedNumber = String(i).padStart(4, '0'); 
+            promoImages.push(`/images/Promo/IMG-20240911-WA${formattedNumber}.jpg`);
+        }
+
+        function displayPromoImages() {
+            const promoSwiperWrapper = document.querySelector('.mySwiper .swiper-wrapper');
+            if (!promoSwiperWrapper) return; 
+            promoSwiperWrapper.innerHTML = ''; 
+
+            promoImages.forEach(image => {
+                const slide = document.createElement('div');
+                slide.classList.add('swiper-slide');
+                slide.innerHTML = `<img src="${image}" alt="Slide Image" class="img-fluid">`;
+                promoSwiperWrapper.appendChild(slide);
+            });
+
+            new Swiper(".mySwiper", {
+                autoplay: {
+                    delay: 3000, 
+                    disableOnInteraction: false,
+                },
+                loop: true, 
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', displayPromoImages);
+
+
+        // Gallery Images
+        const galleryImages = [];
+        const galleryImageCount = 7;
+
+        for (let i = 1; i <= galleryImageCount; i++) {
+            galleryImages.push(`/images/Galeri/Galeri-Hyundai-${i}.png`);
+        }
+
+        function displayGalleryImages() {
+            const gallerySwiperWrapper = document.querySelector('.newSwiper .swiper-wrapper');
+            if (!gallerySwiperWrapper) return; 
+            gallerySwiperWrapper.innerHTML = '';
+
+            galleryImages.forEach((image, index) => {
+                const slide = document.createElement('div');
+                slide.classList.add('swiper-slide');
+                slide.innerHTML = `<img src="${image}" alt="Slide ${index + 1}" class="img-fluid">`;
+                gallerySwiperWrapper.appendChild(slide);
+            });
+
+            new Swiper(".newSwiper", {
+                autoplay: {
+                    delay: 3000, 
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 40, 
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', displayGalleryImages);
