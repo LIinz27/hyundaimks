@@ -10,47 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Manrope'; 
-        }
-        .nav-item.dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0;
-        }
-        
-        .search-modal .modal-content {
-            max-width: 500px;
-            margin: auto;
-        }
-        
-        .navbar-nav .nav-link {
-            font-size: 14px; 
-            color: black; 
-            font-weight: 600; 
-        }
-        .btn-unduh {
-            background-color: #1C4682; 
-            color: white; 
-        }
-        .btn-unduh:hover {
-            background-color: #163d6a; 
-        }
-        .btn-outline-secondary {
-            border: none; 
-        }
-        
-        .navbar {
-            background-color: white; 
-            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3); 
-        }
-        .btn-outline-secondary i {
-            color: black; 
-        }
-        
-        
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
 

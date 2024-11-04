@@ -1,0 +1,822 @@
+        body {
+            font-family: 'Manrope'; 
+        }
+        /*Header */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+        
+        .search-modal .modal-content {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 14px; 
+            color: black; 
+            font-weight: 600; 
+        }
+        .btn-unduh {
+            background-color: #1C4682; 
+            color: white; 
+        }
+        .btn-unduh:hover {
+            background-color: #163d6a; 
+        }
+        .btn-outline-secondary {
+            border: none; 
+        }
+        
+        .navbar {
+            background-color: white; 
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3); 
+        }
+        .btn-outline-secondary i {
+            color: black; 
+        }
+ /* Swiper 1 */
+    .swiper {
+        width: 90%;
+        height: 90%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination {
+        bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        background: #8f8e8e;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #000000;
+    }
+
+    .btn-group .btn.active {
+        background-color: #1C4682;
+        color: white;
+    }
+
+
+    /* Swiper 2 */
+    .full-bg {
+        width: 100vw;
+        margin-left: calc(50% - 50vw); 
+        padding: 20px 0;
+    }
+
+    .newSwiper {
+        width: 75%;
+        height: 80%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .newSwiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .newSwiper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px; 
+    }
+        body {
+        overflow-x: hidden;
+    }
+
+    /* Swiper 3 */
+    .PartnerSwiper {
+        width: 100%;
+        height: 80%;
+        margin-top: 5%
+    }
+
+    .PartnerSwiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PartnerSwiper .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .finance-logo {
+        border: 2px solid #000;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-pagination {
+        bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        background: #8f8e8e;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #000000;
+    }
+
+
+    /* Contact CSS */
+    .contact-bg {
+        padding: 40px 0;
+    }
+
+    .contact-container {
+        max-width: 1200px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .contact-image {
+        flex: 1;
+        text-align: center; /* Menempatkan gambar di tengah */
+        margin: 3%;
+        border: 3px #163b5a solid;
+        border-radius: 2%;
+    }
+
+    .contact-text {
+        flex: 1;
+        text-align: center; /* Menempatkan teks di tengah */
+        color: #333;
+    }
+
+    .contact-text h3 {
+        font-size: 42px;
+        font-weight: bolder;
+        color: #163b5a;
+        margin-bottom: 5%;
+    }
+
+    .contact-text p {
+        font-size: 28px;
+        font-weight: 700;
+        color: #163b5a;
+        margin-bottom: 10%;
+    }
+
+    .contact-details {
+        list-style-type: disc; /* Menambahkan bullet */
+        padding-left: 20px;
+        margin-bottom: 10%;
+        font-weight: 700;
+        text-align: left; /* Menyelaraskan daftar ke kiri */
+    }
+
+    .button-group {
+        display: flex;
+        gap: 10px; 
+    }
+
+    .wa-button, .contact-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Memperpanjang tombol dari kiri ke kanan */
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .wa-button {
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .wa-button:hover {
+        background-color: #163b5a;
+    }
+
+    .contact-button {
+        background-color: #fff;
+        color: #163b5a;
+        border: 2px solid #163b5a;
+        border-radius: 5px;
+    }
+
+    .contact-button:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
+            align-items: center; /* Menyelaraskan item ke tengah */
+            text-align: center; /* Menjaga teks di tengah */
+        }
+
+        .contact-image {
+            margin: 0; /* Menghilangkan margin pada tampilan mobile */
+            width: 90%; /* Menyesuaikan lebar gambar pada tampilan mobile */
+        }
+
+        .contact-text {
+            margin: 0; /* Menghilangkan margin pada tampilan mobile */
+            width: 80%; /* Menyesuaikan lebar teks pada tampilan mobile */
+        }
+
+        .contact-text h3 {
+            font-size: 32px; /* Menyesuaikan ukuran font pada mobile */
+        }
+
+        .contact-text p {
+            font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+        }
+
+        .contact-details {
+            padding-left: 20px; /* Menyelaraskan daftar dengan bullet tetap rata kiri */
+            margin: 10px 0; /* Menyesuaikan margin pada daftar */
+            text-align: left; /* Menyelaraskan daftar tetap rata kiri pada mobile */
+        }
+
+        .button-group {
+            flex-direction: column; /* Mengatur tombol dalam kolom */
+            gap: 5px; /* Mengurangi jarak antar tombol */
+            width: 100%;
+            align-items: center;
+        }
+
+        .wa-button, .contact-button {
+            width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
+            padding: 10px; /* Menyusun padding tombol */
+        }
+    }
+
+    /* Card CSS */
+    .heading-title {
+        font-family: 'Manrope';
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .heading-subtitle {
+        font-family: 'Manrope';
+        font-size: 15px;
+    }
+
+    .nav-tabs .nav-item .nav-link {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        color: #1C4682;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-tabs .nav-item .nav-link.active {
+        background-color: #1C4682;
+        color: #ffffff;
+        border-color: #1C4682;
+    }
+
+    .nav-tabs .nav-item .nav-link:hover {
+        background-color: #0056b3;
+        color: black;
+    }
+
+    .tab-content {
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-title {
+        font-weight: 600;
+    }
+
+    .card-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card .btn-full {
+        width: 80%;
+        background-color: #1C4682;
+        border: none;
+        border-top: 1px solid #eee;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 5%;
+    }
+
+    .car-image {
+        transition: transform 0.3s ease;
+    }
+
+    .car-image:hover {
+        transform: scale(1.2);
+    }
+
+    /* Benefit CSS  */
+    .benefit-section {
+        padding: 40px 0;
+        background-color: #1C4682;
+        width: 100vw;
+        margin-top: -2%;
+        margin-left: calc(50% - 50vw); 
+    }
+
+    .benefit-heading, .bonus-heading, .after-sales-heading {
+        color: #ffffff;
+        margin-bottom: 35px;
+        font-size: 25px;
+        font-weight: bold; 
+        font-family: 'Manrope';
+        text-align: left; 
+    }
+
+    .benefit-container {
+        display: flex;
+        justify-content: center; 
+        gap: 20px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .benefit-list, .bonus-list, .after-sales-list {
+        width: 30%;
+        list-style-type: disc;
+        background-color: transparent;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #ffffff;
+        font-family: 'Manrope', sans-serif;
+        text-align: left; 
+    }
+
+    .benefit-list li, .bonus-list li, .after-sales-list li {
+        margin-bottom: 10px;
+        text-align: left; 
+        
+    }
+
+    @media (max-width: 768px) {
+        .benefit-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; 
+        }
+
+        .benefit-list, .bonus-list, .after-sales-list {
+            width: 100%; 
+        }
+
+        .benefit-heading, .bonus-heading, .after-sales-heading {
+            text-align: center;
+            font-size: 20px; 
+        }
+    }
+
+
+    /* Reason CSS */
+    .reason-section {
+        padding: 40px 0;
+        }
+
+    .reason-heading h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+    .reason-heading p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+
+    .reason-container .reason-item h3 {
+        font-size: 20px;
+        margin: 5%; 
+        font-weight: bold;
+        color: #333;
+    }
+
+    .reason-container .reason-item p {
+        font-size: 15px;
+        color: #666;
+        margin-top: 0; 
+        margin-bottom: 10%;    
+    }
+
+    @media (max-width: 768px) {
+        .reason-container {
+            flex-direction: column; 
+            align-items: center;
+            gap: 20px; 
+        }
+
+        .reason-container .reason-item {
+            width: 100%; 
+            text-align: center;
+        }
+
+        .reason-heading h2 {
+            font-size: 24px; 
+        }
+
+        .reason-heading p {
+            font-size: 14px; 
+        }
+
+        .reason-container .reason-item h3 {
+            font-size: 18px; 
+        }
+
+        .reason-container .reason-item p {
+            font-size: 14px; 
+        }
+    }
+
+    /* Promo CSS */
+    .promo-section {
+        position: relative; 
+        padding: 40px 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        background-image: url('/images/photo_2023-06-06_20-05-30.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .promo-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(28, 70, 130, 0.9);
+        z-index: 1;
+    }
+
+    .promo-heading h2, .promo-heading p {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        margin: 2%;
+    }
+
+    .promo-container .promo-item {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px 90px;
+        transition: transform 0.3s;
+        position: relative;
+        z-index: 2;
+        margin: 10px;
+    }
+
+    .promo-item h3 {
+        margin-top: 10%;
+        margin-bottom: 35%;
+        font-weight: 900;
+    }
+
+    .promo-button {
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .promo-button:hover {
+        background-color: #163b5a;
+    }
+
+    .promo-icon {
+        font-size: 3rem;
+        color: #163b5a;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    .promo-icon:hover {
+        transform: scale(1.1);
+        color: #1C4682;
+    }
+
+    @media (max-width: 768px) {
+        .promo-container {
+            flex-direction: column; 
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .promo-container .promo-item {
+            width: 70%; 
+            padding: 10px 20px; 
+            text-align: center;
+        }
+
+        .promo-icon {
+            margin-bottom: 10px; 
+        }
+
+        .promo-item h3 {
+            margin-top: 5%; 
+            margin-bottom: 10%; 
+            font-size: 18px; 
+        }
+
+        .promo-button {
+            font-size: 14px; 
+            margin-top: 5%;
+        }
+    }
+
+    /* Test Drive CSS */
+    .full-bg {
+        padding: 40px 0;
+    }
+
+    .content-container {
+        max-width: 1200px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .image-container {
+        flex: 1;
+        text-align: left;
+        margin: 3%;
+    }
+
+    .text-container {
+        flex: 1;
+        text-align: left;
+        color: #333;
+    }
+
+    .text-container h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #163b5a;
+        margin-bottom: 5%;
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .testdrive-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #1C4682;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 60px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 5%;
+    }
+
+    .testdrive-button i {
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+
+    .testdrive-button:hover {
+        background-color: #163b5a;
+    }
+
+    @media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
+        align-items: center;
+        text-align: center; /* Menjaga teks di tengah */
+    }
+
+    .image-container, .text-container {
+        margin: 0; /* Menghilangkan margin pada tampilan mobile */
+        width: 87%; /* Menyesuaikan lebar pada tampilan mobile */
+    }
+
+    .text-container {
+        display: flex; /* Menambahkan display flex */
+        flex-direction: column; /* Mengatur arah konten menjadi kolom */
+        align-items: center; /* Menyelaraskan item ke tengah */
+        text-align: center; /* Menjaga teks di tengah */
+    }
+
+    .text-container h3 {
+        font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+    }
+
+    .text-container p {
+        font-size: 16px; /* Menyesuaikan ukuran font pada mobile */
+    }
+
+    .testdrive-button {
+        display: flex; /* Menjadikan tombol sebagai flex container */
+        justify-content: center; /* Menyelaraskan konten secara horizontal di tengah */
+        align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+        width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
+        padding: 10px; /* Menyusun padding tombol */
+        font-size: 14px;
+        margin: 10px 0; /* Menambahkan margin vertikal untuk tombol */
+        border: none; /* Menghilangkan border jika ada */
+        border-radius: 5px; /* Menjaga sudut tombol tetap melengkung */
+        background-color: #1C4682; /* Warna latar belakang */
+        color: #ffffff; /* Warna teks tombol */
+        cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang dapat diklik */
+        transition: background-color 0.3s; /* Transisi saat hover */
+    }
+}
+
+    /* Price List CSS */
+    .pricelist-section {
+        position: relative; 
+        padding: 60px 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        background-image: url('/images/photo_2023-06-06_20-02-43.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        margin-top: -2%;
+    }
+
+    .pricelist-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(28, 70, 130, 0.9);
+        z-index: 1;
+    }
+
+    .pricelist-heading h2 {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        font-size: 200%;
+        text-align: left;
+        padding: 0% 20% 1%;
+        margin-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    .btn-container {
+        position: relative;
+        text-align: left;
+        padding-left: 20%;
+        z-index: 2;
+    }
+
+    .btn-download {
+        color: #ffffff;
+        background-color: #163b5a;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-download:hover {
+        background-color: #000;
+        color: #ffffff
+    }
+
+    .btn-download i {
+        font-size: 1.2rem;
+        order: 1;
+    }
+
+    /* Footer CSS */
+    .footer {
+        background-color: #1C4682;
+        color: white;
+        padding: 40px 0;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+    }
+
+    .footer h5 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footer p, .footer ul li {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .footer ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer ul li i {
+        margin-right: 5px;
+    }
+
+    .footer .visitor-counter {
+        font-size: 24px;
+        font-weight: bold;
+        background: black;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Media Query untuk tampilan mobile */
+    @media (max-width: 768px) {
+        .footer .container {
+            text-align: left;
+        }
+
+        .footer .row {
+            text-align: left;
+        }
+
+        .footer .row > div {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .footer ul {
+            padding-left: 20px; /* Menambahkan indentasi agar bullet point terlihat */
+        }
+    }
