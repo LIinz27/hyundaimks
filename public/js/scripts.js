@@ -123,6 +123,7 @@
     
         document.addEventListener('DOMContentLoaded', displayCars);
 
+        //Finance
         const imageData = {
             "images": [
                 {
@@ -178,7 +179,6 @@
             ]
         };
     
-        // Render images
         const imageContainer = document.getElementById('imageContainer');
         imageData.images.forEach(image => {
             const slideDiv = document.createElement('div');
@@ -192,7 +192,6 @@
             slideDiv.appendChild(img);
             imageContainer.appendChild(slideDiv);
         });    
-
 
         // Promo Images
         const promoImages = [];
