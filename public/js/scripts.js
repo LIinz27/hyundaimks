@@ -35,61 +35,61 @@
             {
                 name: "HYUNDAI STARGAZER",
                 price: "Rp249.600.000",
-                image: "/images/Hyundai-Stargazer.png",
+                image: "/images/car/Hyundai-Stargazer.png",
                 categories: ["mpv"]
             },
             {
                 name: "HYUNDAI CRETA",
                 price: "Rp297.000.000",
-                image: "/images/Hyundai-Creta.png",
+                image: "/images/car/Hyundai-Creta.png",
                 categories: ["suv"]
             },
             {
                 name: "HYUNDAI STARGAZER X",
                 price: "Rp335.800.000",
-                image: "/images/Stargazer-X.png",
+                image: "/images/car/Stargazer-X.png",
                 categories: ["mpv"]
             },
             {
                 name: "HYUNDAI KONA ELECTRIC",
                 price: "Rp297.000.000",
-                image: "/images/Hyundai-kona.png",
+                image: "/images/car/Hyundai-kona.png",
                 categories: ["eco"]
             },
             {
                 name: "HYUNDAI SANTA FE",
                 price: "Rp625.000.000",
-                image: "/images/Hyundai-SANTA-Fe.png",
+                image: "/images/car/Hyundai-SANTA-Fe.png",
                 categories: ["suv"]
             },
             {
                 name: "HYUNDAI IONIQ 5",
                 price: "Rp399.000.000",
-                image: "/images/Hyundai-ioniq-5.png",
+                image: "/images/car/Hyundai-ioniq-5.png",
                 categories: ["eco"]
             },
             {
                 name: "ALL NEW SANTA FE",
                 price: "Rp869.600.000",
-                image: "/images/ALL-NEW-SANTA.png",
+                image: "/images/car/ALL-NEW-SANTA.png",
                 categories: ["suv"]
             },
             {
                 name: "HYUNDAI PALISADE",
                 price: "Rp910.000.000",
-                image: "/images/Hyundai-Palisade.png",
+                image: "/images/car/Hyundai-Palisade.png",
                 categories: ["suv"]
             },
             {
                 name: "HYUNDAI STARIA",
                 price: "Rp924.000.000",
-                image: "/images/Hyundai-Staria.png",
+                image: "/images/car/Hyundai-Staria.png",
                 categories: ["mpv"]
             },
             {
                 name: "HYUNDAI IONIQ 6",
                 price: "Rp1.220.000.000",
-                image: "/images/Hyundai-IONIQ-6.png",
+                image: "/images/car/Hyundai-IONIQ-6.png",
                 categories: ["eco"]
             }
         ];        
@@ -122,6 +122,76 @@
         }
     
         document.addEventListener('DOMContentLoaded', displayCars);
+
+        const imageData = {
+            "images": [
+                {
+                    "src": "images/finance/LOGO-BAF.jpg",
+                    "alt": "Slide 1",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-BCA-FINANCE-1.jpg",
+                    "alt": "Slide 2",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-BRI-FINANCE.jpg",
+                    "alt": "Slide 3",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-CIMB-FINANCE.jpg",
+                    "alt": "Slide 4",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-CLIPAN-FINANCE.jpg",
+                    "alt": "Slide 5",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-IMFI.jpg",
+                    "alt": "Slide 6",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-INDOMOBIL-FINANCE.jpg",
+                    "alt": "Slide 7",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-MAF-1.jpg",
+                    "alt": "Slide 8",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-MANDIRI-TUNAS-FINANCE.jpg",
+                    "alt": "Slide 9",
+                    "class": "img-fluid finance-logo"
+                },
+                {
+                    "src": "images/finance/LOGO-MAYBANK-1.jpg",
+                    "alt": "Slide 10",
+                    "class": "img-fluid finance-logo"
+                }
+            ]
+        };
+    
+        // Render images
+        const imageContainer = document.getElementById('imageContainer');
+        imageData.images.forEach(image => {
+            const slideDiv = document.createElement('div');
+            slideDiv.className = 'swiper-slide';
+    
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.alt = image.alt;
+            img.className = image.class;
+    
+            slideDiv.appendChild(img);
+            imageContainer.appendChild(slideDiv);
+        });    
 
 
         // Promo Images
