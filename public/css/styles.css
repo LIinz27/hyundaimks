@@ -505,9 +505,9 @@
     }
 
     .promo-container .promo-item {
-        border: 2px solid #ffffff;
+        border: 2px;
         background-color: #ffffff;
-        border-radius: 10px;
+        border-radius: 20px;
         padding: 10px 90px;
         transition: transform 0.3s;
         position: relative;

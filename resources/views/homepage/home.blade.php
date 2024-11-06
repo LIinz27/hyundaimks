@@ -12,7 +12,7 @@
             <div class="swiper-wrapper">
                 <!-- Konten gambar Untuk Promo -->
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>               
         </div>
         <div class="text-center mt-4">
             <button class="btn btn-primary" style="background-color: #1C4682; border: none; padding: 15px 40px; font-size: 16px;">Klik di sini</button>
@@ -25,7 +25,6 @@
     <p class="heading-subtitle" style="margin-bottom: 60px;">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p> 
     <div class="swiper newSwiper">
         <div class="swiper-wrapper">
-            <!-- Gambar Untuk Galeri -->
         </div>
         <div class="swiper-pagination"></div>
     </div>    
