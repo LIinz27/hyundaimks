@@ -504,6 +504,16 @@
         margin: 2%;
     }
     
+    .promo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+        max-width: 1200px; /* Membatasi lebar kontainer pada desktop */
+        margin: 0 auto; /* Pusatkan kontainer */
+    }
+    
     .promo-container .promo-item {
         border: 2px solid #ffffff;
         background-color: #ffffff;
@@ -512,8 +522,8 @@
         transition: transform 0.3s;
         position: relative;
         z-index: 2;
-        width: 100%; /* Mengatur lebar penuh agar responsif */
-        max-width: 300px; /* Menentukan lebar maksimum agar elemen tidak terlalu besar */
+        width: 100%;
+        max-width: 300px; /* Batasi lebar setiap item promo agar rapi */
         box-sizing: border-box;
         text-align: center;
     }
@@ -550,21 +560,15 @@
         color: #1C4682;
     }
     
-    .promo-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 0 20px;
-    }
+    /* Responsive Layout */
     
+    /* Tablet Layout */
     @media (min-width: 768px) and (max-width: 1024px) {
         .promo-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 0 20px; 
+            padding: 0 20px;
         }
     
         .promo-container .promo-item {
@@ -596,6 +600,7 @@
     
         .promo-container .promo-item {
             width: 100%;
+            max-width: 80%; /* Menggunakan lebar penuh pada mobile */
             padding: 15px;
             text-align: center;
         }
@@ -612,7 +617,7 @@
         }
     }
     
-
+    
     /* Test Drive CSS */
     .full-bg {
         padding: 40px 0;
