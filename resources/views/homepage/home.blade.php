@@ -16,6 +16,7 @@
         <div class="text-center mt-4">
             <button class="btn btn-primary" style="background-color: #1C4682; border: none; padding: 15px 40px; font-size: 16px;">Klik di sini</button>
         </div>
+    </div>
 
 @include('homepage/card')
 
@@ -23,8 +24,7 @@
     <h2 class="heading-title" style="font-size: 35px; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">GALERI DEALER HYUNDAI MAKASSAR</h2>
     <p class="heading-subtitle" style="margin-bottom: 60px;">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p> 
     <div class="swiper newSwiper">
-        <div class="swiper-wrapper">
-        </div>
+        <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
     </div>    
 </div>
