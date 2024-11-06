@@ -7,7 +7,6 @@
 
     <div class="container mt-4">
         <h2 class="text-center mb-5">Promo Terbaru 2024</h2>
-<!-- Buat perulangan -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <!-- Konten gambar Untuk Promo -->
@@ -31,48 +30,18 @@
     </div>    
 </div>
 
+
 @include('homepage/benefit')
 
 <div class="container mt-4 ">
     <h2 class="text-center mb-5">OUR PARTNER FINANCE & LEASING</h2>
     <p class="text-center">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
-    
     <div class="swiper PartnerSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-BAF.jpg') }}" alt="Slide 1" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-BCA-FINANCE-1.jpg') }}" alt="Slide 2" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-BRI-FINANCE.jpg') }}" alt="Slide 3" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-CIMB-FINANCE.jpg') }}" alt="Slide 4" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-CLIPAN-FINANCE.jpg') }}" alt="Slide 5" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-IMFI.jpg') }}" alt="Slide 6" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-INDOMOBIL-FINANCE.jpg') }}" alt="Slide 7" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-MAF-1.jpg') }}" alt="Slide 8" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-MANDIRI-TUNAS-FINANCE.jpg') }}" alt="Slide 9" class="img-fluid finance-logo">
-            </div>
-            <div class="swiper-slide">
-                <img src="{{ asset('images/LOGO-MAYBANK-1.jpg') }}" alt="Slide 10" class="img-fluid finance-logo">
-            </div>
-        </div>
+        <div class="swiper-wrapper" id="imageContainer"></div>
         <div class="swiper-pagination"></div>
-    </div>
+    </div>    
 </div>
+
 
 <!-- Contact -->
 <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
