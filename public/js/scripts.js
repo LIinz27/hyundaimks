@@ -123,6 +123,20 @@
     
         document.addEventListener('DOMContentLoaded', displayCars);
 
+        // Function untuk memanggil mobil di form simulasi
+        function populateCarTypes() {
+            const carTypeSelect = document.getElementById('carType');
+
+            cars.forEach(car => {
+                const option = document.createElement('option');
+                option.value = car.name;
+                option.textContent = car.name;
+                carTypeSelect.appendChild(option);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', populateCarTypes);
+
+
         //Finance
         const imageData = {
             "images": [
