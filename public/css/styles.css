@@ -475,7 +475,7 @@
 
     /* Promo CSS */
     .promo-section {
-        position: relative; 
+        position: relative;
         padding: 40px 0;
         overflow: hidden;
         width: 100vw;
@@ -485,7 +485,7 @@
         background-position: center;
         z-index: 0;
     }
-
+    
     .promo-section::before {
         content: '';
         position: absolute;
@@ -496,31 +496,34 @@
         background: rgba(28, 70, 130, 0.9);
         z-index: 1;
     }
-
+    
     .promo-heading h2, .promo-heading p {
         position: relative;
         z-index: 2;
         color: #ffffff;
         margin: 2%;
     }
-
+    
     .promo-container .promo-item {
-        border: 2px;
+        border: 2px solid #ffffff;
         background-color: #ffffff;
         border-radius: 20px;
-        padding: 10px 90px;
+        padding: 20px;
         transition: transform 0.3s;
         position: relative;
         z-index: 2;
-        margin: 10px;
+        width: 100%; /* Mengatur lebar penuh agar responsif */
+        max-width: 300px; /* Menentukan lebar maksimum agar elemen tidak terlalu besar */
+        box-sizing: border-box;
+        text-align: center;
     }
-
+    
     .promo-item h3 {
         margin-top: 10%;
-        margin-bottom: 35%;
+        margin-bottom: 20%;
         font-weight: 900;
     }
-
+    
     .promo-button {
         background-color: #1C4682;
         color: #ffffff;
@@ -531,50 +534,84 @@
         cursor: pointer;
         transition: background-color 0.3s;
     }
-
+    
     .promo-button:hover {
         background-color: #163b5a;
     }
-
+    
     .promo-icon {
         font-size: 3rem;
         color: #163b5a;
         transition: transform 0.3s, color 0.3s;
     }
-
+    
     .promo-icon:hover {
         transform: scale(1.1);
         color: #1C4682;
     }
-
-    @media (max-width: 768px) {
+    
+    .promo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
         .promo-container {
-            flex-direction: column; 
-            align-items: center;
-            gap: 10px; 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+            padding: 0 20px; 
         }
-
+    
         .promo-container .promo-item {
-            width: 70%; 
-            padding: 10px 20px; 
+            padding: 20px;
             text-align: center;
         }
-
-        .promo-icon {
-            margin-bottom: 10px; 
-        }
-
+    
         .promo-item h3 {
-            margin-top: 5%; 
-            margin-bottom: 10%; 
-            font-size: 18px; 
-        }
-
-        .promo-button {
-            font-size: 14px; 
             margin-top: 5%;
+            margin-bottom: 10%;
+            font-size: 18px;
+        }
+    
+        .promo-button {
+            font-size: 14px;
+            margin-top: 10px;
         }
     }
+    
+    /* Mobile Layout */
+    @media (max-width: 767px) {
+        .promo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 0 10px;
+        }
+    
+        .promo-container .promo-item {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+    
+        .promo-item h3 {
+            margin-top: 5%;
+            margin-bottom: 10%;
+            font-size: 16px;
+        }
+    
+        .promo-button {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+    
 
     /* Test Drive CSS */
     .full-bg {
