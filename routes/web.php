@@ -13,3 +13,5 @@ Route::get('/tes-drive', [App\Http\Controllers\Controller::class, 'tesdrive']);
 Route::get('/portofolio', [App\Http\Controllers\Controller::class, 'portofolio']);
 Route::get('/kontak', [App\Http\Controllers\Controller::class, 'kontak']);
 
+Route::get('/product/hyundai-kona', [App\Http\Controllers\Controller::class, 'hyundai_kona']);
+
