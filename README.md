@@ -46,7 +46,7 @@ This website is designed to provide complete information about Hyundai dealershi
 - **Additional Scripts**: JavaScript functionalities can be found in `public/js/scripts.js`.
 
 ## Additional UI Settings
-- **Font**: Uses the Manrope font for navigation text, set to 14px.
+- **Font**: Uses the Manrope font
 - **Icons**: Utilizes Bootstrap icons for promotional elements and consultation button (label changed to "Pricelist" with the icon positioned to the right of the text).
 
 ## Contribution
