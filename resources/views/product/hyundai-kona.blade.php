@@ -1,8 +1,6 @@
 <!-- hyundai-kona.blade.php -->
-
 @section('title', 'HYUNDAI KONA ELECTRIC - Dealer Hyundai Makassar')
 @include('header')
-
 <!-- Carousel Section -->
 <div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px;">
     <div id="konaCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -28,6 +26,56 @@
     </div>
 </div>
 
+<style>
+    @media (max-width: 768px) {
+        .position-relative {
+            height: 200px !important; /* Sesuaikan tinggi background di mobile */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            text-align: center; /* Tempatkan gambar di tengah secara horizontal */
+        }
+
+        #konaCarousel .carousel-item img {
+            max-width: 80%;
+            height: auto; /* Sesuaikan tinggi otomatis */
+            object-fit: contain;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            transform: translateX(0);
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .position-relative {
+            height: 300px !important; /* Tinggi background lebih pendek di tablet */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        #konaCarousel .carousel-item img {
+            max-width: 70%; /* Sedikit lebih kecil di tablet */
+            height: auto;
+            object-fit: contain;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            transform: translateX(0);
+        }
+    }
+
+
+</style>
+
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center d-flex align-items-stretch gy-4">
         <!-- Daftar Harga Section -->
@@ -36,7 +84,7 @@
                 <h4 class="fw-bold text-start mb-5" style="font-size: 1.25rem; color:#1c4682;">
                     Daftar Harga Terupdate {{ \Carbon\Carbon::now()->locale('id')->translatedFormat('l, d F Y') }}
                 </h4>
-                <p class="mb-5">*Harga tertera dapat berubah sewaktu-waktu. Klik tombol di bawah untuk melihat informasi terbaru.</p>
+                <p class="mb-5">*Harga tertera dapat berubah sewaktu-waktu. Klik Unduh Pricelist untuk melihat pricelist terbaru.</p>
                 
                 <!-- Buttons in a row with larger size -->
                 <div class="d-flex gap-3">
@@ -54,23 +102,135 @@
         </div>
 
         <!-- Promo Khusus Section -->
-        <div class="col-md-5 d-flex mx-3">
-            <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
-                <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
-                    Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
-                </h4>            
-                <div class="d-flex flex-column gap-4 mt-3">
-                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
-                        <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
-                    </a>
-                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
-                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
-                    </a>
-                </div>
-            </div>
+        <div class="col-md-5 d-flex mx-3 promo-khusus">
+    <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
+        <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
+            Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
+        </h4>            
+        <div class="d-flex flex-column gap-4 mt-3">
+            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
+                <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
+            </a>
+            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
+                <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
+            </a>
         </div>
     </div>
 </div>
+
+    </div>
+</div>
+
+<style>
+
+    @media (max-width: 768px) {
+        .container .row {
+            flex-wrap: wrap; /* Izinkan kolom untuk membungkus jika terlalu panjang */
+            gap: 1rem; /* Berikan jarak antar elemen */
+        }
+
+        .container .col-md-5 {
+            flex: 1 1 100%; /* Lebar kolom menyesuaikan penuh pada mobile */
+            max-width: 100%;
+            margin: 0; /* Hapus margin horizontal */
+        }
+
+        .container .p-4 {
+            padding: 1rem; /* Kurangi padding untuk layar kecil */
+        }
+
+        .container h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .container .btn {
+            font-size: 0.9rem;
+            padding: 0.6rem 1rem;
+            flex: 1 1 auto;
+            text-align: center;
+            display: flex; /* Gunakan flexbox untuk memusatkan konten */
+            align-items: center; /* Pusatkan teks secara vertikal */
+            justify-content: center; /* Pusatkan teks secara horizontal */
+        }
+
+        .container .btn i {
+            margin-right: 5px;
+        }
+
+        .container .d-flex.gap-3 {
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .container .row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .container .col-md-5 {
+            flex: 1;
+            max-width: 48%;
+        }
+
+        .container .p-4 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Pengaturan tombol agar teks di tengah */
+        .container .d-flex.gap-3 {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .container .btn {
+            width: 100%;
+            display: flex; /* Gunakan Flexbox untuk tombol */
+            align-items: center; /* Pusatkan teks secara vertikal */
+            justify-content: center; /* Pusatkan teks secara horizontal */
+            text-align: center; /* Pusatkan teks */
+        }
+
+        .container .btn i {
+            margin-right: 6px; /* Jarak ikon dari teks */
+        }
+
+        /* Promo Khusus Section */
+        .promo-khusus .p-4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* Tombol di bawah teks pada Promo Khusus */
+        .promo-khusus .d-flex.flex-column {
+            margin-top: 1rem; /* Tambahkan jarak di bawah judul */
+            align-items: stretch;
+        }
+
+        .promo-khusus .btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .promo-khusus .btn i {
+            margin-right: 6px;
+        }
+    }
+
+
+</style>
 
 <div class="benefit-section mt-5">
     <div class="benefit-container">
@@ -344,6 +504,46 @@
     <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI KONA ELECTRIC</h2>
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/6jp_2C6OIGY" title="The all-new KONA | Product Review" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
 </div>
+
+<style>
+
+    @media (max-width: 768px) {
+        .text-center.full-bg {
+            padding: 15px 10px; /* Memberikan padding lebih kecil di mobile */
+        }
+
+        .heading-title {
+            font-size: 20px; /* Ukuran font lebih kecil */
+            margin-bottom: 30px;
+            margin-top: 20px; /* Mengurangi margin atas */
+        }
+
+        iframe {
+            width: 100%; /* Membuat lebar iframe 100% dari layar */
+            height: auto; /* Tinggi menyesuaikan dengan lebar */
+            max-width: 100%; /* Menyesuaikan iframe agar tidak lebih lebar dari layar */
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .text-center.full-bg {
+            padding: 20px 15px; /* Padding sedikit lebih besar daripada mobile */
+        }
+
+        .heading-title {
+            font-size: 24px; /* Ukuran font sedikit lebih besar untuk tablet */
+            margin-bottom: 40px;
+            margin-top: 25px; /* Margin atas sedikit lebih besar daripada mobile */
+        }
+
+        iframe {
+            width: 100%; /* Membuat lebar iframe 100% dari layar tablet */
+            height: 600px; /* Menambah tinggi iframe untuk memastikan tampilan lebih panjang */
+            max-width: 100%; /* Menyesuaikan iframe agar tidak lebih lebar dari layar */
+        }
+    }
+
+</style>
 
 <div class="text-center mb-3 full-bg d-flex align-items-center justify-content-center">
     <div class="content-container d-flex align-items-center justify-content-center">
