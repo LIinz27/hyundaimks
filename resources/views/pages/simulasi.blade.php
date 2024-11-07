@@ -9,13 +9,13 @@
     <h1 class="position-absolute top-50 text-white fw-bold" style="left: 10%; transform: translateY(-50%);">Simulasi Kredit</h1>
 </div>
 
-<div class="container mt-5">
-    <h2 class="fw-bold mb-4 ml-3">Simulasi Kredit Mobil Hyundai</h2>
-    <p class="mb-5">Isi formulir dibawah ini untuk mendapatkan info simulasi kredit unit mobil Hyundai</p>
+<div class="container-fluid mt-5 px-0">
+    <h2 class="fw-bold mb-4 ml-3 text-center">Simulasi Kredit Mobil Hyundai</h2>
+    <p class="mb-5 text-center">Isi formulir dibawah ini untuk mendapatkan info simulasi kredit unit mobil Hyundai</p>
     
-    <div class="row justify-content-center">
-        <div class="col-md-5 col-lg-11">
-            <form>
+    <div class="row mx-0 justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="p-3 p-md-4 p-lg-5">
                 <!-- Form Group for Tipe Mobil -->
                 <div class="mb-4">
                     <label for="carType" class="form-label">Tipe Mobil</label>
@@ -23,7 +23,6 @@
                         <option selected disabled>Pilih tipe mobil</option>
                     </select>
                 </div>
-
 
                 <!-- Form Group for Tenor -->
                 <div class="mb-4">
@@ -71,3 +70,21 @@
 </div>
 
 @include('footer')
+
+<style>
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .row.mx-0 {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .p-md-4 {
+            padding: 20px;
+        }
+    }
+</style>
