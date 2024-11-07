@@ -1,6 +1,7 @@
 <!-- hyundai-kona.blade.php -->
 @section('title', 'HYUNDAI KONA ELECTRIC - Dealer Hyundai Makassar')
 @include('header')
+
 <!-- Carousel Section -->
 <div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px;">
     <div id="konaCarousel" class="carousel slide" data-bs-ride="carousel">
