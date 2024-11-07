@@ -14,27 +14,27 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tautan Cepat</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-arrow-right"></i> <a href="/beranda">Beranda</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/pricelist">Pricelist Terbaru</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/proses-kredit">Proses Kredit</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/simulasi-kredit">Simulasi Kredit</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/test-drive">Test Drive</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/galeri">Galeri</a></li>
-                    <li><i class="bi bi-arrow-right"></i> <a href="/kontak">Kontak</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/beranda">Beranda</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/pricelist">Pricelist Terbaru</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/proses-kredit">Proses Kredit</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/simulasi-kredit">Simulasi Kredit</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/tes-drive">Tes Drive</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/portofolio">Galeri</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/kontak">Kontak</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tipe Mobil</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-stargazer">Hyundai Stargazer</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-creta">Hyundai Creta</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-santa-fe">Hyundai Santa FE</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-palisade">Hyundai Palisade</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-staria">Hyundai Staria</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-ioniq5">Hyundai Ioniq 5</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/hyundai-kona-electric">Hyundai Kona Electric</a></li>
-                    <li><i class="bi bi-chevron-right"></i> <a href="/all-new-santa-fe">All New Santa Fe</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-stargazer">Hyundai Stargazer</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-creta">Hyundai Creta</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-santa-fe">Hyundai Santa FE</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-palisade">Hyundai Palisade</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-staria">Hyundai Staria</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-ioniq5">Hyundai Ioniq 5</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-kona-electric">Hyundai Kona Electric</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/all-new-santa-fe">All New Santa Fe</a></li>
                 </ul>
             </div>
 

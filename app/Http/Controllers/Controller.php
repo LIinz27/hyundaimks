@@ -28,4 +28,8 @@ class Controller
     {
         return view('pages/kontak');
     }
+    public function hyundai_kona()
+    {
+        return view('product/hyundai-kona');
+    }
 }
