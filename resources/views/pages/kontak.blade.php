@@ -10,38 +10,74 @@
 </div>
 
 <div class="container mt-5">
-    <h2 class="fw-bold mb-4 ml-3">Kirim Pesan</h2>
-    <p class="mb-5">Isi formulir dibawah ini untuk mengirim pesan</p>
+    <h2 class="fw-bold mb-4 text-center">Kirim Pesan</h2>
+    <p class="mb-5 text-center">Isi formulir dibawah ini untuk mengirim pesan</p>
     
     <div class="row justify-content-center">
-        <div class="col-md-5 col-lg-11">
-            <form>
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="p-3 p-md-4 p-lg-5">
                 <div class="mb-4">
                     <label for="fullName" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="Masukkan nama lengkap Anda">
+                    <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Masukkan nama lengkap Anda">
                 </div>
 
                 <div class="mb-4">
-                    <label for="fullName" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="Email" placeholder="Email">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-lg" id="Email" placeholder="Email">
                 </div>
        
                 <div class="mb-4">
                     <label for="contactNumber" class="form-label">No. HP/WhatsApp</label>
-                    <input type="text" class="form-control" id="contactNumber" placeholder="Masukkan nomor HP atau WhatsApp Anda">
+                    <input type="text" class="form-control form-control-lg" id="contactNumber" placeholder="Masukkan nomor HP atau WhatsApp Anda">
                 </div>
 
                 <div class="mb-4">
                     <label for="message" class="form-label">Tulis Pesan</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Tulis pesan Anda di sini"></textarea>
+                    <textarea class="form-control form-control-lg" id="message" rows="5" placeholder="Tulis pesan Anda di sini"></textarea>
                 </div>
                 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary w-100 py-3 mb-5" style="background-color: #1c4682; border: none;">
-                    <i class="bi bi-envelope-fill m-3"></i>Kirim Formulir</button>
+                <button type="submit" class="btn btn-primary w-100 py-3 mb-5" style="background-color: #1c4682; border: none;"><i class="bi bi-envelope-fill m-3"></i>Kirim Formulir</button>
             </form>
         </div>
     </div>
 </div>
 
 @include('footer')
+
+<style>
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Padding kiri-kanan agar penuh di tablet */
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Form field dan tombol lebih besar di tablet */
+        .form-control, .form-select, .form-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Membuat tombol lebih besar tanpa mengubah warna */
+        .btn {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 0; /* Lebih tebal di tablet */
+        }
+
+        /* Memberikan sedikit padding di form */
+        .p-md-4 {
+            padding: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    }
+</style>
