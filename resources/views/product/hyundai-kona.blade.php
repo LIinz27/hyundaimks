@@ -27,52 +27,68 @@
 </div>
 
 <style>
-    @media (max-width: 768px) {
-        .position-relative {
-            height: 200px !important; /* Sesuaikan tinggi background di mobile */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-item {
-            text-align: center; /* Tempatkan gambar di tengah secara horizontal */
-        }
-
-        #konaCarousel .carousel-item img {
-            max-width: 80%;
-            height: auto; /* Sesuaikan tinggi otomatis */
-            object-fit: contain;
-        }
-
-        .carousel-control-prev, .carousel-control-next {
-            transform: translateX(0);
-        }
+   @media (max-width: 768px) {
+    .position-relative {
+        height: 200px !important; /* Sesuaikan tinggi background di mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Pastikan elemen ini teratur dengan benar */
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-        .position-relative {
-            height: 300px !important; /* Tinggi background lebih pendek di tablet */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-item {
-            text-align: center;
-        }
-
-        #konaCarousel .carousel-item img {
-            max-width: 70%; /* Sedikit lebih kecil di tablet */
-            height: auto;
-            object-fit: contain;
-        }
-
-        .carousel-control-prev, .carousel-control-next {
-            transform: translateX(0);
-        }
+    .carousel-item {
+        text-align: center; /* Tempatkan gambar di tengah secara horizontal */
     }
 
+    #konaCarousel .carousel-item img {
+        max-width: 80%;
+        height: auto; /* Sesuaikan tinggi otomatis */
+        object-fit: contain;
+    }
+
+    /* Menambahkan z-index yang lebih tinggi pada hamburger menu */
+    .navbar-toggler {
+        z-index: 9999; /* Memastikan hamburger menu berada di atas carousel control */
+    }
+
+    /* Mengatur posisi tombol kontrol carousel agar tidak menutupi tombol hamburger */
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: 1; /* Menurunkan z-index pada tombol kontrol carousel */
+    }
+}
+
+/* Responsif untuk tampilan tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .position-relative {
+        height: 300px !important; /* Tinggi background lebih pendek di tablet */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Pastikan elemen ini teratur dengan benar */
+    }
+
+    .carousel-item {
+        text-align: center;
+    }
+
+    #konaCarousel .carousel-item img {
+        max-width: 70%; /* Sedikit lebih kecil di tablet */
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Menambahkan z-index yang lebih tinggi pada hamburger menu */
+    .navbar-toggler {
+        z-index: 9999; /* Memastikan hamburger menu berada di atas carousel control */
+    }
+
+    /* Mengatur posisi tombol kontrol carousel agar tidak menutupi tombol hamburger */
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: 1; /* Menurunkan z-index pada tombol kontrol carousel */
+    }
+}
 
 </style>
 
@@ -228,7 +244,6 @@
             margin-right: 6px;
         }
     }
-
 
 </style>
 
