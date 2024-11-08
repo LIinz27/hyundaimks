@@ -256,8 +256,8 @@
                         spaceBetween: 30
                     },
                     640: {
-                        slidesPerView: 3,
-                        spaceBetween: 40
+                        slidesPerView: 2,
+                        spaceBetween: 30
                     },
                     769: {
                         slidesPerView: 2,
