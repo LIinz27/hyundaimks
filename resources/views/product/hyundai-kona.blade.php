@@ -518,7 +518,7 @@
 
 <div class="text-center full-bg" style="margin-top: 50px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
     <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI KONA ELECTRIC</h2>
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/6jp_2C6OIGY" title="The all-new KONA | Product Review" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
+    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/6jp_2C6OIGY" title="The all-new KONA | Product Review" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
 </div>
 
 <style>
@@ -552,7 +552,7 @@
             margin-top: 25px; /* Margin atas sedikit lebih besar daripada mobile */
         }
 
-        iframe {
+        iframe.yt {
             width: 100%; /* Membuat lebar iframe 100% dari layar tablet */
             height: 600px; /* Menambah tinggi iframe untuk memastikan tampilan lebih panjang */
             max-width: 100%; /* Menyesuaikan iframe agar tidak lebih lebar dari layar */
