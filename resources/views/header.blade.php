@@ -30,6 +30,7 @@
                             <li><a class="dropdown-item" href="{{ url('/product/stargazer-x') }}">Hyundai STARGAZER X</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/hyundai-kona') }}">Hyundai KONA ELECTRIC</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/santa-fe') }}">Hyundai SANTA FE</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product/staria') }}">Hyundai STARIA</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/ioniq-5') }}">Hyundai IONIQ 5</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/palisade') }}">Hyundai PALISADE</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/ioniq-6') }}">Hyundai IONIQ 6</a></li>
