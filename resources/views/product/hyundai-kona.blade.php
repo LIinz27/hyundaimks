@@ -30,43 +30,40 @@
 <style>
    @media (max-width: 768px) {
     .position-relative {
-        height: 200px !important; /* Sesuaikan tinggi background di mobile */
+        height: 200px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; /* Pastikan elemen ini teratur dengan benar */
+        position: relative; 
     }
 
     .carousel-item {
-        text-align: center; /* Tempatkan gambar di tengah secara horizontal */
+        text-align: center; 
     }
 
     #konaCarousel .carousel-item img {
         max-width: 80%;
-        height: auto; /* Sesuaikan tinggi otomatis */
+        height: auto; 
         object-fit: contain;
     }
 
-    /* Menambahkan z-index yang lebih tinggi pada hamburger menu */
     .navbar-toggler {
-        z-index: 9999; /* Memastikan hamburger menu berada di atas carousel control */
+        z-index: 9999; 
     }
 
-    /* Mengatur posisi tombol kontrol carousel agar tidak menutupi tombol hamburger */
     .carousel-control-prev,
     .carousel-control-next {
-        z-index: 1; /* Menurunkan z-index pada tombol kontrol carousel */
+        z-index: 1; 
     }
 }
 
-/* Responsif untuk tampilan tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .position-relative {
-        height: 300px !important; /* Tinggi background lebih pendek di tablet */
+        height: 300px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; /* Pastikan elemen ini teratur dengan benar */
+        position: relative;
     }
 
     .carousel-item {
@@ -74,20 +71,18 @@
     }
 
     #konaCarousel .carousel-item img {
-        max-width: 70%; /* Sedikit lebih kecil di tablet */
+        max-width: 70%; 
         height: auto;
         object-fit: contain;
     }
 
-    /* Menambahkan z-index yang lebih tinggi pada hamburger menu */
     .navbar-toggler {
-        z-index: 9999; /* Memastikan hamburger menu berada di atas carousel control */
+        z-index: 9999; 
     }
 
-    /* Mengatur posisi tombol kontrol carousel agar tidak menutupi tombol hamburger */
     .carousel-control-prev,
     .carousel-control-next {
-        z-index: 1; /* Menurunkan z-index pada tombol kontrol carousel */
+        z-index: 1;
     }
 }
 
@@ -142,18 +137,18 @@
 
     @media (max-width: 768px) {
         .container .row {
-            flex-wrap: wrap; /* Izinkan kolom untuk membungkus jika terlalu panjang */
-            gap: 1rem; /* Berikan jarak antar elemen */
+            flex-wrap: wrap; 
+            gap: 1rem; 
         }
 
         .container .col-md-5 {
-            flex: 1 1 100%; /* Lebar kolom menyesuaikan penuh pada mobile */
+            flex: 1 1 100%; 
             max-width: 100%;
-            margin: 0; /* Hapus margin horizontal */
+            margin: 0; 
         }
 
         .container .p-4 {
-            padding: 1rem; /* Kurangi padding untuk layar kecil */
+            padding: 1rem; 
         }
 
         .container h4 {
@@ -166,9 +161,9 @@
             padding: 0.6rem 1rem;
             flex: 1 1 auto;
             text-align: center;
-            display: flex; /* Gunakan flexbox untuk memusatkan konten */
-            align-items: center; /* Pusatkan teks secara vertikal */
-            justify-content: center; /* Pusatkan teks secara horizontal */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
         }
 
         .container .btn i {
@@ -201,7 +196,6 @@
             justify-content: space-between;
         }
 
-        /* Pengaturan tombol agar teks di tengah */
         .container .d-flex.gap-3 {
             flex-direction: column;
             gap: 1rem;
@@ -210,26 +204,24 @@
 
         .container .btn {
             width: 100%;
-            display: flex; /* Gunakan Flexbox untuk tombol */
-            align-items: center; /* Pusatkan teks secara vertikal */
-            justify-content: center; /* Pusatkan teks secara horizontal */
-            text-align: center; /* Pusatkan teks */
+            display: flex; 
+            align-items: center;
+            justify-content: center; 
+            text-align: center; 
         }
 
         .container .btn i {
-            margin-right: 6px; /* Jarak ikon dari teks */
+            margin-right: 6px;
         }
 
-        /* Promo Khusus Section */
         .promo-khusus .p-4 {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
 
-        /* Tombol di bawah teks pada Promo Khusus */
         .promo-khusus .d-flex.flex-column {
-            margin-top: 1rem; /* Tambahkan jarak di bawah judul */
+            margin-top: 1rem;
             align-items: stretch;
         }
 
@@ -525,37 +517,37 @@
 
     @media (max-width: 768px) {
         .text-center.full-bg {
-            padding: 15px 10px; /* Memberikan padding lebih kecil di mobile */
+            padding: 15px 10px;
         }
 
         .heading-title {
-            font-size: 20px; /* Ukuran font lebih kecil */
+            font-size: 20px; 
             margin-bottom: 30px;
-            margin-top: 20px; /* Mengurangi margin atas */
+            margin-top: 20px; 
         }
 
-        iframe {
-            width: 100%; /* Membuat lebar iframe 100% dari layar */
-            height: auto; /* Tinggi menyesuaikan dengan lebar */
-            max-width: 100%; /* Menyesuaikan iframe agar tidak lebih lebar dari layar */
+        iframe.yt {
+            width: 100%; 
+            height: auto; 
+            max-width: 100%; 
         }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
         .text-center.full-bg {
-            padding: 20px 15px; /* Padding sedikit lebih besar daripada mobile */
+            padding: 20px 15px; 
         }
 
         .heading-title {
-            font-size: 24px; /* Ukuran font sedikit lebih besar untuk tablet */
+            font-size: 24px;
             margin-bottom: 40px;
-            margin-top: 25px; /* Margin atas sedikit lebih besar daripada mobile */
+            margin-top: 25px; 
         }
 
         iframe.yt {
-            width: 100%; /* Membuat lebar iframe 100% dari layar tablet */
-            height: 600px; /* Menambah tinggi iframe untuk memastikan tampilan lebih panjang */
-            max-width: 100%; /* Menyesuaikan iframe agar tidak lebih lebar dari layar */
+            width: 100%; 
+            height: 600px; 
+            max-width: 100%; 
         }
     }
 

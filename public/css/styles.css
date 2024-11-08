@@ -163,7 +163,7 @@
 
     .contact-image {
         flex: 1;
-        text-align: center; /* Menempatkan gambar di tengah */
+        text-align: center; 
         margin: 3%;
         border: 3px #163b5a solid;
         border-radius: 2%;
@@ -171,7 +171,7 @@
 
     .contact-text {
         flex: 1;
-        text-align: center; /* Menempatkan teks di tengah */
+        text-align: center; 
         color: #333;
     }
 
@@ -190,11 +190,11 @@
     }
 
     .contact-details {
-        list-style-type: disc; /* Menambahkan bullet */
+        list-style-type: disc; 
         padding-left: 20px;
         margin-bottom: 10%;
         font-weight: 700;
-        text-align: left; /* Menyelaraskan daftar ke kiri */
+        text-align: left; 
     }
 
     .button-group {
@@ -206,7 +206,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 100%; /* Memperpanjang tombol dari kiri ke kanan */
+        width: 100%; 
         padding: 10px;
         font-size: 14px;
         cursor: pointer;
@@ -238,45 +238,45 @@
 
     @media (max-width: 768px) {
         .contact-container {
-            flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
-            align-items: center; /* Menyelaraskan item ke tengah */
-            text-align: center; /* Menjaga teks di tengah */
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
         }
 
         .contact-image {
-            margin: 0; /* Menghilangkan margin pada tampilan mobile */
-            width: 90%; /* Menyesuaikan lebar gambar pada tampilan mobile */
+            margin: 0; 
+            width: 90%; 
         }
 
         .contact-text {
-            margin: 0; /* Menghilangkan margin pada tampilan mobile */
-            width: 80%; /* Menyesuaikan lebar teks pada tampilan mobile */
+            margin: 0; 
+            width: 80%; 
         }
 
         .contact-text h3 {
-            font-size: 32px; /* Menyesuaikan ukuran font pada mobile */
+            font-size: 32px; 
         }
 
         .contact-text p {
-            font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+            font-size: 24px; 
         }
 
         .contact-details {
-            padding-left: 20px; /* Menyelaraskan daftar dengan bullet tetap rata kiri */
-            margin: 10px 0; /* Menyesuaikan margin pada daftar */
-            text-align: left; /* Menyelaraskan daftar tetap rata kiri pada mobile */
+            padding-left: 20px; 
+            margin: 10px 0;
+            text-align: left; 
         }
 
         .button-group {
-            flex-direction: column; /* Mengatur tombol dalam kolom */
-            gap: 5px; /* Mengurangi jarak antar tombol */
+            flex-direction: column; 
+            gap: 5px; 
             width: 100%;
             align-items: center;
         }
 
         .wa-button, .contact-button {
-            width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
-            padding: 10px; /* Menyusun padding tombol */
+            width: 100%; 
+            padding: 10px; 
         }
     }
 
@@ -511,8 +511,8 @@
         align-items: center;
         gap: 20px;
         padding: 0 20px;
-        max-width: 1200px; /* Membatasi lebar kontainer pada desktop */
-        margin: 0 auto; /* Pusatkan kontainer */
+        max-width: 1200px; 
+        margin: 0 auto; 
     }
     
     .promo-container .promo-item {
@@ -524,7 +524,7 @@
         position: relative;
         z-index: 2;
         width: 100%;
-        max-width: 300px; /* Batasi lebar setiap item promo agar rapi */
+        max-width: 300px; 
         box-sizing: border-box;
         text-align: center;
     }
@@ -561,9 +561,6 @@
         color: #1C4682;
     }
     
-    /* Responsive Layout */
-    
-    /* Tablet Layout */
     @media (min-width: 768px) and (max-width: 1024px) {
         .promo-container {
             display: grid;
@@ -601,7 +598,7 @@
     
         .promo-container .promo-item {
             width: 100%;
-            max-width: 80%; /* Menggunakan lebar penuh pada mobile */
+            max-width: 80%; 
             padding: 15px;
             text-align: center;
         }
@@ -678,45 +675,45 @@
 
     @media (max-width: 768px) {
     .content-container {
-        flex-direction: column; /* Mengatur elemen menjadi kolom pada tampilan mobile */
+        flex-direction: column; 
         align-items: center;
-        text-align: center; /* Menjaga teks di tengah */
+        text-align: center; 
     }
 
     .image-container, .text-container {
-        margin: 0; /* Menghilangkan margin pada tampilan mobile */
-        width: 87%; /* Menyesuaikan lebar pada tampilan mobile */
+        margin: 0; 
+        width: 87%; 
     }
 
     .text-container {
-        display: flex; /* Menambahkan display flex */
-        flex-direction: column; /* Mengatur arah konten menjadi kolom */
-        align-items: center; /* Menyelaraskan item ke tengah */
-        text-align: center; /* Menjaga teks di tengah */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
 
     .text-container h3 {
-        font-size: 24px; /* Menyesuaikan ukuran font pada mobile */
+        font-size: 24px; 
     }
 
     .text-container p {
-        font-size: 16px; /* Menyesuaikan ukuran font pada mobile */
+        font-size: 16px; 
     }
 
     .testdrive-button {
-        display: flex; /* Menjadikan tombol sebagai flex container */
-        justify-content: center; /* Menyelaraskan konten secara horizontal di tengah */
-        align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
-        width: 100%; /* Membuat tombol memanjang dari kiri ke kanan */
-        padding: 10px; /* Menyusun padding tombol */
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+        padding: 10px; 
         font-size: 14px;
-        margin: 10px 0; /* Menambahkan margin vertikal untuk tombol */
-        border: none; /* Menghilangkan border jika ada */
-        border-radius: 5px; /* Menjaga sudut tombol tetap melengkung */
-        background-color: #1C4682; /* Warna latar belakang */
-        color: #ffffff; /* Warna teks tombol */
-        cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang dapat diklik */
-        transition: background-color 0.3s; /* Transisi saat hover */
+        margin: 10px 0; 
+        border: none;
+        border-radius: 5px; 
+        background-color: #1C4682; 
+        color: #ffffff; 
+        cursor: pointer;
+        transition: background-color 0.3s; 
     }
 }
 
@@ -846,23 +843,21 @@
 
     @media (min-width: 768px) {
         .footer .container .row {
-            display: flex; /* Mengatur menjadi baris */
-            justify-content: space-between; /* Spasi antara kolom */
-            flex-wrap: nowrap; /* Mencegah kolom turun ke baris berikutnya */
+            display: flex; 
+            justify-content: space-between;
+            flex-wrap: nowrap; 
         }
     
         .footer .col-lg-3, .footer .col-md-6 {
-            flex: 1; /* Membagi setiap kolom agar memiliki lebar yang sama */
+            flex: 1; 
             margin-right: 20px;
         }
     
         .footer .col-lg-3:last-child, .footer .col-md-6:last-child {
-            margin-right: 0; /* Menghilangkan margin pada kolom terakhir */
+            margin-right: 0; 
         }
     }
     
-
-    /* Media Query untuk tampilan mobile */
     @media (max-width: 768px) {
         .footer .container {
             text-align: left;
@@ -878,7 +873,7 @@
         }
 
         .footer ul {
-            padding-left: 20px; /* Menambahkan indentasi agar bullet point terlihat */
+            padding-left: 20px; 
         }
     }
 
