@@ -90,6 +90,7 @@
 
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center d-flex align-items-stretch gy-4">
+        
         <!-- Daftar Harga Section -->
         <div class="col-md-5 d-flex mx-3">
             <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
@@ -115,40 +116,40 @@
 
         <!-- Promo Khusus Section -->
         <div class="col-md-5 d-flex mx-3 promo-khusus">
-    <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
-        <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
-            Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
-        </h4>            
-        <div class="d-flex flex-column gap-4 mt-3">
-            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
-                <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
-            </a>
-            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
-                <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
-            </a>
+            <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
+                <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
+                    Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
+                </h4>            
+                <div class="d-flex flex-column gap-4 mt-3">
+                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
+                        <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
+                    </a>
+                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
+                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
     </div>
 </div>
 
 <style>
-
+    
     @media (max-width: 768px) {
         .container .row {
-            flex-wrap: wrap; 
-            gap: 1rem; 
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .container .col-md-5 {
-            flex: 1 1 100%; 
+            flex: 1 1 100%;
             max-width: 100%;
-            margin: 0; 
+            margin: 0;
         }
 
         .container .p-4 {
-            padding: 1rem; 
+            padding: 1rem;
         }
 
         .container h4 {
@@ -161,9 +162,9 @@
             padding: 0.6rem 1rem;
             flex: 1 1 auto;
             text-align: center;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container .btn i {
@@ -175,7 +176,7 @@
             flex-wrap: wrap;
         }
     }
-    
+
     @media (min-width: 768px) and (max-width: 1024px) {
         .container .row {
             display: flex;
@@ -204,10 +205,10 @@
 
         .container .btn {
             width: 100%;
-            display: flex; 
+            display: flex;
             align-items: center;
-            justify-content: center; 
-            text-align: center; 
+            justify-content: center;
+            text-align: center;
         }
 
         .container .btn i {
@@ -237,8 +238,8 @@
             margin-right: 6px;
         }
     }
-
 </style>
+
 
 <div class="benefit-section mt-5">
     <div class="benefit-container">
@@ -508,6 +509,21 @@
     </table>
 </div>
 
+<style>
+    
+    @media (max-width: 768px) {
+        .container h3 {
+            font-size: 18px;
+        }
+
+        .table th, .table td {
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+
+</style>
+
 <div class="text-center full-bg" style="margin-top: 50px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
     <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI KONA ELECTRIC</h2>
     <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/6jp_2C6OIGY" title="The all-new KONA | Product Review" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
@@ -516,7 +532,7 @@
 <style>
 
     @media (max-width: 768px) {
-        .text-center.full-bg {
+        .text-center {
             padding: 15px 10px;
         }
 
@@ -534,7 +550,7 @@
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        .text-center.full-bg {
+        .text-center {
             padding: 20px 15px; 
         }
 
