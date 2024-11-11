@@ -49,7 +49,7 @@
 
 <style>
     @media (min-width: 768px) and (max-width: 1024px) {
-        /* Padding kiri-kanan agar penuh di tablet */
+        
         .container {
             padding-left: 0;
             padding-right: 0;
@@ -60,20 +60,17 @@
             margin-right: 0;
         }
 
-        /* Form field dan tombol lebih besar di tablet */
         .form-control, .form-select, .form-label {
             font-size: 1.1rem;
             font-weight: 500;
         }
 
-        /* Membuat tombol lebih besar tanpa mengubah warna */
         .btn {
             font-size: 1.2rem;
             font-weight: bold;
-            padding: 12px 0; /* Lebih tebal di tablet */
+            padding: 12px 0; 
         }
 
-        /* Memberikan sedikit padding di form */
         .p-md-4 {
             padding: 20px;
         }

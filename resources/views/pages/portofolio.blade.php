@@ -57,11 +57,15 @@ const galleryImages = [];
                     },
                     480: {
                         slidesPerView: 2,
-                        spaceBetween: 30
+                        spaceBetween: 5
                     },
                     640: {
+                        slidesPerView: 2,
+                        spaceBetween: 5
+                    },
+                    1029: {
                         slidesPerView: 3,
-                        spaceBetween: 40
+                        spaceBetween: 5
                     }
                 }
             });
