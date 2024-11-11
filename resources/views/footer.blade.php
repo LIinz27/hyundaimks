@@ -53,10 +53,33 @@
             </div>
         </div>
     </div>
-</footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bubble Head HTML -->
+<div class="bubble-head" onclick="toggleDropup()">
+    <i class="bi bi-chat-dots"></i> Hubungi Kami
+</div>
+
+<div class="dropup-content" id="dropup">
+    <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i> Email</a>
+    <a href="tel:+1234567890"><i class="bi bi-telephone"></i> Telepon</a>
+</div>
+
+<script>
+    function toggleDropup() {
+        var dropup = document.getElementById("dropup");
+        dropup.style.display = (dropup.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        var dropup = document.getElementById("dropup");
+        var bubbleHead = document.querySelector(".bubble-head");
+        if (event.target !== bubbleHead && !bubbleHead.contains(event.target)) {
+            dropup.style.display = "none";
+        }
+    };
+</script>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
