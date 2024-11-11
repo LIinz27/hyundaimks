@@ -1,43 +1,21 @@
-        var PartnerSwiper = new Swiper(".PartnerSwiper", {
-        autoplay: {
-            delay: 1000, 
-            disableOnInteraction: false,
-        },
-        loop: true,
-        slidesPerView: 5,
-        spaceBetween: 10, 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-            slidesPerView: 3,
-            spaceBetween: 5
-            },
-            // when window width is >= 480px
-            480: {
-            slidesPerView: 3,
-            spaceBetween: 5
-            },
-            // when window width is >= 640px
-            640: {
-            slidesPerView: 3,
-            spaceBetween: 10
-            },
-            769: {
-            slidesPerView: 3,
-            spaceBetween: 10
-            },
-            1029: {
-            slidesPerView: 5,
-            spaceBetween: 5
-            }
-        }
-    }
-);
+let lastScrollTop = 0; // Keeps track of the last scroll position
+const header = document.getElementById('header'); // Get the header element
 
+window.addEventListener('scroll', function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // If user scrolls down, hide the header
+        header.classList.add('hidden');
+    } else {
+        // If user scrolls up, show the header
+        header.classList.remove('hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+});
+
+        
         // Display cars
         const cars = [
             {
@@ -330,3 +308,58 @@
             });
         }
         document.addEventListener('DOMContentLoaded', displayGalleryImages);
+
+        var PartnerSwiper = new Swiper(".PartnerSwiper", {
+            autoplay: {
+                delay: 1000, 
+                disableOnInteraction: false,
+            },
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 10, 
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                slidesPerView: 3,
+                spaceBetween: 5
+                },
+                // when window width is >= 480px
+                480: {
+                slidesPerView: 3,
+                spaceBetween: 5
+                },
+                // when window width is >= 640px
+                640: {
+                slidesPerView: 3,
+                spaceBetween: 10
+                },
+                769: {
+                slidesPerView: 3,
+                spaceBetween: 10
+                },
+                1029: {
+                    slidesPerView: 5,
+                    spaceBetween: 10
+                }
+            }
+        }
+    );
+
+        // bublehead
+
+        function toggleDropup() {
+            var dropup = document.getElementById("dropup");
+            dropup.style.display = (dropup.style.display === "block") ? "none" : "block";
+        }
+    
+        window.onclick = function(event) {
+            var dropup = document.getElementById("dropup");
+            var bubbleHead = document.querySelector(".bubble-head");
+            if (event.target !== bubbleHead && !bubbleHead.contains(event.target)) {
+                dropup.style.display = "none";
+            }
+        };

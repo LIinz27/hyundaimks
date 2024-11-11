@@ -13,9 +13,9 @@
 </head>
 <body>
 
-    <header class="navbar navbar-expand-lg navbar-light py-3">
+    <header class="navbar navbar-expand-lg navbar-light py-3" id="header">
         <div class="container d-flex justify-space-between">
-            <img src="{{ asset('images\LOGO-HYUNDAI.png') }}" alt="Gambar logo" class="img-fluid" style="max-height: 30px; object-fit: cover;" />
+            <a href="{{ url('/') }}"><img src="{{ asset('images\LOGO-HYUNDAI.png') }}" alt="Gambar logo" class="img-fluid" style="max-height: 30px; object-fit: cover;" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +23,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link me-3" href="{{ url('/') }}">Beranda</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle me-3" href="#" id="tipeMobilDropdown" role="button" aria-expanded="false">Tipe Mobil</a>
+                        <a class="nav-link dropdown-toggle me-3" href="#" id="tipeMobilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tipe Mobil
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="tipeMobilDropdown">
                             <li><a class="dropdown-item" href="{{ url('/product/stargazer') }}">Hyundai STARGAZER</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/creta') }}">Hyundai CRETA</a></li>
@@ -36,7 +38,7 @@
                             <li><a class="dropdown-item" href="{{ url('/product/ioniq-6') }}">Hyundai IONIQ 6</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product/all-new-santa-fe') }}">Hyundai ALL NEW SANTA FE</a></li>
                         </ul>
-                    </li>
+                    </li>                                        
                     <li class="nav-item"><a class="nav-link me-3" href="{{ url('/pricelist') }}">Pricelist</a></li>
                     <li class="nav-item"><a class="nav-link me-3" href="{{ url('/proses-kredit') }}">Proses Kredit</a></li>
                     <li class="nav-item"><a class="nav-link me-3" href="{{ url('/simulasi-kredit') }}">Simulasi Kredit</a></li>
