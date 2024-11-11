@@ -13,22 +13,30 @@
         breakpoints: {
             // when window width is >= 320px
             320: {
-            slidesPerView: 1,
-            spaceBetween: 10
+            slidesPerView: 3,
+            spaceBetween: 5
             },
             // when window width is >= 480px
             480: {
-            slidesPerView: 2,
-            spaceBetween: 10
+            slidesPerView: 3,
+            spaceBetween: 5
             },
             // when window width is >= 640px
             640: {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 10
+            },
+            769: {
+            slidesPerView: 3,
+            spaceBetween: 10
+            },
+            1029: {
+            slidesPerView: 5,
+            spaceBetween: 5
             }
-
-        }});
-
+        }
+    }
+);
 
         // Display cars
         const cars = [
@@ -248,6 +256,14 @@
                         spaceBetween: 30
                     },
                     640: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    769: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1029: {
                         slidesPerView: 3,
                         spaceBetween: 40
                     }
@@ -299,8 +315,16 @@
                         spaceBetween: 30
                     },
                     640: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
                         spaceBetween: 40
+                    },
+                    769: {
+                        slidesPerView: 2,
+                        spaceBetween: 5
+                    },
+                    1029: {
+                        slidesPerView: 3,
+                        spaceBetween: 5
                     }
                 }
             });
