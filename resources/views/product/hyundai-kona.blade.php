@@ -10,7 +10,7 @@
         <div class="carousel-inner">
             @for ($i = 1; $i <= 5; $i++)
                 <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
-                    <img src="{{ asset('images/hyundai-kona/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
+                    <img src="{{ asset('images/car/hyundai-kona/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
                 </div>
             @endfor
         </div>
