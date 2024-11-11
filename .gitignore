@@ -21,3 +21,4 @@ yarn-error.log
 /.vscode
 /.zed
 /resources/views/test.blade.php
+/database/database.sqlite
