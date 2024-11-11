@@ -1,5 +1,4 @@
-<!-- hyundai-stargazer.blade.php -->
-
+<!-- hyundai-kona.blade.php -->
 @section('title', 'HYUNDAI STARGAZER - Dealer Hyundai Makassar')
 @include('header')
 
@@ -11,13 +10,13 @@
         <div class="carousel-inner">
             @for ($i = 1; $i <= 6; $i++)
                 <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
-                    <img src="{{ asset('images/hyundai-stargazer/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai stargazer Slide {{ $i }}" style="object-fit: contain; height: 500px;">
+                    <img src="{{ asset('images/hyundai-stargazer/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
                 </div>
             @endfor
         </div>
 
-       <!-- Carousel Controls -->
-       <button class="carousel-control-prev" type="button" data-bs-target="#konaCarousel" data-bs-slide="prev" style="transform: translateX(50%);">
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#konaCarousel" data-bs-slide="prev" style="transform: translateX(50%);">
             <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
             <span class="visually-hidden">Previous</span>
         </button>
@@ -44,7 +43,7 @@
 
     #konaCarousel .carousel-item img {
         max-width: 80%;
-        height: auto;
+        height: auto; 
         object-fit: contain;
     }
 
@@ -54,7 +53,7 @@
 
     .carousel-control-prev,
     .carousel-control-next {
-        z-index: 1;
+        z-index: 1; 
     }
 }
 
@@ -83,7 +82,7 @@
 
     .carousel-control-prev,
     .carousel-control-next {
-        z-index: 1; 
+        z-index: 1;
     }
 }
 
@@ -91,6 +90,7 @@
 
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center d-flex align-items-stretch gy-4">
+        
         <!-- Daftar Harga Section -->
         <div class="col-md-5 d-flex mx-3">
             <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
@@ -116,40 +116,40 @@
 
         <!-- Promo Khusus Section -->
         <div class="col-md-5 d-flex mx-3 promo-khusus">
-    <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
-        <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
-            Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
-        </h4>            
-        <div class="d-flex flex-column gap-4 mt-3">
-            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
-                <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
-            </a>
-            <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
-                <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
-            </a>
+            <div class="p-4 rounded shadow-sm h-100 w-100" style="background-color: #F1F1F1; border: 1px solid #ddd;">
+                <h4 class="fw-bold text-start mb-3" style="font-size: 1.25rem; color: #1c4682;">
+                    Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
+                </h4>            
+                <div class="d-flex flex-column gap-4 mt-3">
+                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #1c4682; border: none;">
+                        <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
+                    </a>
+                    <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
+                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI STARGAZER
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
     </div>
 </div>
 
 <style>
-
+    
     @media (max-width: 768px) {
         .container .row {
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 1rem;
         }
 
         .container .col-md-5 {
-            flex: 1 1 100%; 
+            flex: 1 1 100%;
             max-width: 100%;
-            margin: 0; 
+            margin: 0;
         }
 
         .container .p-4 {
-            padding: 1rem; 
+            padding: 1rem;
         }
 
         .container h4 {
@@ -163,8 +163,8 @@
             flex: 1 1 auto;
             text-align: center;
             display: flex;
-            align-items: center; 
-            justify-content: center; 
+            align-items: center;
+            justify-content: center;
         }
 
         .container .btn i {
@@ -176,7 +176,7 @@
             flex-wrap: wrap;
         }
     }
-    
+
     @media (min-width: 768px) and (max-width: 1024px) {
         .container .row {
             display: flex;
@@ -205,14 +205,14 @@
 
         .container .btn {
             width: 100%;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .container .btn i {
-            margin-right: 6px; 
+            margin-right: 6px;
         }
 
         .promo-khusus .p-4 {
@@ -222,7 +222,7 @@
         }
 
         .promo-khusus .d-flex.flex-column {
-            margin-top: 1rem; 
+            margin-top: 1rem;
             align-items: stretch;
         }
 
@@ -238,8 +238,8 @@
             margin-right: 6px;
         }
     }
-
 </style>
+
 
 <div class="benefit-section mt-5">
     <div class="benefit-container">
@@ -274,7 +274,7 @@
     </div>
 </div>
 
-<!-- Hyundai KONA Electric Performance Table -->
+<!-- Hyundai STARGAZER Performance Table -->
 <div class="container mt-5" style="background-color: #F1F1F1; padding: 20px; border-radius: 10px; width: 80%;">
     <h3 class="mb-4">Performa</h3>
     <table class="table table-bordered" style="width: 100%;">
@@ -509,24 +509,40 @@
     </table>
 </div>
 
+<style>
+    
+    @media (max-width: 768px) {
+        .container h3 {
+            font-size: 18px;
+        }
+
+        .table th, .table td {
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+
+</style>
+
 <div class="text-center full-bg" style="margin-top: 50px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
-    <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI STARGAZER</h2>
-    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/Ap2um9HvDNQ" title="Hyundai STARGAZER - Bintang Baru Keluarga" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI KONA ELECTRIC</h2>
+    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/Ap2um9HvDNQ" title="Hyundai STARGAZER - Bintang Baru Keluarga" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
+</div>
 
 <style>
 
     @media (max-width: 768px) {
-        .text-center.full-bg {
-            padding: 15px 10px; 
+        .text-center {
+            padding: 15px 10px;
         }
 
         .heading-title {
-            font-size: 20px;
+            font-size: 20px; 
             margin-bottom: 30px;
             margin-top: 20px; 
         }
 
-        iframe.yt{
+        iframe.yt {
             width: 100%; 
             height: auto; 
             max-width: 100%; 
@@ -534,8 +550,8 @@
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        .text-center.full-bg {
-            padding: 20px 15px;
+        .text-center {
+            padding: 20px 15px; 
         }
 
         .heading-title {
