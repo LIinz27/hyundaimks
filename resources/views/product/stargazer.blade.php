@@ -3,14 +3,14 @@
 @include('header')
 
 <!-- Carousel Section -->
-<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px;">
+<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px; margin-top:5%;">
     <div id="konaCarousel" class="carousel slide" data-bs-ride="carousel">
         
         <!-- Carousel Images -->
         <div class="carousel-inner">
             @for ($i = 1; $i <= 6; $i++)
                 <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
-                    <img src="{{ asset('images/hyundai-stargazer/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
+                    <img src="{{ asset('images/car/hyundai-stargazer/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
                 </div>
             @endfor
         </div>
@@ -30,7 +30,7 @@
 <style>
    @media (max-width: 768px) {
     .position-relative {
-        height: 200px !important; 
+        height: 300px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -46,20 +46,11 @@
         height: auto; 
         object-fit: contain;
     }
-
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1; 
-    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .position-relative {
-        height: 300px !important; 
+        height: 350px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
