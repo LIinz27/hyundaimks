@@ -66,15 +66,6 @@
         height: auto;
         object-fit: contain;
     }
-
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1;
-    }
 }
 
 </style>
