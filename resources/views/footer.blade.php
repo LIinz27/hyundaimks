@@ -27,14 +27,14 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tipe Mobil</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-stargazer">Hyundai Stargazer</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-creta">Hyundai Creta</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-santa-fe">Hyundai Santa FE</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-palisade">Hyundai Palisade</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-staria">Hyundai Staria</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-ioniq5">Hyundai Ioniq 5</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/hyundai-kona-electric">Hyundai Kona Electric</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/all-new-santa-fe">All New Santa Fe</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/stargazer">Hyundai Stargazer</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/creta">Hyundai Creta</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/santa-fe">Hyundai Santa FE</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/palisade">Hyundai Palisade</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/staria">Hyundai Staria</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/ioniq5">Hyundai Ioniq 5</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/kona-electric">Hyundai Kona Electric</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/all-new-santa-fe">All New Santa Fe</a></li>
                 </ul>
             </div>
 
