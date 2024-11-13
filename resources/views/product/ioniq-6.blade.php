@@ -8,22 +8,13 @@
         
         <!-- Carousel Images -->
         <div class="carousel-inner">
-            @for ($i = 1; $i <= 5; $i++)
+            @for ($i = 1; $i <= 1; $i++)
                 <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
                     <img src="{{ asset('images/car/ioniq-6/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
                 </div>
             @endfor
         </div>
 
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#konaCarousel" data-bs-slide="prev" style="transform: translateX(50%);">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#konaCarousel" data-bs-slide="next" style="transform: translateX(-50%);">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </div>
 
