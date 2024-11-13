@@ -2,7 +2,7 @@
 
 <div class="container-fluid mt-4">
     <div class="text-center mb-4">
-        <img src="{{ asset('images/SAMPUL-WEB-1.png') }}" alt="Gambar Sampul" class="img-fluid rounded w-100" style="max-height: 600px; object-fit: cover;" />
+        <img src="{{ asset('images/SAMPUL-WEB-1.png') }}" alt="Gambar Sampul" class="img-fluid rounded w-100" style="max-height: 600px; object-fit: cover; margin-top: 5%;" />
     </div>
 
     <div class="container mt-4">

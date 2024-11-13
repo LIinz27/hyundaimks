@@ -1,16 +1,16 @@
 <!-- hyundai-kona.blade.php -->
-@section('title', 'HYUNDAI KONA ELECTRIC - Dealer Hyundai Makassar')
+@section('title', 'HYUNDAI STARGAZER X - Dealer Hyundai Makassar')
 @include('header')
 
 <!-- Carousel Section -->
-<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px;">
+<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px; margin-top:5%">
     <div id="konaCarousel" class="carousel slide" data-bs-ride="carousel">
         
         <!-- Carousel Images -->
         <div class="carousel-inner">
             @for ($i = 1; $i <= 5; $i++)
                 <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
-                    <img src="{{ asset('images/car/hyundai-kona/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
+                    <img src="{{ asset('images/car/hyundai-stargazer-x/' . $i . '.png') }}" class="d-block mx-auto" alt="Hyundai Kona Slide {{ $i }}" style="object-fit: contain; height: 500px;">
                 </div>
             @endfor
         </div>
@@ -30,11 +30,11 @@
 <style>
    @media (max-width: 768px) {
     .position-relative {
-        height: 200px !important; 
+        height: 300px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; 
+        position: relative;
     }
 
     .carousel-item {
@@ -46,20 +46,11 @@
         height: auto; 
         object-fit: contain;
     }
-
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1; 
-    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .position-relative {
-        height: 300px !important; 
+        height: 350px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -125,7 +116,7 @@
                         <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
                     </a>
                     <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
-                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI KONA ELECTRIC
+                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI STARGAZER X
                     </a>
                 </div>
             </div>
@@ -244,7 +235,7 @@
 <div class="benefit-section mt-5">
     <div class="benefit-container">
         <ul class="benefit-list">
-            <h3 class="benefit-heading">Keuntungan membeli HYUNDAI KONA ELECTRIC di Hyundai Makassar</h3>
+            <h3 class="benefit-heading">Keuntungan membeli STARGAZER X di Hyundai Makassar</h3>
             <li>Transaksi online aman 100%</li>
             <li>Melayani cash, kredit, tukar tambah atau COP kantor</li>
             <li>Data & BI CHECKING dibantu sampai approve</li>
@@ -274,34 +265,34 @@
     </div>
 </div>
 
-<!-- Hyundai KONA Electric Performance Table -->
+<!-- Hyundai STARGAZER X Performance Table -->
 <div class="container mt-5" style="background-color: #F1F1F1; padding: 20px; border-radius: 10px; width: 80%;">
     <h3 class="mb-4">Performa</h3>
     <table class="table table-bordered" style="width: 100%;">
         <tbody>
             <tr>
                 <th scope="row" style="width: 50%;">Jenis Bahan Bakar</th>
-                <td style="width: 50%;">Electric</td>
+                <td style="width: 50%;">Bensin</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Tenaga</th>
-                <td style="width: 50%;">134 hp</td>
+                <td style="width: 50%;">113 hp</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">RPM At Max Power</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">6300 RPM</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Kapasitas Mesin</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1497 cc</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Torsi</th>
-                <td style="width: 50%;">395 Nm</td>
+                <td style="width: 50%;">144 Nm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">RPM At Max Torque</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">45000 RPM</td>
             </tr>
         </tbody>
     </table>
@@ -310,31 +301,31 @@
         <tbody>
             <tr>
                 <th scope="row" style="width: 50%;">Kapasitas Bagasi</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">585 L</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Ruang Kepala Depan</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1056 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Ruang Kepala Belakang</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">961 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Middle Row Legroom</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1014 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Berat Bersih</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1191 kg</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Panjang</th>
-                <td style="width: 50%;">4205 mm</td>
+                <td style="width: 50%;">4460 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Tinggi</th>
-                <td style="width: 50%;">1570 mm</td>
+                <td style="width: 50%;">1695 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jumlah Pintu</th>
@@ -342,23 +333,23 @@
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Kapasitas Tangki Bahan Bakar</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">40 L</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Berat Kotor</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1780 kg</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Lebar</th>
-                <td style="width: 50%;">1800 mm</td>
+                <td style="width: 50%;">1780 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jarak Sumbu Roda</th>
-                <td style="width: 50%;">2600 mm</td>
+                <td style="width: 50%;">2780 mm</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Kapasitas Tempat duduk</th>
-                <td style="width: 50%;">5 Kursi</td>
+                <td style="width: 50%;">7 Kursi</td>
             </tr>
         </tbody>
     </table>
@@ -367,7 +358,7 @@
         <tbody>
             <tr>
                 <th scope="row" style="width: 50%;">Jenis Transmisi</th>
-                <td style="width: 50%;">Otomatis</td>
+                <td style="width: 50%;">Manual</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jenis Penggerak</th>
@@ -375,7 +366,7 @@
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Girboks</th>
-                <td style="width: 50%;">Single Speed</td>
+                <td style="width: 50%;">6 - Speed</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Steering Wheel Gearshift Paddle</th>
@@ -393,15 +384,15 @@
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Suspensi Depan</th>
-                <td style="width: 50%;">MacPherson Strut</td>
+                <td style="width: 50%;">Double Wishbon</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jenis Rem Belakang</th>
-                <td style="width: 50%;">Discs</td>
+                <td style="width: 50%;">Double Wishbon</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Suspensi Belakang</th>
-                <td style="width: 50%;">Multi-Link</td>
+                <td style="width: 50%;">Torsion Beam</td>
             </tr>
         </tbody>
     </table>
@@ -411,23 +402,23 @@
         <tbody>
             <tr>
                 <th scope="row" style="width: 50%;">Mesin</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">1.5L Petrol Engine, 4 Cylinder 16 Valve</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Sistem Suplai Bahan Bakar</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">MPI</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jumlah Silinder</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">4</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Katup per Silinder</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">4</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Tipe Baterai</th>
-                <td style="width: 50%;">Lithium-ion</td>
+                <td style="width: 50%;"></td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Regenerative Braking</th>
@@ -447,7 +438,7 @@
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Emission</th>
-                <td style="width: 50%;">0 g/km</td>
+                <td style="width: 50%;"></td>
             </tr>
         </tbody>
     </table>
@@ -457,27 +448,27 @@
         <tbody>
             <tr>
                 <th scope="row" style="width: 50%;">Velg alloy</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">Ya</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Ukuran Velg Alloy</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">15 Inch</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Jenis Ban</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">Radial</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Cover Velg</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">Tidak</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Ukuran Ban</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">185/65 R15</td>
             </tr>
             <tr>
                 <th scope="row" style="width: 50%;">Ukuran Velg</th>
-                <td style="width: 50%;"></td>
+                <td style="width: 50%;">R15</td>
             </tr>
         </tbody>
     </table>
@@ -525,8 +516,8 @@
 </style>
 
 <div class="text-center full-bg" style="margin-top: 50px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
-    <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI KONA ELECTRIC</h2>
-    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/6jp_2C6OIGY" title="The all-new KONA | Product Review" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 15px;"></iframe>
+    <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI STARGAZER X</h2>
+    <iframe class= "yt" width="1280" height="720" src="https://www.youtube.com/embed/zbrALbCopKs" title="STARGAZER X: Unleash the X in you" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style = "border-radius : 15px;"></iframe>
 </div>
 
 <style>
