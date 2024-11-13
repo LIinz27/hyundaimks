@@ -3,7 +3,7 @@
 @include('header')
 
 <!-- Carousel Section -->
-<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px;">
+<div class="position-relative" style="background-image: url('{{ asset('images/bg-colors-desktop.jpeg') }}'); background-size: cover; background-position: center; height: 550px; margin-top:5%">
     <div id="konaCarousel" class="carousel slide" data-bs-ride="carousel">
         
         <!-- Carousel Images -->
@@ -30,11 +30,11 @@
 <style>
    @media (max-width: 768px) {
     .position-relative {
-        height: 200px !important; 
+        height: 300px !important; 
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; 
+        position: relative;
     }
 
     .carousel-item {
@@ -46,20 +46,11 @@
         height: auto; 
         object-fit: contain;
     }
-
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1; 
-    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .position-relative {
-        height: 300px !important; 
+        height: 350px !important; 
         display: flex;
         align-items: center;
         justify-content: center;

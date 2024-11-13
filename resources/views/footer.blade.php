@@ -14,7 +14,7 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Tautan Cepat</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/beranda">Beranda</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/">Beranda</a></li>
                     <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/pricelist">Pricelist Terbaru</a></li>
                     <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/proses-kredit">Proses Kredit</a></li>
                     <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/simulasi-kredit">Simulasi Kredit</a></li>
