@@ -58,14 +58,6 @@
         object-fit: contain;
     }
 
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1;
-    }
 }
 
 </style>
@@ -107,7 +99,7 @@
                         <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
                     </a>
                     <a href="#" class="btn btn-success fw-bold px-4 py-3" style="background-color: #000000; border: none;">
-                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI SANTA FE
+                        <i class="bi bi-download"></i> Unduh E-Brosur HYUNDAI IONIQ 6
                     </a>
                 </div>
             </div>
