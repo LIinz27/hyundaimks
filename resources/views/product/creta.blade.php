@@ -66,15 +66,6 @@
         height: auto;
         object-fit: contain;
     }
-
-    .navbar-toggler {
-        z-index: 9999; 
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1;
-    }
 }
 
 </style>
@@ -517,7 +508,7 @@
 
 <div class="text-center full-bg" style="margin-top: 50px; background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
     <h2 class="heading-title" style="font-size: 26px; color:#1c4682; font-weight: bolder; margin-bottom: 50px; margin-top: 30px">Video HYUNDAI CRETA</h2>
-    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/FW0OBtFiJvI" title="Hyundai CRETA | Spotlight in Motion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style = "border-radius: 15px;"></iframe>
+    <iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/FW0OBtFiJvI" title="Hyundai CRETA | Spotlight in Motion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style = "border-radius: 15;"></iframe>
 </div>
 
 <style>
