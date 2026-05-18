@@ -72,17 +72,17 @@
         <div class="promo-item text-center col ">
             <i class="bi bi-list-task promo-icon"></i>
             <h3>Pricelist Terbaru</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="/pricelist" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-credit-card promo-icon"></i>
             <h3>Proses Kredit</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="/proses-kredit" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-pencil-square promo-icon"></i>
             <h3>Simulasi Kredit</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="/simulasi-kredit" class="promo-button">Selengkapnya &rarr;</a>
         </div>
     </div>
 </div>
@@ -97,9 +97,9 @@
         <div class="text-container">
             <h3>Test Drive Hyundai</h3>
             <p>Yuk Test Drive Sebelum Membeli, Rasakan Pengalaman Mengendarai <strong>Mobil Hyundai</strong>, Ajak Serta Keluarga Anda.</p>
-            <button class="testdrive-button">
+            <a href="/tes-drive" class="testdrive-button">
                 <i class="bi bi-whatsapp"></i> Daftar Test Drive
-            </button>
+            </a>
         </div>
     </div>
 </div>
@@ -111,9 +111,9 @@
     <div class="pricelist-heading">
         <h2>Segera konsultasikan harga mobil impian anda sekarang juga</h2>
         <div class="btn-container">
-            <button class="btn btn-download">
+            <a href="/pricelist-download" class="btn btn-download">
                 Unduh Pricelist <i class="bi bi-file-earmark-arrow-down"></i>
-            </button>
+            </a>
         </div>
     </div>
 </div>

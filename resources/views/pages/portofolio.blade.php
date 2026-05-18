@@ -19,12 +19,7 @@
 </div>
 
 <script>
-const galleryImages = [];
-        const galleryImageCount = 7;
-
-        for (let i = 1; i <= galleryImageCount; i++) {
-            galleryImages.push(`/images/Galeri/Galeri-Hyundai-${i}.png`);
-        }
+const galleryImages = {!! json_encode($galeriImages) !!};
 
         function displayGalleryImages() {
             const gallerySwiperWrapper = document.querySelector('.newSwiper .swiper-wrapper');

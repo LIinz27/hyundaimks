@@ -15,25 +15,40 @@
     
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
-            <form class="p-3 p-md-4 p-lg-5">
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i>{{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
+            <form class="p-3 p-md-4 p-lg-5" method="POST" action="{{ route('kontak.store') }}">
+                @csrf
                 <div class="mb-4">
-                    <label for="fullName" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Masukkan nama lengkap Anda">
+                    <label for="nama" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control form-control-lg @error('nama') is-invalid @enderror"
+                           id="nama" name="nama" value="{{ old('nama') }}" placeholder="Masukkan nama lengkap Anda">
+                    @error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <div class="mb-4">
-                    <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control form-control-lg" id="Email" placeholder="Email">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
+                           id="email" name="email" value="{{ old('email') }}" placeholder="Email">
+                    @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
        
                 <div class="mb-4">
-                    <label for="contactNumber" class="form-label">No. HP/WhatsApp</label>
-                    <input type="text" class="form-control form-control-lg" id="contactNumber" placeholder="Masukkan nomor HP atau WhatsApp Anda">
+                    <label for="telepon" class="form-label">No. HP/WhatsApp</label>
+                    <input type="text" class="form-control form-control-lg @error('telepon') is-invalid @enderror"
+                           id="telepon" name="telepon" value="{{ old('telepon') }}" placeholder="Masukkan nomor HP atau WhatsApp Anda">
+                    @error('telepon')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <div class="mb-4">
-                    <label for="message" class="form-label">Tulis Pesan</label>
-                    <textarea class="form-control form-control-lg" id="message" rows="5" placeholder="Tulis pesan Anda di sini"></textarea>
+                    <label for="pesan" class="form-label">Tulis Pesan</label>
+                    <textarea class="form-control form-control-lg @error('pesan') is-invalid @enderror"
+                              id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini">{{ old('pesan') }}</textarea>
+                    @error('pesan')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
                 
                 <!-- Submit Button -->

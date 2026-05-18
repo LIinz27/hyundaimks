@@ -78,7 +78,7 @@
                     <a href="#" class="btn btn-primary d-flex align-items-center" style="background-color: #1c4682; border: none;">
                         <i class="bi bi-whatsapp me-2"></i> Info Promo
                     </a>
-                    <a href="#" class="btn btn-secondary d-flex align-items-center" style="background-color: #3069C4; border: none;">
+                    <a href="{{ route('pricelist.download') }}" class="btn btn-secondary d-flex align-items-center" style="background-color: #3069C4; border: none;">
                         <i class="bi bi-file-earmark-arrow-down-fill me-2"></i> Unduh Pricelist
                     </a>
                     <a href="#" class="btn btn-secondary d-flex align-items-center" style="background-color: #000000; border: none;">

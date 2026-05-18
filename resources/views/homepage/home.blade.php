@@ -2,19 +2,18 @@
 
 <div class="container-fluid mt-4">
     <div class="text-center mb-4">
-        <img src="{{ asset('images/SAMPUL-WEB-1.png') }}" alt="Gambar Sampul" class="img-fluid rounded w-100" style="max-height: 600px; object-fit: cover; margin-top: 5%;" />
+        @php $bannerSrc = $banner ? asset($banner->filename) : asset('images/SAMPUL-WEB-1.png'); @endphp
+        <img src="{{ $bannerSrc }}" alt="Gambar Sampul" class="img-fluid rounded w-100" style="max-height: 600px; object-fit: cover; margin-top: 5%;" />
     </div>
 
     <div class="container mt-4">
-        <h2 class="text-center mb-5">Promo Terbaru 2024</h2>
+        <h2 class="text-center mb-5">{{ $siteSettings['judul_promo'] ?? 'Promo Terbaru 2024' }}</h2>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Konten gambar Untuk Promo -->
-            </div>
+            <div class="swiper-wrapper"></div>
             <div class="swiper-pagination"></div>              
         </div>
         <div class="text-center mt-4">
-            <button class="btn btn-primary" style="background-color: #1C4682; border: none; padding: 15px 40px; font-size: 16px;">Klik di sini</button>
+            <a href="https://wa.me/{{ preg_replace('/\D/', '', $siteSettings['whatsapp'] ?? '6281242906882') }}?text=Halo%2C%20saya%20tertarik%20dengan%20promo%20Hyundai%20Makassar" target="_blank" class="btn btn-primary" style="background-color: #1C4682; border: none; padding: 15px 40px; font-size: 16px;">Klik di sini</a>
         </div>
     </div>
 
@@ -43,30 +42,38 @@
 
 
 <!-- Contact -->
+@if ($salesProfile)
 <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
     <div class="contact-container d-flex align-items-center justify-content-center">
         <div class="contact-image">
-            <img style="border-radius: 2%" src="{{ asset('images/Fadli-Kuntuls.jpg') }}" alt="Hyundai Creta Feature" class="img-fluid">
+            <img style="border-radius: 2%" src="{{ asset('images/' . $salesProfile->foto) }}" alt="{{ $salesProfile->nama }}" class="img-fluid">
         </div>
         <div class="contact-text">
-            <h3>Rukman Fadli</h3>
-            <p>Profesional Sales Consultant</p>
+            <h3>{{ $salesProfile->nama }}</h3>
+            <p>{{ $salesProfile->jabatan }}</p>
             <ul class="contact-details">
-                <li>Melayani tukar tambah mobil lama dengan harga tinggi.</li>
-                <li>Layanan Chat 24 Jam Fast Respon.</li>
-                <li>Bisa konsultasi langsung ke dealer kami dengan finance langsung.</li>
-                <li>Survey dibantu sampai approval.</li>
+                @foreach ($salesProfile->keunggulan ?? [] as $poin)
+                    <li>{{ $poin }}</li>
+                @endforeach
             </ul>
             <div class="button-group">
-                <button class="wa-button">
-                    <i class="bi bi-whatsapp"></i> <strong>0896-1688-0688</strong>
+                <button class="wa-button" onclick="window.open('https://wa.me/62{{ ltrim($salesProfile->whatsapp, '0') }}','_blank')">
+                    <i class="bi bi-whatsapp"></i> <strong>{{ $salesProfile->whatsapp }}</strong>
                 </button>
-                <button class="contact-button">
-                    <i class="bi bi-telephone-fill"></i> <strong>0896-1688-0688</strong>
+                <button class="contact-button" onclick="window.location.href='tel:{{ $salesProfile->telepon }}'">
+                    <i class="bi bi-telephone-fill"></i> <strong>{{ $salesProfile->telepon }}</strong>
                 </button>
             </div>
         </div>
     </div>
 </div>
+@endif
+
+<script>
+window._galleryImages  = {!! json_encode($galeriImages) !!};
+window._cars           = {!! json_encode($cars) !!};
+window._promoImages    = {!! json_encode($promoImages) !!};
+window._partnerImages  = {!! json_encode($partnerImages) !!};
+</script>
 
 @include('footer')

@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5>Hyundai Mobil Pettarani</h5>
                 <p>
-                    Jl. A. P. Pettarani No.55, Bua Kana, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90231, Indonesia
+                    {{ $siteSettings['alamat'] ?? 'Jl. A. P. Pettarani No.55, Makassar' }}
                 </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.6741777767293!2d119.43534717425133!3d-5.15602616659745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee3785c0d47d7%3A0x5c6e300074880996!2sHyundai%20Pettarani%20Official!5e0!3m2!1sid!2ssg!4v1730361990363!5m2!1sid!2ssg" 
                         width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -60,9 +60,9 @@
 </div>
 
 <div class="dropup-content" id="dropup">
-    <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-    <a href="mailto:contact@example.com"><i class="bi bi-envelope"></i> Email</a>
-    <a href="tel:+1234567890"><i class="bi bi-telephone"></i> Telepon</a>
+    <a href="https://wa.me/62{{ ltrim($siteSettings['whatsapp'] ?? '0896168806880', '0') }}" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:{{ $siteSettings['email'] ?? 'info@hyundaimks.com' }}"><i class="bi bi-envelope"></i> Email</a>
+    <a href="tel:{{ $siteSettings['telepon'] ?? '0896-1688-0688' }}"><i class="bi bi-telephone"></i> Telepon</a>
 </div>
 
 <script>
@@ -82,7 +82,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}?v={{ filemtime(public_path('js/scripts.js')) }}"></script>
 </body>
 </html>
 

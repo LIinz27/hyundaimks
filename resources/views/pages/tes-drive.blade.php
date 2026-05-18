@@ -15,27 +15,52 @@
     
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
-            <form class="p-3 p-md-4 p-lg-5">
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i>{{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            @endif
+            <form class="p-3 p-md-4 p-lg-5" method="POST" action="{{ route('tesdrive.store') }}">
+                @csrf
                 <div class="mb-4">
-                    <label for="fullName" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Masukkan nama lengkap Anda">
+                    <label for="nama" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control form-control-lg @error('nama') is-invalid @enderror"
+                           id="nama" name="nama" value="{{ old('nama') }}" placeholder="Masukkan nama lengkap Anda">
+                    @error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
        
                 <div class="mb-4">
-                    <label for="contactNumber" class="form-label">No. HP/WhatsApp</label>
-                    <input type="text" class="form-control form-control-lg" id="contactNumber" placeholder="Masukkan nomor HP atau WhatsApp Anda">
+                    <label for="telepon" class="form-label">No. HP/WhatsApp</label>
+                    <input type="text" class="form-control form-control-lg @error('telepon') is-invalid @enderror"
+                           id="telepon" name="telepon" value="{{ old('telepon') }}" placeholder="Masukkan nomor HP atau WhatsApp Anda">
+                    @error('telepon')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <div class="mb-4">
-                    <label for="testDriveDate" class="form-label">Tanggal Tes Drive</label>
-                    <input type="date" class="form-control form-control-lg" id="testDriveDate" onclick="this.showPicker()" placeholder="Pilih tanggal tes drive Anda">
+                    <label for="tanggal" class="form-label">Tanggal Tes Drive</label>
+                    <input type="date" class="form-control form-control-lg @error('tanggal') is-invalid @enderror"
+                           id="tanggal" name="tanggal" value="{{ old('tanggal') }}" onclick="this.showPicker()">
+                    @error('tanggal')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
                 
                 <div class="mb-4">
-                    <label for="carType" class="form-label">Tipe Mobil</label>
-                    <select class="form-select form-control-lg" id="carType">
-                        <option selected disabled>Pilih tipe mobil</option>
+                    <label for="tipe_mobil" class="form-label">Tipe Mobil</label>
+                    <select class="form-select form-control-lg @error('tipe_mobil') is-invalid @enderror"
+                            id="tipe_mobil" name="tipe_mobil">
+                        <option value="" disabled {{ old('tipe_mobil') ? '' : 'selected' }}>Pilih tipe mobil</option>
+                        <option value="Hyundai STARGAZER" {{ old('tipe_mobil') == 'Hyundai STARGAZER' ? 'selected' : '' }}>Hyundai STARGAZER</option>
+                        <option value="Hyundai STARGAZER X" {{ old('tipe_mobil') == 'Hyundai STARGAZER X' ? 'selected' : '' }}>Hyundai STARGAZER X</option>
+                        <option value="Hyundai CRETA" {{ old('tipe_mobil') == 'Hyundai CRETA' ? 'selected' : '' }}>Hyundai CRETA</option>
+                        <option value="Hyundai KONA" {{ old('tipe_mobil') == 'Hyundai KONA' ? 'selected' : '' }}>Hyundai KONA</option>
+                        <option value="Hyundai SANTA FE" {{ old('tipe_mobil') == 'Hyundai SANTA FE' ? 'selected' : '' }}>Hyundai SANTA FE</option>
+                        <option value="Hyundai All New SANTA FE" {{ old('tipe_mobil') == 'Hyundai All New SANTA FE' ? 'selected' : '' }}>Hyundai All New SANTA FE</option>
+                        <option value="Hyundai STARIA" {{ old('tipe_mobil') == 'Hyundai STARIA' ? 'selected' : '' }}>Hyundai STARIA</option>
+                        <option value="Hyundai IONIQ 5" {{ old('tipe_mobil') == 'Hyundai IONIQ 5' ? 'selected' : '' }}>Hyundai IONIQ 5</option>
+                        <option value="Hyundai IONIQ 6" {{ old('tipe_mobil') == 'Hyundai IONIQ 6' ? 'selected' : '' }}>Hyundai IONIQ 6</option>
+                        <option value="Hyundai PALISADE" {{ old('tipe_mobil') == 'Hyundai PALISADE' ? 'selected' : '' }}>Hyundai PALISADE</option>
                     </select>
+                    @error('tipe_mobil')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <!-- Submit Button -->
