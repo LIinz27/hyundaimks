@@ -1,5 +1,5 @@
 <!-- benefit -->
-<div class="benefit-section">
+<div class="benefit-section benefit-section-home">
     <div class="benefit-container">
         <ul class="benefit-list">
             <h3 class="benefit-heading">Keuntungan membeli di Hyundai Makassar</h3>
@@ -32,88 +32,82 @@
     </div>
 </div>
 
-
-
 <!-- Reason -->
 <div class="reason-section">
     <div class="reason-heading text-center">
         <h2>ALASAN MENGAPA KAMI MERUPAKAN DEALER YANG TEPAT UNTUK ANDA</h2>
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
-    
-    <div class="reason-container d-flex justify-content-center gap-4 ">
+
+    <div class="reason-container d-flex justify-content-center gap-4">
         <div class="reason-item text-center col-sm-4 col-12">
-            <i class="bi bi-check-circle promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-check-circle promo-icon reason-icon"></i>
             <h3>Proses Mudah & Cepat</h3>
             <p>Proses Kredit Mudah & Cepat menjadi hal terbaik yang kami persembahkan untuk anda.</p>
         </div>
         <div class="reason-item text-center col-sm-4 col-12">
-            <i class="bi bi-people promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-people promo-icon reason-icon"></i>
             <h3>Sales Berpengalaman</h3>
             <p>Pengalaman menjadi modal utama kami untuk terus memberikan pelayanan terbaik kepada konsumen.</p>
         </div>
         <div class="reason-item text-center col-sm-4 col-12">
-            <i class="bi bi-wallet2 promo-icon" style="font-size: 3rem; color: #1C4682;"></i>
+            <i class="bi bi-wallet2 promo-icon reason-icon"></i>
             <h3>Harga Fleksibel</h3>
             <p>Kami menawarkan harga yang cocok sesuai anggaran belanja Anda untuk mendapatkan mobil impian Anda.</p>
         </div>
     </div>
 </div>
 
-
 <!-- PROMO KREDIT -->
 <div class="promo-section">
     <div class="promo-heading text-center">
-        <h2 style="font-weight: bolder;">PROMO KREDIT UNIT HYUNDAI</h2>
+        <h2 class="fw-bolder">PROMO KREDIT UNIT HYUNDAI</h2>
         <p>Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
     </div>
-    
-    <div class="promo-container d-flex justify-content-center gap-4 ">
-        <div class="promo-item text-center col ">
+
+    <div class="promo-container d-flex justify-content-center gap-4">
+        <div class="promo-item text-center col">
             <i class="bi bi-list-task promo-icon"></i>
             <h3>Pricelist Terbaru</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="{{ url('/pricelist') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-credit-card promo-icon"></i>
             <h3>Proses Kredit</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="{{ url('/proses-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-pencil-square promo-icon"></i>
             <h3>Simulasi Kredit</h3>
-            <button class="promo-button">Selengkapnya &rarr;</button>
+            <a href="{{ url('/simulasi-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
     </div>
 </div>
 
-
 <!-- Test Drive -->
-<div class="text-center mb-3 full-bg d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/white-background-with-triangle-patterns_1017-18410.jpg') }}'); background-size: cover; background-position: center;">
+<div class="text-center mb-3 full-bg pattern-bg d-flex align-items-center justify-content-center">
     <div class="content-container d-flex align-items-center justify-content-center">
         <div class="image-container">
-            <img style="border-radius: 2%" src="{{ asset('images/hyundai-creta-fitur-5.webp') }}" alt="Hyundai Creta Feature" class="img-fluid">
+            <img class="rounded-2 img-fluid" src="{{ asset('images/hyundai-creta-fitur-5.webp') }}" alt="Hyundai Creta Feature">
         </div>
         <div class="text-container">
             <h3>Test Drive Hyundai</h3>
             <p>Yuk Test Drive Sebelum Membeli, Rasakan Pengalaman Mengendarai <strong>Mobil Hyundai</strong>, Ajak Serta Keluarga Anda.</p>
-            <button class="testdrive-button">
+            <a href="{{ url('/tes-drive') }}" class="testdrive-button text-decoration-none">
                 <i class="bi bi-whatsapp"></i> Daftar Test Drive
-            </button>
+            </a>
         </div>
     </div>
 </div>
-
-
 
 <!-- Pricelist -->
 <div class="pricelist-section">
     <div class="pricelist-heading">
         <h2>Segera konsultasikan harga mobil impian anda sekarang juga</h2>
         <div class="btn-container">
-            <button class="btn btn-download">
+            <a href="{{ url('/pricelist') }}" class="btn btn-download">
                 Unduh Pricelist <i class="bi bi-file-earmark-arrow-down"></i>
-            </button>
+            </a>
         </div>
     </div>
 </div>

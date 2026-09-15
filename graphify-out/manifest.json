@@ -1,0 +1,884 @@
+{
+  ".opencode/opencode.json": {
+    "mtime": 1789479168.944151,
+    "seen": 1789479309.1022243,
+    "ast_hash": "abcc8b9dcd80bca5f9dde6d9f0c3ae79",
+    "semantic_hash": ""
+  },
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1789479168.944055,
+    "seen": 1789479309.102227,
+    "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
+    "semantic_hash": ""
+  },
+  "app/Http/Controllers/Controller.php": {
+    "mtime": 1789479037.6338382,
+    "seen": 1789479309.1022282,
+    "ast_hash": "e703fc471df213c31f3608d40530397c",
+    "semantic_hash": ""
+  },
+  "app/Models/User.php": {
+    "mtime": 1789475293.0524714,
+    "seen": 1789479309.1022298,
+    "ast_hash": "54d8905d828c845a035441e219519e05",
+    "semantic_hash": ""
+  },
+  "app/Providers/AppServiceProvider.php": {
+    "mtime": 1789475293.0524714,
+    "seen": 1789479309.1022308,
+    "ast_hash": "c0094f35cad6bba7636002a62186dae4",
+    "semantic_hash": ""
+  },
+  "artisan": {
+    "mtime": 1789475293.0524714,
+    "seen": 1789479309.102232,
+    "ast_hash": "6db4e64ab2d4fa6230e6dad951a79530",
+    "semantic_hash": ""
+  },
+  "bootstrap/app.php": {
+    "mtime": 1789475293.0524714,
+    "seen": 1789479309.1022334,
+    "ast_hash": "3f8974b9195d258cbf6f924c79a66c41",
+    "semantic_hash": ""
+  },
+  "bootstrap/providers.php": {
+    "mtime": 1789475293.0534213,
+    "seen": 1789479309.1022437,
+    "ast_hash": "d18593472c5e35d8ab5add4240fc95f6",
+    "semantic_hash": ""
+  },
+  "composer.json": {
+    "mtime": 1789475293.0534213,
+    "seen": 1789479309.1022453,
+    "ast_hash": "a25897b3af65798ded77acf93b1d4cff",
+    "semantic_hash": ""
+  },
+  "config/app.php": {
+    "mtime": 1789475293.0538383,
+    "seen": 1789479309.1022468,
+    "ast_hash": "04bad29c587cf3fe5f1c7b7f63262c19",
+    "semantic_hash": ""
+  },
+  "config/auth.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022475,
+    "ast_hash": "b65c6daa01e89ecd22338a88fbae40ce",
+    "semantic_hash": ""
+  },
+  "config/cache.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022487,
+    "ast_hash": "488b21f09c887ceb3306242d0500736f",
+    "semantic_hash": ""
+  },
+  "config/cars.php": {
+    "mtime": 1789478934.7815924,
+    "seen": 1789479309.1022496,
+    "ast_hash": "cca48c72a892707388b987fa5dfa52d9",
+    "semantic_hash": ""
+  },
+  "config/database.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022503,
+    "ast_hash": "b7b09d68f8893547a7e5fbd5207fc8fa",
+    "semantic_hash": ""
+  },
+  "config/filesystems.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022513,
+    "ast_hash": "52654f1235518c1e978f8766a0fbbec9",
+    "semantic_hash": ""
+  },
+  "config/logging.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.102252,
+    "ast_hash": "fbb56a82ae25fc5d2ce556acf26838ad",
+    "semantic_hash": ""
+  },
+  "config/mail.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022527,
+    "ast_hash": "3dfc6aef3bd17072e52a421d8d5215c0",
+    "semantic_hash": ""
+  },
+  "config/queue.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.102254,
+    "ast_hash": "fa588a4871790fca01d6a90af9208d15",
+    "semantic_hash": ""
+  },
+  "config/services.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022546,
+    "ast_hash": "e3185f8bf937203123588b3884abf896",
+    "semantic_hash": ""
+  },
+  "config/session.php": {
+    "mtime": 1789475293.0546002,
+    "seen": 1789479309.1022553,
+    "ast_hash": "18c47205e34848ffffd98d4d65bd8e13",
+    "semantic_hash": ""
+  },
+  "config/site.php": {
+    "mtime": 1789478953.7978396,
+    "seen": 1789479309.1022563,
+    "ast_hash": "04475003f353fd1eda5280a9caf7a7ee",
+    "semantic_hash": ""
+  },
+  "database/factories/UserFactory.php": {
+    "mtime": 1789475293.0552132,
+    "seen": 1789479309.1022573,
+    "ast_hash": "e863c5e59a1728c6fd033e87269acda7",
+    "semantic_hash": ""
+  },
+  "database/migrations/0001_01_01_000000_create_users_table.php": {
+    "mtime": 1789475293.0552132,
+    "seen": 1789479309.1022582,
+    "ast_hash": "138280095e9d19f2ba6fb830415602e2",
+    "semantic_hash": ""
+  },
+  "database/migrations/0001_01_01_000001_create_cache_table.php": {
+    "mtime": 1789475293.0554883,
+    "seen": 1789479309.102259,
+    "ast_hash": "6803c10a1aa695d40633ec8bea5576d5",
+    "semantic_hash": ""
+  },
+  "database/migrations/0001_01_01_000002_create_jobs_table.php": {
+    "mtime": 1789475293.0554883,
+    "seen": 1789479309.1022599,
+    "ast_hash": "ead9cce2650b36345454f85e8c0214a0",
+    "semantic_hash": ""
+  },
+  "database/seeders/DatabaseSeeder.php": {
+    "mtime": 1789475293.0554883,
+    "seen": 1789479309.1022608,
+    "ast_hash": "203551b514520168139f67a8c8fb418f",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1789475293.0554883,
+    "seen": 1789479309.1022615,
+    "ast_hash": "e50b3cb1f9feccd5f1ea6d5b809bb59d",
+    "semantic_hash": ""
+  },
+  "postcss.config.js": {
+    "mtime": 1789475293.0554883,
+    "seen": 1789479309.1022623,
+    "ast_hash": "40617f13f9f0033c23f7830f6344cfd8",
+    "semantic_hash": ""
+  },
+  "public/index.php": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.102263,
+    "ast_hash": "f9b5759b193d6bcb41ce28e59781fc47",
+    "semantic_hash": ""
+  },
+  "public/js/scripts.js": {
+    "mtime": 1789479044.7858386,
+    "seen": 1789479309.1022637,
+    "ast_hash": "c09f84f16471aeb8cfde56a7d05edb10",
+    "semantic_hash": ""
+  },
+  "resources/js/app.js": {
+    "mtime": 1789475293.1086967,
+    "seen": 1789479309.1022646,
+    "ast_hash": "52791255e4bc9be6bcec92c922e0bde7",
+    "semantic_hash": ""
+  },
+  "resources/js/bootstrap.js": {
+    "mtime": 1789475293.1089115,
+    "seen": 1789479309.1022651,
+    "ast_hash": "78f909acc19aea4717eddca5a87c1ba3",
+    "semantic_hash": ""
+  },
+  "resources/views/footer.blade.php": {
+    "mtime": 1789479279.5338387,
+    "seen": 1789479309.102266,
+    "ast_hash": "3d1e5ef90c6d410bbecf9f5953ac84c4",
+    "semantic_hash": ""
+  },
+  "resources/views/header.blade.php": {
+    "mtime": 1789478964.8818395,
+    "seen": 1789479309.1022668,
+    "ast_hash": "d90d23e2b99ffe25f5eb7ec88cf0ebdb",
+    "semantic_hash": ""
+  },
+  "resources/views/homepage/benefit.blade.php": {
+    "mtime": 1789479001.2938397,
+    "seen": 1789479309.1022677,
+    "ast_hash": "2238e1937b34d2448f46c8e187f8ab45",
+    "semantic_hash": ""
+  },
+  "resources/views/homepage/card.blade.php": {
+    "mtime": 1789478993.0218396,
+    "seen": 1789479309.1022687,
+    "ast_hash": "e5ed06831e241d6757c253e9aa1fa38f",
+    "semantic_hash": ""
+  },
+  "resources/views/homepage/home.blade.php": {
+    "mtime": 1789478987.6898396,
+    "seen": 1789479309.1022692,
+    "ast_hash": "cfa714d04aa2ef1737dd547c79f41093",
+    "semantic_hash": ""
+  },
+  "resources/views/layouts/app.blade.php": {
+    "mtime": 1789478958.0898397,
+    "seen": 1789479309.1022704,
+    "ast_hash": "d571506c13470e829c5d41464f59e567",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/kontak.blade.php": {
+    "mtime": 1789479032.937838,
+    "seen": 1789479309.1022713,
+    "ast_hash": "074ea402aaae72f7ab072594355d2c01",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/kredit.blade.php": {
+    "mtime": 1789479014.033838,
+    "seen": 1789479309.102272,
+    "ast_hash": "a39f5c6d989e40ee07416f50394f0e6f",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/portofolio.blade.php": {
+    "mtime": 1789479028.2218382,
+    "seen": 1789479309.1022727,
+    "ast_hash": "304274f222d92807c554a18dacf5557a",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/pricelist.blade.php": {
+    "mtime": 1789479007.9298396,
+    "seen": 1789479309.1022735,
+    "ast_hash": "bd33d2f4f7edc9eaa33595dcddb622d5",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/simulasi.blade.php": {
+    "mtime": 1789479019.9658382,
+    "seen": 1789479309.1022744,
+    "ast_hash": "5c73a986f5745613b0c77e75b931729a",
+    "semantic_hash": ""
+  },
+  "resources/views/pages/tes-drive.blade.php": {
+    "mtime": 1789479024.789838,
+    "seen": 1789479309.1022756,
+    "ast_hash": "74c9d91ae9a837fdcaa24f76c439c2a4",
+    "semantic_hash": ""
+  },
+  "resources/views/product/show.blade.php": {
+    "mtime": 1789478981.2938397,
+    "seen": 1789479309.1022763,
+    "ast_hash": "7d5be8bc8840c4eb4cbca84ec50c5d10",
+    "semantic_hash": ""
+  },
+  "routes/console.php": {
+    "mtime": 1789475293.1102989,
+    "seen": 1789479309.1022773,
+    "ast_hash": "157ad0b9b9296dffe8c58855651fd02b",
+    "semantic_hash": ""
+  },
+  "routes/web.php": {
+    "mtime": 1789475293.1111887,
+    "seen": 1789479309.1022785,
+    "ast_hash": "031c24cf8c8b7afed98db4f6377fcf5b",
+    "semantic_hash": ""
+  },
+  "tailwind.config.js": {
+    "mtime": 1789475293.1124337,
+    "seen": 1789479309.1022792,
+    "ast_hash": "48eb44c9e53844088439bf11dd6076cc",
+    "semantic_hash": ""
+  },
+  "tests/Feature/ExampleTest.php": {
+    "mtime": 1789475293.1134973,
+    "seen": 1789479309.10228,
+    "ast_hash": "0f4d91c9c5bbcd4e2f46cf885acb7fb6",
+    "semantic_hash": ""
+  },
+  "tests/TestCase.php": {
+    "mtime": 1789475293.1134973,
+    "seen": 1789479309.1022809,
+    "ast_hash": "7e567dc27e68d5b57bae16af07f68907",
+    "semantic_hash": ""
+  },
+  "tests/Unit/ExampleTest.php": {
+    "mtime": 1789475293.1134973,
+    "seen": 1789479309.1022818,
+    "ast_hash": "3f679e9508c834f0ad95943455fcd836",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1789475293.1134973,
+    "seen": 1789479309.1022825,
+    "ast_hash": "804b9fdf6105c34a0a14bed82a9d6026",
+    "semantic_hash": ""
+  },
+  ".hermes-redesign-task.md": {
+    "mtime": 1789478836.2378643,
+    "seen": 1789479309.1022835,
+    "ast_hash": "1ea00cb0d6b11836c130522977b478dd",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1789479168.943405,
+    "seen": 1789479309.1022842,
+    "ast_hash": "16613505ca979a178acd3119af2f2f64",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789475293.0515912,
+    "seen": 1789479309.1022851,
+    "ast_hash": "345c4e360f5a178fa09e6b04d355aeef",
+    "semantic_hash": ""
+  },
+  "public/robots.txt": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.1022859,
+    "ast_hash": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "semantic_hash": ""
+  },
+  "public/images/01.-PRICELIST-19.06.2024.jpg": {
+    "mtime": 1789475293.0578382,
+    "seen": 1789479309.1022868,
+    "ast_hash": "bf48297f67e822c969fa38a70ce4efb3",
+    "semantic_hash": ""
+  },
+  "public/images/Fadli-Kuntuls.jpg": {
+    "mtime": 1789475293.0578382,
+    "seen": 1789479309.1022873,
+    "ast_hash": "aa55a2c4b233965341d58c132b800d61",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-1.png": {
+    "mtime": 1789475293.0578382,
+    "seen": 1789479309.1022882,
+    "ast_hash": "18d3022ab2d597999a3f55e1b04fa42a",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-2.png": {
+    "mtime": 1789475293.0618382,
+    "seen": 1789479309.102289,
+    "ast_hash": "2d45668d914e9f1b00fec75657e4372b",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-3.png": {
+    "mtime": 1789475293.0618382,
+    "seen": 1789479309.10229,
+    "ast_hash": "ba36265a8c08501b5684633314b7ceae",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-4.png": {
+    "mtime": 1789475293.065838,
+    "seen": 1789479309.1022906,
+    "ast_hash": "7c960a64590e9ebfb40d31477d3f6f0b",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-5.png": {
+    "mtime": 1789475293.065838,
+    "seen": 1789479309.1022913,
+    "ast_hash": "451a04b74ed475e54cad04389ceafc3a",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-6.png": {
+    "mtime": 1789475293.069838,
+    "seen": 1789479309.102292,
+    "ast_hash": "35450093c15c613ae8bf983d82822161",
+    "semantic_hash": ""
+  },
+  "public/images/Galeri/Galeri-Hyundai-7.png": {
+    "mtime": 1789475293.0738382,
+    "seen": 1789479309.1022928,
+    "ast_hash": "7302d250857db73f15703305e62834d3",
+    "semantic_hash": ""
+  },
+  "public/images/LOGO-HYUNDAI.png": {
+    "mtime": 1789475293.0738382,
+    "seen": 1789479309.102294,
+    "ast_hash": "98dccf8bed080a06ac1e5c0ceb5b8a7e",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0001.jpg": {
+    "mtime": 1789475293.0738382,
+    "seen": 1789479309.1022947,
+    "ast_hash": "f874e58c8350a0ce941095bf3e00048c",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0002.jpg": {
+    "mtime": 1789475293.0765398,
+    "seen": 1789479309.1022956,
+    "ast_hash": "af717213ac2e7b500635686d7234decc",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0003.jpg": {
+    "mtime": 1789475293.0765398,
+    "seen": 1789479309.1022964,
+    "ast_hash": "e189772115bf612683636b7d5912df38",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0004.jpg": {
+    "mtime": 1789475293.0778382,
+    "seen": 1789479309.102297,
+    "ast_hash": "68c6c24d4809fa9749dc058c09d3f11e",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0005.jpg": {
+    "mtime": 1789475293.0778382,
+    "seen": 1789479309.102298,
+    "ast_hash": "2b80376d091bf3ea1360f5871fa0e562",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0006.jpg": {
+    "mtime": 1789475293.0778382,
+    "seen": 1789479309.102299,
+    "ast_hash": "df393ad8a1449faf97f323e03912cc17",
+    "semantic_hash": ""
+  },
+  "public/images/Promo/IMG-20240911-WA0007.jpg": {
+    "mtime": 1789475293.0778382,
+    "seen": 1789479309.1022997,
+    "ast_hash": "87b5d70da0d9c76043b122fbbcb853b2",
+    "semantic_hash": ""
+  },
+  "public/images/SAMPUL-WEB-1.png": {
+    "mtime": 1789475293.0818381,
+    "seen": 1789479309.1023006,
+    "ast_hash": "3ce0916713435650014e9ade3875b685",
+    "semantic_hash": ""
+  },
+  "public/images/bg-colors-desktop.jpeg": {
+    "mtime": 1789475293.0818381,
+    "seen": 1789479309.1023016,
+    "ast_hash": "98866ec3503d978e3b8a63aee406e5a2",
+    "semantic_hash": ""
+  },
+  "public/images/car/ALL-NEW-SANTA.png": {
+    "mtime": 1789475293.0818381,
+    "seen": 1789479309.1023026,
+    "ast_hash": "630452cc5ad31c1743dd41e9e29280e3",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Creta.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.102335,
+    "ast_hash": "675a25997a0c1a8afe7307b0c968e5b1",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-IONIQ-6.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023376,
+    "ast_hash": "5babccdd8eeb10e45a1a923ecb03a3e9",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Ioniq-5.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023393,
+    "ast_hash": "fa174ce604e8d1ca00b8effe6c549360",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Kona.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023412,
+    "ast_hash": "b2dac29ff8c7247bd2a580fe7c5a0770",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Palisade.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023424,
+    "ast_hash": "b51aede60a795055b8329435b8fda215",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Santa-Fe.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023438,
+    "ast_hash": "ba89a72b7d324f139f26bcb62b169dc9",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Stargazer.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023452,
+    "ast_hash": "cac99dbd35c10e21657fc953a84ecc69",
+    "semantic_hash": ""
+  },
+  "public/images/car/Hyundai-Staria.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023462,
+    "ast_hash": "cdcc5d6631166a925640bb3cda849456",
+    "semantic_hash": ""
+  },
+  "public/images/car/Stargazer-X.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023479,
+    "ast_hash": "e583b2b2f17c12b5b627779893a78be8",
+    "semantic_hash": ""
+  },
+  "public/images/car/all-new-santa-fe/1.png": {
+    "mtime": 1789475293.0832515,
+    "seen": 1789479309.1023586,
+    "ast_hash": "5632ca8e8260a8874368094bc540da17",
+    "semantic_hash": ""
+  },
+  "public/images/car/all-new-santa-fe/2.png": {
+    "mtime": 1789475293.085838,
+    "seen": 1789479309.1023629,
+    "ast_hash": "7e256f9b3d262735446797766159460b",
+    "semantic_hash": ""
+  },
+  "public/images/car/all-new-santa-fe/3.png": {
+    "mtime": 1789475293.085838,
+    "seen": 1789479309.1023648,
+    "ast_hash": "e117d478be7de69fdc0dfe3d589b91d5",
+    "semantic_hash": ""
+  },
+  "public/images/car/all-new-santa-fe/4.png": {
+    "mtime": 1789475293.085838,
+    "seen": 1789479309.102366,
+    "ast_hash": "63eece4ff7a38f9064ace9bbdd3c4c91",
+    "semantic_hash": ""
+  },
+  "public/images/car/all-new-santa-fe/5.png": {
+    "mtime": 1789475293.085838,
+    "seen": 1789479309.1023672,
+    "ast_hash": "ff8dfe908d4065290f9027d9afd264be",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/1.png": {
+    "mtime": 1789475293.085838,
+    "seen": 1789479309.1023684,
+    "ast_hash": "802d0656d3f217fb8aea6ba7b424bdeb",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/2.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.102369,
+    "ast_hash": "0ca6c5bef602410ab9e01633952d7c71",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/3.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.1023698,
+    "ast_hash": "febf9ebf42cbeb4d1e6fe2f558084ec0",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/4.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.1023705,
+    "ast_hash": "7bd32e91fd3b30950686f110c239a087",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/5.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.1023712,
+    "ast_hash": "9c09a911e4268ada72c094f9f9a9222c",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/6.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.1023724,
+    "ast_hash": "e336f1d1d150f2a34ba17033344811a6",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-creta/7.png": {
+    "mtime": 1789475293.0890152,
+    "seen": 1789479309.102373,
+    "ast_hash": "4ca5fb084bebe74a31af18cf30f2547e",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-kona/1.png": {
+    "mtime": 1789475293.089838,
+    "seen": 1789479309.1023736,
+    "ast_hash": "de7109fc7eae3762a75249b6c996ac75",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-kona/2.png": {
+    "mtime": 1789475293.0912032,
+    "seen": 1789479309.1023746,
+    "ast_hash": "41900035367648976d2b62206d6c6265",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-kona/3.png": {
+    "mtime": 1789475293.0912032,
+    "seen": 1789479309.1023755,
+    "ast_hash": "59365b54604d325df601cb14e7c998dc",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-kona/4.png": {
+    "mtime": 1789475293.0912032,
+    "seen": 1789479309.1023762,
+    "ast_hash": "503f341fc64b0fb0f077fe2a1c6de3e4",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-kona/5.png": {
+    "mtime": 1789475293.0912032,
+    "seen": 1789479309.102377,
+    "ast_hash": "ea7c05c361785e3ab2e2be249f3ca9e9",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-palisade/1.png": {
+    "mtime": 1789475293.0912032,
+    "seen": 1789479309.1023777,
+    "ast_hash": "dfb54943a3f309772c634a0749fdf47d",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-palisade/2.png": {
+    "mtime": 1789475293.0941257,
+    "seen": 1789479309.1023786,
+    "ast_hash": "a561a172ad1e6f7a7d6673ff6d2aac77",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-palisade/3.png": {
+    "mtime": 1789475293.0941257,
+    "seen": 1789479309.1023798,
+    "ast_hash": "58e27535d43818f122fb59052771f8c4",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-palisade/4.png": {
+    "mtime": 1789475293.0941257,
+    "seen": 1789479309.1023808,
+    "ast_hash": "4356a172d7ae4e5db99179c88b8aa52f",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer-x/1.png": {
+    "mtime": 1789475293.0941257,
+    "seen": 1789479309.1023815,
+    "ast_hash": "8b48a3bad4149bcef45842ad46fc332a",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer-x/2.png": {
+    "mtime": 1789475293.095493,
+    "seen": 1789479309.1023824,
+    "ast_hash": "721a6be51556940dbcf05c28857e1c6f",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer-x/3.png": {
+    "mtime": 1789475293.095493,
+    "seen": 1789479309.1023834,
+    "ast_hash": "b2527824c9cd847dc4993fc8ca31e942",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer-x/4.png": {
+    "mtime": 1789475293.095493,
+    "seen": 1789479309.102384,
+    "ast_hash": "8a7eeadcb147a98ec7ca96345e58e0b0",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer-x/5.png": {
+    "mtime": 1789475293.095493,
+    "seen": 1789479309.1023846,
+    "ast_hash": "cf90846a98f7f99e9d54c33fe0d6fd5c",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/1.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023858,
+    "ast_hash": "6faf212dce49e43a248765f7c0d4efc3",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/2.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023865,
+    "ast_hash": "65f3d0e7e252af78451bcbf7fc5df470",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/3.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023874,
+    "ast_hash": "43199f0525c8e2ab1f16be44aa9a6c44",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/4.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023881,
+    "ast_hash": "a0d6c966350362603fe2b989bdb61555",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/5.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.102389,
+    "ast_hash": "8c7c851d70d03e4f240d747c7d87a3c0",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-stargazer/6.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023898,
+    "ast_hash": "5b5551283d1f566adf45ae7c2d3fdbd7",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-staria/1.png": {
+    "mtime": 1789475293.0978382,
+    "seen": 1789479309.1023908,
+    "ast_hash": "a66922ab4fd84baa338d1a44ec68e1a1",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-staria/2.png": {
+    "mtime": 1789475293.1010041,
+    "seen": 1789479309.1023915,
+    "ast_hash": "bc8d24be5d3f8576d4ff54a82757154c",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-staria/3.png": {
+    "mtime": 1789475293.1010041,
+    "seen": 1789479309.1023927,
+    "ast_hash": "dc901d90dbe91ff268b4eb4aca0cee99",
+    "semantic_hash": ""
+  },
+  "public/images/car/hyundai-staria/4.png": {
+    "mtime": 1789475293.1010041,
+    "seen": 1789479309.1023934,
+    "ast_hash": "bf860ad2357ad8025ebea7320a16e2ba",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-5/1.png": {
+    "mtime": 1789475293.1010041,
+    "seen": 1789479309.102394,
+    "ast_hash": "cf636b645336396ad0dec938aa43198d",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-5/2.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.1023948,
+    "ast_hash": "1f555d8e069da668211439080c4b5154",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-5/3.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.1023955,
+    "ast_hash": "cd8834a3b8df1723e9b96131d75a03af",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-5/4.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.1023967,
+    "ast_hash": "49d5f3378bbf03c38b47c4c10c59dddd",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-5/5.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.1023972,
+    "ast_hash": "902e051dc50efa81e8de331b9422085d",
+    "semantic_hash": ""
+  },
+  "public/images/car/ioniq-6/1.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.102398,
+    "ast_hash": "70cee8c5184230be31d3ccd9c7bba438",
+    "semantic_hash": ""
+  },
+  "public/images/car/santa-fe/1.png": {
+    "mtime": 1789475293.1019726,
+    "seen": 1789479309.1023989,
+    "ast_hash": "4a1f8346bbb64cffda9b90c2bb4a4f1d",
+    "semantic_hash": ""
+  },
+  "public/images/car/santa-fe/2.png": {
+    "mtime": 1789475293.1036015,
+    "seen": 1789479309.1023998,
+    "ast_hash": "60f9953b1ba930d2777399cd58de77e6",
+    "semantic_hash": ""
+  },
+  "public/images/car/santa-fe/3.png": {
+    "mtime": 1789475293.1036015,
+    "seen": 1789479309.1024008,
+    "ast_hash": "13f232ac978ef07236ad6f26d62b5d8d",
+    "semantic_hash": ""
+  },
+  "public/images/car/santa-fe/4.png": {
+    "mtime": 1789475293.1036015,
+    "seen": 1789479309.1024015,
+    "ast_hash": "9ad00732ca36e28f9376830f9f7ec143",
+    "semantic_hash": ""
+  },
+  "public/images/car/santa-fe/5.png": {
+    "mtime": 1789475293.1036015,
+    "seen": 1789479309.1024024,
+    "ast_hash": "25a69342dacbb8bc2040a600d4a60ff1",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-BAF.jpg": {
+    "mtime": 1789475293.1036015,
+    "seen": 1789479309.1024034,
+    "ast_hash": "02e4316be1d3328f588061d3bf3194d5",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-BCA-FINANCE-1.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024044,
+    "ast_hash": "469bd653f62a36b6433c6b586cf72494",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-BRI-FINANCE.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.102405,
+    "ast_hash": "1f881ece8e73823fc0b14a0773f7c0be",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-CIMB-FINANCE.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.102406,
+    "ast_hash": "6a89d885185fbc4e3db1773bb7cac2db",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-CLIPAN-FINANCE.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.102407,
+    "ast_hash": "d43b12585c6e4f8b6e5931e8011794c0",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-IMFI.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024077,
+    "ast_hash": "00d44002055f7715575cb7e0c5b660e2",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-INDOMOBIL-FINANCE.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024086,
+    "ast_hash": "9f15a2a06fa2d05c999120edb6d40dfe",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-MAF-1.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024098,
+    "ast_hash": "dbbe0b814f35a27c7d3670ed3174107f",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-MANDIRI-TUNAS-FINANCE.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024106,
+    "ast_hash": "f674e4ec312b27c8ac06c748149aaf7c",
+    "semantic_hash": ""
+  },
+  "public/images/finance/LOGO-MAYBANK-1.jpg": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024113,
+    "ast_hash": "60a868849da29785204ecd93a7c8248a",
+    "semantic_hash": ""
+  },
+  "public/images/hyundai-creta-fitur-5.webp": {
+    "mtime": 1789475293.1047587,
+    "seen": 1789479309.1024122,
+    "ast_hash": "24a4d37e77418fd8e8a4647bf328ce9f",
+    "semantic_hash": ""
+  },
+  "public/images/hyundai-logo.png": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.102413,
+    "ast_hash": "b5db8b68eb25f17e5858c650bc73399a",
+    "semantic_hash": ""
+  },
+  "public/images/photo_2023-06-06_20-02-43.jpg": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.102414,
+    "ast_hash": "ce277d15208fd49996b4033139af3814",
+    "semantic_hash": ""
+  },
+  "public/images/photo_2023-06-06_20-05-30.jpg": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.1024148,
+    "ast_hash": "b7c2a085d113711acc1bc3a823785685",
+    "semantic_hash": ""
+  },
+  "public/images/white-background-with-triangle-patterns_1017-18410.jpg": {
+    "mtime": 1789475293.105838,
+    "seen": 1789479309.1024156,
+    "ast_hash": "ef9ca86465838f188e15a8f0cb9c0757",
+    "semantic_hash": ""
+  }
+}
