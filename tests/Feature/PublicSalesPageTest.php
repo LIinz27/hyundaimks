@@ -41,10 +41,11 @@ class PublicSalesPageTest extends TestCase
             ->assertSee('>R<', false);
     }
 
-    public function test_homepage_does_not_error_with_empty_sales_table(): void
+    public function test_homepage_returns_404_without_sales_context(): void
     {
         $this->assertDatabaseCount('sales', 0);
 
-        $this->get('/')->assertOk();
+        // Spec G0: public pages require a sales context (?s= or logged-in sales).
+        $this->get('/')->assertNotFound();
     }
 }

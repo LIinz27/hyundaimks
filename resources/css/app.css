@@ -1457,3 +1457,51 @@ img {
         transform: none;
     }
 }
+
+/* ---------------------------------------------------------------------------
+   Halaman error 404
+   Mandiri (layout sendiri, tanpa header/footer) karena halaman error tidak
+   punya konteks sales. Jangan letakkan nav/link di sini — semuanya akan mati.
+   --------------------------------------------------------------------------- */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-soft, #f4f7fb);
+    padding: 1.5rem;
+}
+
+.error-404 {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+.error-404 .error-brand {
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--brand);
+    margin-bottom: 2rem;
+}
+
+.error-404 .error-code {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--brand);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.error-404 .error-message {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-dark, #14325e);
+    margin-bottom: 0.75rem;
+}
+
+.error-404 .error-guidance {
+    color: #555;
+    max-width: 32rem;
+    margin: 0 auto;
+}
