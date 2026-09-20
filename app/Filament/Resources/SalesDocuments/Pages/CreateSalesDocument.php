@@ -8,4 +8,13 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateSalesDocument extends CreateRecord
 {
     protected static string $resource = SalesDocumentResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        if (! auth()->user()?->isAdmin()) {
+            $data['sales_id'] = auth()->user()?->sales?->id;
+        }
+
+        return $data;
+    }
 }

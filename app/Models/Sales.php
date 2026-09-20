@@ -37,7 +37,19 @@ class Sales extends Model
     protected static function booted(): void
     {
         // Soft delete: jangan hapus file (bisa dipulihkan).
-        // Hapus file hanya saat force delete.
+        // Hapus file hanya saat force delete, dan sekalian dokumennya.
+        static::forceDeleting(function (Sales $sales) {
+            // PENTING: harus di forceDelETING (sebelum DELETE dijalankan), bukan
+            // forceDeleted. Foreign key ON DELETE CASCADE menghapus baris
+            // sales_documents di level database saat sales dihapus, sehingga di
+            // event forceDeleted relasinya sudah kosong dan file akan terlantar.
+            $sales->documents()->get()->each(function (SalesDocument $document) {
+                if ($document->file_path && Storage::disk('public')->exists($document->file_path)) {
+                    Storage::disk('public')->delete($document->file_path);
+                }
+            });
+        });
+
         static::forceDeleted(function (Sales $sales) {
             if ($sales->photo_path && Storage::disk('public')->exists($sales->photo_path)) {
                 Storage::disk('public')->delete($sales->photo_path);

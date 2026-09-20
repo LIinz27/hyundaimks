@@ -10,6 +10,15 @@ class EditSalesDocument extends EditRecord
 {
     protected static string $resource = SalesDocumentResource::class;
 
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        if (! auth()->user()?->isAdmin()) {
+            $data['sales_id'] = auth()->user()?->sales?->id;
+        }
+
+        return $data;
+    }
+
     protected function getHeaderActions(): array
     {
         return [
