@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 @extends('layouts.app')
 
 @section('title', 'Dealer Hyundai Makassar')
@@ -43,17 +47,94 @@
             </div>
         </div>
 
-        <!-- Tim Sales -->
-        @if ($salesList->isNotEmpty())
-            <div class="container mt-5 mb-4 sales-team-section">
-                <h2 class="text-center mb-2">TIM SALES KAMI</h2>
-                <p class="text-center text-muted mb-4">Hubungi sales resmi kami untuk konsultasi gratis.</p>
-                <div class="row g-4 {{ $salesList->count() === 1 ? 'justify-content-center sales-team-single' : '' }}">
-                    @foreach ($salesList as $sales)
-                        @include('homepage/sales-card', ['sales' => $sales])
+        <!-- Profil Sales Aktif -->
+        @php
+            $photoUrl = $sales->photo_path ? Storage::disk('public')->url($sales->photo_path) : null;
+            $initials = strtoupper(mb_substr($sales->name, 0, 1));
+            $waLink = $sales->whatsappLink();
+            $phoneLink = $sales->phoneLink();
+        @endphp
+        <div class="container mt-5 mb-4">
+            <div class="home-profile text-center">
+                @if ($photoUrl)
+                    <img src="{{ $photoUrl }}" alt="Foto profil {{ $sales->name }}" class="home-profile-photo">
+                @else
+                    <div class="avatar-fallback home-profile-photo" aria-hidden="true">{{ $initials }}</div>
+                @endif
+                <span class="sales-badge">Sales Resmi Hyundai Makassar</span>
+                <h2 class="home-profile-name">{{ $sales->name }}</h2>
+                @if ($sales->title)
+                    <p class="home-profile-title">{{ $sales->title }}</p>
+                @endif
+                @if ($sales->bio)
+                    <p class="home-profile-bio">{{ $sales->bio }}</p>
+                @endif
+                @if ($waLink || $phoneLink)
+                    <div class="home-profile-contact">
+                        @if ($waLink)
+                            <a href="{{ $waLink }}" target="_blank" rel="noopener" class="btn btn-success btn-whatsapp"
+                               aria-label="Hubungi {{ $sales->name }} via WhatsApp">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
+                            </a>
+                        @endif
+                        @if ($phoneLink)
+                            <a href="{{ $phoneLink }}" class="btn btn-outline-primary"
+                               aria-label="Telepon {{ $sales->name }}">
+                                <i class="bi bi-telephone-fill" aria-hidden="true"></i> Telepon
+                            </a>
+                        @endif
+                    </div>
+                @endif
+            </div>
+        </div>
+
+        <!-- Galeri Dealer -->
+        <div class="container mt-5 mb-5 home-gallery">
+            <h2 class="text-center mb-4">Galeri Dealer</h2>
+            @if ($documents->isNotEmpty())
+                <div class="row g-3">
+                    @foreach ($documents as $doc)
+                        @php
+                            $docUrl = Storage::disk('public')->url($doc->file_path);
+                            $docAlt = $doc->caption ?: 'Dokumentasi dealer Hyundai Makassar';
+                        @endphp
+                        <div class="col-6 col-md-4">
+                            <div class="home-gallery-item">
+                                <button type="button" class="home-gallery-trigger" data-bs-toggle="modal"
+                                        data-bs-target="#galleryModal{{ $loop->index }}"
+                                        aria-label="Perbesar foto: {{ $docAlt }}">
+                                    <img src="{{ $docUrl }}" alt="{{ $docAlt }}" class="home-gallery-img" loading="lazy">
+                                </button>
+                                @if ($doc->caption)
+                                    <p class="home-gallery-caption">{{ $doc->caption }}</p>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="galleryModal{{ $loop->index }}" tabindex="-1"
+                             aria-labelledby="galleryModalLabel{{ $loop->index }}" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="galleryModalLabel{{ $loop->index }}">
+                                            {{ $doc->caption ?: 'Galeri Dealer' }}
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="{{ $docUrl }}" alt="{{ $docAlt }}" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @endforeach
                 </div>
-            </div>
-        @endif
+            @else
+                <div class="gallery-empty" role="status">
+                    <i class="bi bi-image" aria-hidden="true"></i>
+                    <p>Dokumentasi belum tersedia</p>
+                </div>
+            @endif
+        </div>
     </div>
 @endsection
