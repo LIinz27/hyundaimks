@@ -12,5 +12,4 @@ return [
     'contact_email'    => env('SITE_CONTACT_EMAIL', ''),
 
     // Jumlah maksimal foto dokumentasi di seksi "Galeri Dealer" beranda.
-    'homepage_gallery_limit' => env('SITE_HOMEPAGE_GALLERY_LIMIT', 6),
 ];

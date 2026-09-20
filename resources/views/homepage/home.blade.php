@@ -88,53 +88,5 @@
             </div>
         </div>
 
-        <!-- Galeri Dealer -->
-        <div class="container mt-5 mb-5 home-gallery">
-            <h2 class="text-center mb-4">Galeri Dealer</h2>
-            @if ($documents->isNotEmpty())
-                <div class="row g-3">
-                    @foreach ($documents as $doc)
-                        @php
-                            $docUrl = Storage::disk('public')->url($doc->file_path);
-                            $docAlt = $doc->caption ?: 'Dokumentasi dealer Hyundai Makassar';
-                        @endphp
-                        <div class="col-6 col-md-4">
-                            <div class="home-gallery-item">
-                                <button type="button" class="home-gallery-trigger" data-bs-toggle="modal"
-                                        data-bs-target="#galleryModal{{ $loop->index }}"
-                                        aria-label="Perbesar foto: {{ $docAlt }}">
-                                    <img src="{{ $docUrl }}" alt="{{ $docAlt }}" class="home-gallery-img" loading="lazy">
-                                </button>
-                                @if ($doc->caption)
-                                    <p class="home-gallery-caption">{{ $doc->caption }}</p>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="modal fade" id="galleryModal{{ $loop->index }}" tabindex="-1"
-                             aria-labelledby="galleryModalLabel{{ $loop->index }}" aria-hidden="true">
-                            <div class="modal-dialog modal-lg modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="galleryModalLabel{{ $loop->index }}">
-                                            {{ $doc->caption ?: 'Galeri Dealer' }}
-                                        </h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                                    </div>
-                                    <div class="modal-body text-center">
-                                        <img src="{{ $docUrl }}" alt="{{ $docAlt }}" class="img-fluid rounded">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @else
-                <div class="gallery-empty" role="status">
-                    <i class="bi bi-image" aria-hidden="true"></i>
-                    <p>Dokumentasi belum tersedia</p>
-                </div>
-            @endif
-        </div>
     </div>
 @endsection

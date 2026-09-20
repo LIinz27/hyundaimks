@@ -167,31 +167,5 @@ class SalesContextPropagationTest extends TestCase
         $this->assertMatchesRegularExpression('/avatar-fallback[^>]*>\s*R\b/s', $html);
     }
 
-    public function test_homepage_gallery_is_capped_by_config(): void
-    {
-        $sales = $this->makeSales();
 
-        for ($i = 1; $i <= 8; $i++) {
-            $sales->documents()->create([
-                'file_path' => "sales/documents/f{$i}.jpg",
-                'caption' => "Item {$i}",
-                'sort_order' => $i,
-            ]);
-        }
-
-        $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
-
-        $limit = (int) config('site.homepage_gallery_limit', 6);
-        $this->assertSame($limit, substr_count($html, 'home-gallery-item'));
-    }
-
-    public function test_empty_gallery_shows_placeholder(): void
-    {
-        $sales = $this->makeSales();
-
-        $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
-
-        $this->assertStringContainsString('Galeri Dealer', $html);
-        $this->assertStringContainsString('Dokumentasi belum tersedia', $html);
-    }
 }

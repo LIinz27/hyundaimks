@@ -8,12 +8,8 @@ class HomeController
     {
         $sales = app('active.sales'); // dari middleware G0
 
-        $documents = $sales->documents()
-            ->orderBy('sort_order')
-            ->latest()
-            ->limit(config('site.homepage_gallery_limit', 6))
-            ->get();
-
-        return view('homepage/home', compact('sales', 'documents'));
+        // Beranda memuat galeri dealer dari public/images/Galeri via JS (warisan
+        // desain lama). Koleksi dokumen per-sales tidak lagi dirender di sini.
+        return view('homepage/home', compact('sales'));
     }
 }
