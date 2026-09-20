@@ -2,8 +2,7 @@
 # check-sales-links.sh
 #
 # Audit every Blade view for internal links / forms / route helpers that do NOT
-# go through sales_route() / sales_url() (or the sales.show route, which is
-# context-free by design).
+# go through sales_route() / sales_url().
 #
 # Exits 0 when clean, 1 when violations are found.
 
@@ -29,10 +28,9 @@ fi
 
 echo
 echo "== 2. route() / url() helpers not wrapped by sales_route/sales_url =="
-# route('...') that is not sales_route('...') and not the context-free sales.show
+# route('...') that is not sales_route('...')
 matches=$(grep -rnE '\b(route|url)\(' "$VIEWS_DIR" --include='*.blade.php' \
-    | grep -v 'sales_route(\|sales_url(\|route(.sales.show\|Storage::disk' \
-    | grep -v 'resources/views/sales/show.blade.php' || true)
+    | grep -v 'sales_route(\|sales_url(\|Storage::disk' || true)
 if [ -n "$matches" ]; then
     flag "$matches"
 else
