@@ -5,6 +5,28 @@ Rekap projek lengkap: /mnt/c/Users/micha/Documents/Obsidian Vault/Hermes/Project
 Baca file itu sebelum mulai kerja. Setelah ada keputusan baru atau perubahan arah,
 tambahkan ke bagian "Log" di sana sebelum sesi berakhir.
 
+## ATURAN WAJIB: Obsidian selalu diperbarui
+
+Setiap kali projek ini disentuh, note Obsidian **harus** diperbarui. Ini permintaan
+eksplisit pemilik projek, berlaku untuk setiap sesi, tanpa perlu diminta ulang.
+
+Dua berkas yang dijaga:
+
+| Berkas | Isi |
+|---|---|
+| `…/Hermes/Projects/hyundaimks.md` | note utama — status, keputusan, Log, Pelajaran, Sisa Pekerjaan |
+| `…/Hermes/Projects/hyundaimks-docs/` | salinan `docs/` + `docs/tasks/` |
+
+Yang wajib, setiap kali ada perubahan berarti:
+
+1. Tambah entri baru di bagian **Log** (tanggal, apa yang berubah, hasil verifikasi, commit).
+2. Perbarui **Status/stage** di frontmatter dan awal note bila fase berubah.
+3. Perbarui **Sisa Pekerjaan** — centang yang selesai, tambah yang baru.
+4. Tambah ke **Pelajaran** bila ada bug/pelajaran yang layak diingat sesi berikutnya.
+5. Salin ulang dokumen: `cp docs/*.md` dan `cp docs/tasks/*.md` ke `hyundaimks-docs/`.
+
+Jangan menunggu diminta. Kerjakan sebagai bagian dari menyelesaikan tugas.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
