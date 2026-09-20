@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Sales extends Model
 {
@@ -32,6 +33,27 @@ class Sales extends Model
         'is_active' => 'bool',
         'sort_order' => 'int',
     ];
+
+    protected static function booted(): void
+    {
+        // Soft delete: jangan hapus file (bisa dipulihkan).
+        // Hapus file hanya saat force delete.
+        static::forceDeleted(function (Sales $sales) {
+            if ($sales->photo_path && Storage::disk('public')->exists($sales->photo_path)) {
+                Storage::disk('public')->delete($sales->photo_path);
+            }
+        });
+
+        // Penggantian foto profil: hapus file lama setelah berhasil simpan yang baru.
+        static::updated(function (Sales $sales) {
+            if ($sales->wasChanged('photo_path')) {
+                $old = $sales->getOriginal('photo_path');
+                if ($old && $old !== $sales->photo_path && Storage::disk('public')->exists($old)) {
+                    Storage::disk('public')->delete($old);
+                }
+            }
+        });
+    }
 
     public function user(): BelongsTo
     {
