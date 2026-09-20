@@ -47,44 +47,51 @@
             </div>
         </div>
 
-        <!-- Profil Sales Aktif -->
+        <!-- Profil Sales Aktif — layout & CSS original (foto kiri, teks kanan) -->
         @php
-            $photoUrl = $sales->photo_path ? Storage::disk('public')->url($sales->photo_path) : null;
-            $initials = strtoupper(mb_substr($sales->name, 0, 1));
+            $photoUrl = $sales->photo_path
+                ? Storage::disk('public')->url($sales->photo_path)
+                : asset('images/Fadli-Kuntuls.jpg');
             $waLink = $sales->whatsappLink();
             $phoneLink = $sales->phoneLink();
+            // Label diambil dari kolomnya masing-masing: whatsapp dan phone bisa
+            // berbeda, dan keduanya dapat diubah dari panel.
+            $waLabel = $sales->whatsapp ?: '0896-1688-0688';
+            $phoneLabel = $sales->phone ?: '0896-1688-0688';
         @endphp
-        <div class="container mt-5 mb-4">
-            <div class="home-profile text-center">
-                @if ($photoUrl)
-                    <img src="{{ $photoUrl }}" alt="Foto profil {{ $sales->name }}" class="home-profile-photo">
-                @else
-                    <div class="avatar-fallback home-profile-photo" aria-hidden="true">{{ $initials }}</div>
-                @endif
-                <span class="sales-badge">Sales Resmi Hyundai Makassar</span>
-                <h2 class="home-profile-name">{{ $sales->name }}</h2>
-                @if ($sales->title)
-                    <p class="home-profile-title">{{ $sales->title }}</p>
-                @endif
-                @if ($sales->bio)
-                    <p class="home-profile-bio">{{ $sales->bio }}</p>
-                @endif
-                @if ($waLink || $phoneLink)
-                    <div class="home-profile-contact">
+        <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
+            <div class="contact-container d-flex align-items-center justify-content-center">
+                <div class="contact-image">
+                    <img style="border-radius: 2%" src="{{ $photoUrl }}"
+                         alt="Foto {{ $sales->name }}" class="img-fluid">
+                </div>
+                <div class="contact-text">
+                    <h3>{{ $sales->name }}</h3>
+                    <p>{{ $sales->title ?: 'Profesional Sales Consultant' }}</p>
+                    <ul class="contact-details">
+                        <li>Melayani tukar tambah mobil lama dengan harga tinggi.</li>
+                        <li>Layanan Chat 24 Jam Fast Respon.</li>
+                        <li>Bisa konsultasi langsung ke dealer kami dengan finance langsung.</li>
+                        <li>Survey dibantu sampai approval.</li>
+                    </ul>
+                    <div class="button-group">
                         @if ($waLink)
-                            <a href="{{ $waLink }}" target="_blank" rel="noopener" class="btn btn-success btn-whatsapp"
-                               aria-label="Hubungi {{ $sales->name }} via WhatsApp">
-                                <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
+                            <a class="wa-button text-decoration-none" href="{{ $waLink }}"
+                               target="_blank" rel="noopener"
+                               aria-label="Hubungi {{ $sales->name }} via WhatsApp"
+                               style="text-decoration: none;">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i>&nbsp;<strong>{{ $waLabel }}</strong>
                             </a>
                         @endif
                         @if ($phoneLink)
-                            <a href="{{ $phoneLink }}" class="btn btn-outline-primary"
-                               aria-label="Telepon {{ $sales->name }}">
-                                <i class="bi bi-telephone-fill" aria-hidden="true"></i> Telepon
+                            <a class="contact-button text-decoration-none" href="{{ $phoneLink }}"
+                               aria-label="Telepon {{ $sales->name }}"
+                               style="text-decoration: none;">
+                                <i class="bi bi-telephone-fill" aria-hidden="true"></i>&nbsp;<strong>{{ $phoneLabel }}</strong>
                             </a>
                         @endif
                     </div>
-                @endif
+                </div>
             </div>
         </div>
 

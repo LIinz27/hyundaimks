@@ -149,10 +149,9 @@ class SalesContextPropagationTest extends TestCase
         $this->assertStringContainsString($sales->name, $html);
     }
 
-    public function test_sales_without_photo_renders_initial_avatar_fallback(): void
+    public function test_sales_without_photo_falls_back_to_default_dealer_photo(): void
     {
-        // Cakupan ini dulu ada di PublicSalesPageTest (dihapus di G3) — dipindahkan
-        // agar tidak hilang saat halaman /sales/{slug} dibongkar.
+        // Layout original memakai satu foto default, bukan avatar inisial.
         $sales = $this->makeSales([
             'name' => 'Rukman Fadli',
             'photo_path' => null,
@@ -160,12 +159,60 @@ class SalesContextPropagationTest extends TestCase
 
         $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
 
-        $this->assertStringContainsString('avatar-fallback', $html);
+        $this->assertStringContainsString('Fadli-Kuntuls.jpg', $html);
         $this->assertStringNotContainsString('storage/sales/photos', $html);
-
-        // Inisial diambil dari nama sales.
-        $this->assertMatchesRegularExpression('/avatar-fallback[^>]*>\s*R\b/s', $html);
     }
 
+    /**
+     * Foto dan nomor WA harus dapat diubah dari panel: perubahan di DB wajib
+     * langsung tercermin di beranda, tanpa menyentuh kode.
+     */
+    public function test_sales_photo_and_whatsapp_are_driven_by_database(): void
+    {
+        $sales = $this->makeSales([
+            'name' => 'Rukman Fadli',
+            'photo_path' => 'sales/photos/rukman.jpg',
+            'whatsapp' => '0812-3456-7890',
+            'phone' => '0811-2222-3333',
+        ]);
 
+        $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
+
+        // Foto dari DB, bukan foto default.
+        $this->assertStringContainsString('sales/photos/rukman.jpg', $html);
+        $this->assertStringNotContainsString('Fadli-Kuntuls.jpg', $html);
+
+        // Tautan WA & telepon mengikuti kolomnya masing-masing.
+        $this->assertStringContainsString('wa.me/6281234567890', $html);
+        $this->assertStringContainsString('tel:6281122223333', $html);
+
+        // Label tombol menampilkan nomor yang tampil apa adanya.
+        $this->assertStringContainsString('0812-3456-7890', $html);
+        $this->assertStringContainsString('0811-2222-3333', $html);
+    }
+
+    /**
+     * Kolom whatsapp dan phone terpisah: label tombol WA tidak boleh memakai
+     * nomor telepon, dan sebaliknya.
+     */
+    public function test_whatsapp_and_phone_labels_are_not_swapped(): void
+    {
+        $sales = $this->makeSales([
+            'whatsapp' => '0812-0000-1111',
+            'phone' => '0813-9999-8888',
+        ]);
+
+        $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
+
+        // Tautan WA juga muncul di tombol seksi Promo, jadi cari tautan yang
+        // berada di dalam blok tombol sales, bukan kemunculan pertama.
+        $this->assertMatchesRegularExpression(
+            '/class="wa-button[^"]*"[^>]*href="https:\/\/wa\.me\/6281200001111".*?0812-0000-1111/s',
+            $html
+        );
+        $this->assertMatchesRegularExpression(
+            '/class="contact-button[^"]*"[^>]*href="tel:6281399998888".*?0813-9999-8888/s',
+            $html
+        );
+    }
 }
