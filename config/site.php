@@ -10,4 +10,7 @@ return [
     'contact_whatsapp' => env('SITE_CONTACT_WHATSAPP', ''),
     'contact_phone'    => env('SITE_CONTACT_PHONE', ''),
     'contact_email'    => env('SITE_CONTACT_EMAIL', ''),
+
+    // Jumlah maksimal foto dokumentasi di seksi "Galeri Dealer" beranda.
+    'homepage_gallery_limit' => env('SITE_HOMEPAGE_GALLERY_LIMIT', 6),
 ];

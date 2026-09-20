@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand-lg navbar-light py-3" id="header">
     <div class="container">
-        <a href="{{ url('/') }}" class="navbar-brand">
+        <a href="{{ sales_url('/') }}" class="navbar-brand">
             <img src="{{ asset('images/LOGO-HYUNDAI.png') }}" alt="Hyundai Makassar" class="site-logo img-fluid">
         </a>
 
@@ -11,7 +11,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_url('/') }}">Beranda</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="tipeMobilDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -19,23 +19,23 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="tipeMobilDropdown">
                         @foreach (config('cars.cars') as $car)
-                            <li><a class="dropdown-item" href="{{ url('/product/' . $car['slug']) }}">{{ $car['name'] }}</a></li>
+                            <li><a class="dropdown-item" href="{{ sales_url('/product/' . $car['slug']) }}">{{ $car['name'] }}</a></li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/pricelist') }}">Pricelist</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/proses-kredit') }}">Proses Kredit</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/simulasi-kredit') }}">Simulasi Kredit</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/tes-drive') }}">Tes Drive</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/portofolio') }}">Portofolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/kontak') }}">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('pricelist') }}">Pricelist</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('proses-kredit') }}">Proses Kredit</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('simulasi-kredit') }}">Simulasi Kredit</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('tes-drive') }}">Tes Drive</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('portofolio') }}">Portofolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ sales_route('kontak') }}">Kontak</a></li>
             </ul>
 
             <button class="btn btn-outline-secondary ms-lg-3" type="button" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Cari">
                 <i class="bi bi-search"></i>
             </button>
 
-            <a href="{{ url('/pricelist') }}" class="btn btn-unduh ms-lg-3">Unduh Pricelist</a>
+            <a href="{{ sales_route('pricelist') }}" class="btn btn-unduh ms-lg-3">Unduh Pricelist</a>
         </div>
     </div>
 </header>

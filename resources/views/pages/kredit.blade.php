@@ -57,8 +57,11 @@
             <li>Apabila alamat anda tinggal sekarang berbeda dengan alamat anda di KTP (contoh: kontrak) maka survey akan dilakukan di alamat anda sekarang.</li>
         </ol>
 
-        <button class="btn btn-brand d-flex align-items-center page-cta">
-            <i class="bi bi-whatsapp me-2"></i> Konsultasi via WhatsApp
-        </button>
+        @if (active_sales()?->whatsappLink())
+            <a href="{{ active_sales()->whatsappLink() }}" target="_blank" rel="noopener"
+               class="btn btn-brand d-flex align-items-center page-cta text-decoration-none">
+                <i class="bi bi-whatsapp me-2"></i> Konsultasi via WhatsApp
+            </a>
+        @endif
     </div>
 @endsection

@@ -33,3 +33,24 @@ if (! function_exists('sales_route')) {
         return route($name, $params);
     }
 }
+
+if (! function_exists('sales_url')) {
+    /**
+     * Build a URL from an internal path while preserving the active sales
+     * context (?s=<slug>). Use for internal routes without a name
+     * (e.g. /product/*).
+     */
+    function sales_url(string $path): string
+    {
+        $url = url($path);
+
+        if (app()->bound('active.sales.source') && app('active.sales.source') === 'query') {
+            $sales = active_sales();
+            if ($sales) {
+                $url .= (str_contains($url, '?') ? '&' : '?').'s='.$sales->slug;
+            }
+        }
+
+        return $url;
+    }
+}

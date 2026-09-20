@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SalesPageController;
 
 Route::middleware('sales.context')->group(function () {
-    Route::view('/', 'homepage/home')->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::controller(Controller::class)->group(function () {
         Route::get('/pricelist', 'pricelist')->name('pricelist');

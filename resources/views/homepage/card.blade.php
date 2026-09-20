@@ -41,7 +41,7 @@
                                     <h5 class="card-title">{{ $car['name'] }}</h5>
                                     <p class="card-text">{{ $car['price'] }}</p>
                                 </div>
-                                <a href="{{ url('/product/' . $car['slug']) }}" class="btn btn-primary btn-full">Selengkapnya</a>
+                                <a href="{{ sales_url('/product/' . $car['slug']) }}" class="btn btn-primary btn-full">Selengkapnya</a>
                             </div>
                         </div>
                     @endif

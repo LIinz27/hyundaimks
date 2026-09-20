@@ -21,7 +21,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             <div class="text-center mt-4">
-                <a href="{{ url('/pricelist') }}" class="btn btn-brand btn-lg px-5">Klik di sini</a>
+                <a href="{{ sales_route('pricelist') }}" class="btn btn-brand btn-lg px-5">Klik di sini</a>
             </div>
         </div>
 
