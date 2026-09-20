@@ -25,3 +25,6 @@ yarn-error.log
 /.zed
 /resources/views/test.blade.php
 /graphify-out/cache/
+
+# Orchestrator work files
+.hermes-redesign-task.md
