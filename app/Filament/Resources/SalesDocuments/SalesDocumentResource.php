@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class SalesDocumentResource extends Resource
 {
@@ -41,6 +42,37 @@ class SalesDocumentResource extends Resource
         return [
             //
         ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $query = parent::getEloquentQuery();
+
+        if (! auth()->user()?->isAdmin()) {
+            $salesId = auth()->user()?->sales?->id;
+
+            if ($salesId) {
+                $query->where('sales_id', $salesId);
+            } else {
+                $query->whereRaw('1 = 0');
+            }
+        }
+
+        return $query;
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        $user = auth()->user();
+
+        return $user && ($user->isAdmin() || $user->sales()->exists());
+    }
+
+    public static function canViewAny(): bool
+    {
+        $user = auth()->user();
+
+        return $user && ($user->isAdmin() || $user->sales()->exists());
     }
 
     public static function getPages(): array

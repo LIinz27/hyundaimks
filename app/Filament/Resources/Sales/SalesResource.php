@@ -54,6 +54,22 @@ class SalesResource extends Resource
         ];
     }
 
+    public static function getEloquentQuery(): Builder
+    {
+        $query = parent::getEloquentQuery();
+
+        if (! auth()->user()?->isAdmin()) {
+            $query->where('user_id', auth()->id());
+        }
+
+        return $query;
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return (bool) auth()->user()?->isAdmin();
+    }
+
     public static function getRecordRouteBindingEloquentQuery(): Builder
     {
         return parent::getRecordRouteBindingEloquentQuery()

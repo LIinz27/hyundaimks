@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\SalesDocuments\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
@@ -17,7 +18,12 @@ class SalesDocumentForm
                     ->relationship('sales', 'name')
                     ->searchable()
                     ->preload()
-                    ->required(),
+                    ->required()
+                    ->visible(fn () => auth()->user()?->isAdmin()),
+                Hidden::make('sales_id')
+                    ->default(fn () => auth()->user()?->sales?->id)
+                    ->dehydrated()
+                    ->hidden(fn () => (bool) auth()->user()?->isAdmin()),
                 FileUpload::make('file_path')
                     ->image()
                     ->disk('public')
