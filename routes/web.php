@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\SalesPageController;
 
 Route::view('/', 'homepage/home');
 
@@ -26,3 +27,5 @@ Route::prefix('product')->controller(Controller::class)->group(function () {
     Route::get('/ioniq-6', 'hyundai_ioniq_6');
     Route::get('/all-new-santa-fe', 'hyundai_all_new_santa_fe');
 });
+
+Route::get('/sales/{slug}', [SalesPageController::class, 'show'])->name('sales.show');

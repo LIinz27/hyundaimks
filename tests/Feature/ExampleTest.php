@@ -2,11 +2,15 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    // The homepage reads the sales table, so the schema must exist in the
+    // in-memory test database.
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      */

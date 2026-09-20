@@ -9,7 +9,9 @@ class SalesSeeder extends Seeder
 {
     public function run(): void
     {
-        Sales::firstOrCreate(
+        // withTrashed(): a soft-deleted sales record must be restored, not re-created,
+        // otherwise the unique slug constraint fails.
+        Sales::withTrashed()->updateOrCreate(
             ['slug' => 'rukman-fadli'],
             [
                 'name' => 'Rukman Fadli',
@@ -20,6 +22,7 @@ class SalesSeeder extends Seeder
                 'email' => null,
                 'is_active' => true,
                 'sort_order' => 0,
+                'deleted_at' => null,
             ]
         );
     }

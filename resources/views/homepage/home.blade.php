@@ -43,31 +43,17 @@
             </div>
         </div>
 
-        <!-- Contact -->
-        <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
-            <div class="contact-container d-flex align-items-center justify-content-center">
-                <div class="contact-image">
-                    <img class="rounded-2 img-fluid" src="{{ asset('images/Fadli-Kuntuls.jpg') }}" alt="Hyundai Creta Feature">
-                </div>
-                <div class="contact-text">
-                    <h3>Rukman Fadli</h3>
-                    <p>Profesional Sales Consultant</p>
-                    <ul class="contact-details">
-                        <li>Melayani tukar tambah mobil lama dengan harga tinggi.</li>
-                        <li>Layanan Chat 24 Jam Fast Respon.</li>
-                        <li>Bisa konsultasi langsung ke dealer kami dengan finance langsung.</li>
-                        <li>Survey dibantu sampai approval.</li>
-                    </ul>
-                    <div class="button-group">
-                        <button class="wa-button">
-                            <i class="bi bi-whatsapp"></i> <strong>0896-1688-0688</strong>
-                        </button>
-                        <button class="contact-button">
-                            <i class="bi bi-telephone-fill"></i> <strong>0896-1688-0688</strong>
-                        </button>
-                    </div>
+        <!-- Tim Sales -->
+        @if ($salesList->isNotEmpty())
+            <div class="container mt-5 mb-4 sales-team-section">
+                <h2 class="text-center mb-2">TIM SALES KAMI</h2>
+                <p class="text-center text-muted mb-4">Hubungi sales resmi kami untuk konsultasi gratis.</p>
+                <div class="row g-4 {{ $salesList->count() === 1 ? 'justify-content-center sales-team-single' : '' }}">
+                    @foreach ($salesList as $sales)
+                        @include('homepage/sales-card', ['sales' => $sales])
+                    @endforeach
                 </div>
             </div>
-        </div>
+        @endif
     </div>
 @endsection
