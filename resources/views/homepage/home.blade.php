@@ -39,7 +39,15 @@
                 <div class="swiper-wrapper">
                     @foreach($galeris as $g)
                         <div class="swiper-slide">
-                            <img src="{{ Storage::disk('public')->url($g->image_path) }}" alt="{{ $g->caption }}" class="img-fluid">
+                            {{-- Slide pertama dimuat langsung (terlihat tanpa
+                                 digeser); sisanya lazy supaya gambar 7 foto
+                                 tidak diminta sekaligus di awal. --}}
+                            <img src="{{ Storage::disk('public')->url($g->image_path) }}"
+                                 alt="{{ $g->caption }}"
+                                 class="img-fluid"
+                                 width="1080" height="1920"
+                                 @if($loop->first) fetchpriority="high" @else loading="lazy" @endif
+                                 decoding="async">
                         </div>
                     @endforeach
                 </div>

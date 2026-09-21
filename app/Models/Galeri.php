@@ -34,5 +34,18 @@ class Galeri extends Model
                 Storage::disk('public')->delete($galeri->image_path);
             }
         });
+
+        // Bersihkan cache galeri beranda setiap ada perubahan baris galeri.
+        static::saved(fn (Galeri $galeri) => static::forgetHomeCache($galeri->sales_id));
+        static::deleted(fn (Galeri $galeri) => static::forgetHomeCache($galeri->sales_id));
+    }
+
+    public static function forgetHomeCache(?int $salesId): void
+    {
+        if ($salesId) {
+            \Illuminate\Support\Facades\Cache::forget(
+                \App\Http\Controllers\HomeController::galleryCacheKey($salesId)
+            );
+        }
     }
 }

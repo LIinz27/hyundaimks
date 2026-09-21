@@ -65,6 +65,11 @@ class Sales extends Model
                 }
             }
         });
+
+        // Perubahan data sales (apapun) menginvalidasi cache galeri beranda
+        // miliknya; menghapus sales juga membersihkan cache-nya.
+        static::saved(fn (Sales $sales) => Galeri::forgetHomeCache($sales->id));
+        static::deleted(fn (Sales $sales) => Galeri::forgetHomeCache($sales->id));
     }
 
     public function user(): BelongsTo

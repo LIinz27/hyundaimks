@@ -28,8 +28,24 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+            // User hasil factory dianggap sudah punya password sendiri
+            // (bukan password default seeder), sehingga tidak dipaksa
+            // ganti password. Gunakan state ->needsPasswordChange()
+            // untuk mensimulasikan user seeder.
+            'password_changed_at' => now(),
             'remember_token' => Str::random(10),
         ];
+    }
+
+    /**
+     * Simulasi user dari seeder default: belum pernah ganti password,
+     * wajib ganti saat login berikutnya.
+     */
+    public function needsPasswordChange(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'password_changed_at' => null,
+        ]);
     }
 
     /**

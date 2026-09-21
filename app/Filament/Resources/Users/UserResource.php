@@ -39,6 +39,10 @@ class UserResource extends Resource
     {
         return $schema->components([
             TextInput::make('name')->required()->maxLength(255),
+            TextInput::make('username')
+                ->required()
+                ->maxLength(255)
+                ->unique(ignoreRecord: true),
             TextInput::make('email')->email()->required()->unique(ignoreRecord: true),
             TextInput::make('password')
                 ->password()
@@ -61,6 +65,7 @@ class UserResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('username')->searchable(),
                 TextColumn::make('email')->searchable(),
                 TextColumn::make('role')->badge(),
                 TextColumn::make('sales.name')->label('Sales')->placeholder('-'),
