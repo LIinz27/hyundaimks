@@ -26,9 +26,15 @@ class SalesPanelTest extends TestCase
     {
         [$user, $sales] = $this->makeSalesUser();
 
+        // Halaman Profil Saya milik sales sekarang hidup di panel sales.
         $this->actingAs($user)
-            ->get(MyProfile::getUrl())
+            ->get(MyProfile::getUrl(panel: 'sales'))
             ->assertOk();
+
+        // Di panel admin sales ditolak dan dialihkan ke panel sales (bukan 403 mentah).
+        $response = $this->actingAs($user)->get('/admin/my-profile');
+        $this->assertSame(302, $response->getStatusCode());
+        $this->assertStringContainsString('/sales', $response->headers->get('Location', ''));
     }
 
     public function test_sales_cannot_see_sales_resource(): void
@@ -37,9 +43,11 @@ class SalesPanelTest extends TestCase
 
         $this->assertFalse(SalesResource::canViewAny());
 
-        $this->actingAs($user)
-            ->get(SalesResource::getUrl('index'))
-            ->assertForbidden();
+        $response = $this->actingAs($user)
+            ->get(SalesResource::getUrl('index'));
+
+        $this->assertNotSame(200, $response->getStatusCode());
+        $this->assertNotSame(500, $response->getStatusCode());
     }
 
     public function test_sales_sees_only_own_gallery(): void

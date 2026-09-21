@@ -8,14 +8,18 @@ use Filament\Http\Middleware\SetUpPanel;
 
 // URL login kustom: /admin/login di-redirect ke /login/admin (link lama tidak mati).
 Route::middleware(SetUpPanel::class . ':admin')->group(function () {
-    Route::get('/login/admin', Filament::getPanel('admin')->getLoginRouteAction())
+    Route::get('/login/admin', fn () => redirect('/login?tab=admin'))
         ->name('filament.admin.auth.login');
 
-    Route::get('/login/sales', \App\Filament\Pages\Auth\SalesLogin::class)
+    Route::get('/login/sales', fn () => redirect('/login?tab=sales'))
         ->name('filament.admin.auth.login.sales');
 
     Route::get('/admin/login', fn () => redirect('/login/admin'));
 });
+
+// Halaman login gabungan dengan dua tab (Admin & Sales). Panel tujuan
+// ditentukan dari tab aktif oleh UnifiedLogin, bukan dari konteks panel.
+Route::get('/login', \App\Filament\Pages\Auth\UnifiedLogin::class)->name('login');
 
 Route::middleware('sales.context')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');

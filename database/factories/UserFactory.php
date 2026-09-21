@@ -25,6 +25,10 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            // Login memakai username (lihat AuthenticatesWithUsername), jadi
+            // factory wajib mengisinya — tanpa ini user hasil factory tidak
+            // bisa dipakai menguji login sama sekali.
+            'username' => fake()->unique()->userName(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
@@ -33,8 +37,21 @@ class UserFactory extends Factory
             // ganti password. Gunakan state ->needsPasswordChange()
             // untuk mensimulasikan user seeder.
             'password_changed_at' => now(),
+            // Kolom role dipakai canAccessPanel(); default ke hak paling
+            // kecil supaya test tidak diam-diam memberi akses admin.
+            'role' => 'sales',
             'remember_token' => Str::random(10),
         ];
+    }
+
+    /**
+     * User dengan hak admin.
+     */
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => 'admin',
+        ]);
     }
 
     /**

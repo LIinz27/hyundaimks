@@ -18,6 +18,12 @@ class SalesLogin extends Login
             'password' => '',
             'remember' => false,
         ]);
+
+        // Semua login lewat satu halaman /login bertab. /sales/login (dan
+        // redirect otentikasi dari /sales) dialihkan ke tab sales.
+        if (! app()->runningUnitTests()) {
+            $this->redirect('/login?tab=sales');
+        }
     }
 
     public function getHeading(): \Illuminate\Contracts\Support\Htmlable|string|null

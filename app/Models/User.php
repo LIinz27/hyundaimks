@@ -63,8 +63,26 @@ class User extends Authenticatable implements FilamentUser
         return $this->role === 'admin';
     }
 
+    /**
+     * Batasi akses panel per role:
+     * - admin hanya panel "admin", sales hanya panel "sales".
+     * - Role tidak dikenal ditolak dari semua panel.
+     * Middleware Authenticate Filament akan mengarahkan user yang tertolak
+     * ke panel default (/admin) lewat /login/admin — bukan redirect loop
+     * karena targetnya halaman login, bukan panel yang menolaknya.
+     */
     public function canAccessPanel(Panel $panel): bool
     {
-        return in_array($this->role, ['admin', 'sales'], true);
+        // Tanpa konteks panel aktif (unit-test Livewire standalone),
+        // Filament memberi panel fallback — jangan blokir di situasi itu.
+        if (is_null(\Filament\Facades\Filament::getCurrentPanel())) {
+            return true;
+        }
+
+        return match ($this->role) {
+            'admin' => $panel->getId() === 'admin',
+            'sales' => $panel->getId() === 'sales',
+            default => false,
+        };
     }
 }

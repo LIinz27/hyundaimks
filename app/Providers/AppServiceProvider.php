@@ -13,6 +13,12 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         require_once app_path('Support/helpers.php');
+
+        // Panel tujuan login gabungan /login ditentukan dari tab aktif.
+        $this->app->bind(
+            \Filament\Auth\Http\Responses\Contracts\LoginResponse::class,
+            \App\Http\Responses\LoginResponse::class,
+        );
     }
 
     /**

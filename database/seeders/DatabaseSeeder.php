@@ -2,25 +2,22 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
+     *
+     * Catatan penting: JANGAN memanggil User::factory() di sini. Factory
+     * membuat user acak (username acak + password 'password') yang ikut
+     * masuk ke database ASLI setiap kali `db:seed` dijalankan, sehingga
+     * menumpuk akun sampah yang bisa dipakai login. Akun admin & sales
+     * asli dibuat lewat seeder masing-masing di bawah.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         $this->call(SalesSeeder::class);
         $this->call(GaleriSeeder::class);
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
     }
 }

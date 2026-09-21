@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 828 nodes · 1116 edges · 86 communities (49 shown, 9 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.85)
+- 828 nodes · 1113 edges · 87 communities (50 shown, 10 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3fc95144`
+- Built from commit: `e66ce0e1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,7 +27,7 @@
 - EditSales.php
 - PRD — Hyundai Dealer Makassar: Platform Multi-Sales
 - SalesTable.php
-- Galeri
+- Tests\TestCase
 - logging.php
 - bootstrap/app.php
 - ResolveActiveSales.php
@@ -50,16 +50,16 @@
 - SPEC F4 — Halaman Publik Sales + Integrasi Homepage
 - SPEC F5 — Dokumentasi & Storage
 - PHPUnit\Framework\TestCase
-- 3. Inventaris Komponen
-- 5. Desain Layar
-- 4. Arsitektur Informasi
-- Ringkasan Eksekusi (2026-09-20)
 - Sales
-- Filament\Resources\Pages\CreateRecord
+- Galeri
+- ActiveSalesResolutionTest
+- Illuminate\Foundation\Testing\RefreshDatabase
+- User
+- UserResource
 - 1. Perilaku yang diinginkan
 - SPEC BARU — Beranda Personal per Sales (Revisi Arah)
 - SPEC G5 — Verifikasi Menyeluruh & Penutupan
-- SalesResource.php
+- App\Filament\Resources\Sales\SalesResource
 - SPEC G1 — Beranda Personal: Profil + Galeri + Kontak Sales
 - SPEC G2 — Sebar Konteks Sales ke Semua Halaman
 - SPEC G0 — Middleware Resolusi Sales + Helper + 404 Kustom
@@ -67,41 +67,43 @@
 - AppServiceProvider
 - SalesResource
 - Filament\Resources\Pages\ListRecords
+- Illuminate\Database\Seeder
 - GaleriResource
-- TODO — Platform Multi-Sales
-- Workflow — Cara Kerja Proyek Ini
+- MyProfileGalleryTest
+- SalesStatsWidget.php
+- UnitEnum
 - verify-context.sh
 - check-sales-links.sh
 - verify-final.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Sales` - 64 edges
-2. `User` - 45 edges
+2. `User` - 42 edges
 3. `Galeri` - 24 edges
-4. `TestCase` - 22 edges
-5. `SalesResource` - 19 edges
-6. `Controller` - 19 edges
-7. `MyProfile` - 17 edges
-8. `GaleriResource` - 16 edges
-9. `ActiveSalesResolutionTest` - 14 edges
-10. `SalesContextPropagationTest` - 13 edges
+4. `Controller` - 18 edges
+5. `SalesResource` - 18 edges
+6. `MyProfile` - 17 edges
+7. `GaleriResource` - 16 edges
+8. `ActiveSalesResolutionTest` - 14 edges
+9. `SalesContextPropagationTest` - 13 edges
+10. `Arsitektur — Hyundai Dealer Makassar (Multi-Sales)` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `active_sales()` --references--> `Sales`  [EXTRACTED]
+  app/Support/helpers.php → app/Models/Sales.php
+- `GaleriAccessTest` --inherits--> `TestCase`  [EXTRACTED]
+  tests/Feature/GaleriAccessTest.php → tests/TestCase.php
 - `ActiveSalesResolutionTest` --inherits--> `TestCase`  [EXTRACTED]
   tests/Feature/ActiveSalesResolutionTest.php → tests/TestCase.php
 - `SalesAuthorizationTest` --inherits--> `TestCase`  [EXTRACTED]
   tests/Feature/SalesAuthorizationTest.php → tests/TestCase.php
 - `SalesContextPropagationTest` --inherits--> `TestCase`  [EXTRACTED]
   tests/Feature/SalesContextPropagationTest.php → tests/TestCase.php
-- `active_sales()` --references--> `Sales`  [EXTRACTED]
-  app/Support/helpers.php → app/Models/Sales.php
-- `AdminPanelSmokeTest` --inherits--> `TestCase`  [EXTRACTED]
-  tests/Feature/AdminPanelSmokeTest.php → tests/TestCase.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (86 total, 9 thin omitted)
+## Communities (87 total, 10 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.04
@@ -113,7 +115,7 @@ Nodes (29): dependencies, bootstrap, jquery, swiper, devDependencies, autoprefix
 
 ### Community 2 - "Controller"
 Cohesion: 0.12
-Nodes (5): Controller, HomeController, Filament\Facades\Filament, Filament\Http\Middleware\SetUpPanel, Illuminate\Support\Facades\Route
+Nodes (6): App\Http\Controllers\Controller, Controller, HomeController, Filament\Facades\Filament, Filament\Http\Middleware\SetUpPanel, Illuminate\Support\Facades\Route
 
 ### Community 3 - "SalesLogin"
 Cohesion: 0.24
@@ -124,12 +126,12 @@ Cohesion: 0.12
 Nodes (4): Illuminate\Database\Migrations\Migration, Illuminate\Database\Schema\Blueprint, Illuminate\Support\Facades\DB, Illuminate\Support\Facades\Schema
 
 ### Community 5 - "Illuminate\Support\Str"
-Cohesion: 0.16
+Cohesion: 0.17
 Nodes (6): SalesFactory, UserFactory, Illuminate\Database\Eloquent\Factories\Factory, Illuminate\Support\Facades\Hash, Illuminate\Support\Str, static
 
 ### Community 7 - "MyProfile"
 Cohesion: 0.09
-Nodes (19): MyProfile, GaleriForm, SalesForm, SalesOverviewWidget, Filament\Forms\Components\FileUpload, Filament\Forms\Components\Repeater, Filament\Forms\Components\Textarea, Filament\Forms\Components\TextInput (+11 more)
+Nodes (20): MyProfile, App\Filament\Resources\Galeris\Schemas\GaleriForm, GaleriForm, SalesForm, SalesOverviewWidget, Filament\Forms\Components\FileUpload, Filament\Forms\Components\Repeater, Filament\Forms\Components\Textarea (+12 more)
 
 ### Community 8 - "scripts.js"
 Cohesion: 0.25
@@ -140,20 +142,20 @@ Cohesion: 0.22
 Nodes (8): Additional UI Settings, Contribution, Description, Installation and Setup, Key Features, Project Name: **Hyundai Dealer Makassar**, Project Structure, Technologies Used
 
 ### Community 10 - "EditSales.php"
-Cohesion: 0.17
-Nodes (7): EditGaleri, EditSales, EditUser, Filament\Actions\DeleteAction, Filament\Actions\ForceDeleteAction, Filament\Actions\RestoreAction, Filament\Resources\Pages\EditRecord
+Cohesion: 0.18
+Nodes (8): App\Filament\Resources\Galeris\Pages\EditGaleri, EditGaleri, EditSales, EditUser, Filament\Actions\DeleteAction, Filament\Actions\ForceDeleteAction, Filament\Actions\RestoreAction, Filament\Resources\Pages\EditRecord
 
 ### Community 11 - "PRD — Hyundai Dealer Makassar: Platform Multi-Sales"
 Cohesion: 0.08
 Nodes (24): 10. Fase Rilis, 11. Pertanyaan Terbuka, 1. Ringkasan, 2. Pengguna & Peran, 3.1 Termasuk (In scope) — Fase 1, 3.2 Tidak termasuk (Fase ini), 3.3 Non-blocker yang diketahui (tidak dikerjakan, sesuai arahan), 3. Ruang Lingkup (+16 more)
 
 ### Community 12 - "SalesTable.php"
-Cohesion: 0.16
-Nodes (14): Filament\Actions\Action, Filament\Actions\BulkAction, Filament\Actions\BulkActionGroup, Filament\Actions\DeleteBulkAction, Filament\Actions\EditAction, Filament\Actions\ForceDeleteBulkAction, Filament\Actions\RestoreBulkAction, Filament\Tables\Columns\IconColumn (+6 more)
+Cohesion: 0.13
+Nodes (17): App\Filament\Resources\Galeris\Tables\GalerisTable, GalerisTable, SalesTable, Filament\Actions\Action, Filament\Actions\BulkAction, Filament\Actions\BulkActionGroup, Filament\Actions\DeleteBulkAction, Filament\Actions\EditAction (+9 more)
 
-### Community 13 - "Galeri"
-Cohesion: 0.07
-Nodes (16): SalesStatsWidget, Galeri, Filament\Widgets\StatsOverviewWidget, Filament\Widgets\StatsOverviewWidget\Stat, Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase, Livewire\Livewire, PHPUnit\Framework\Attributes\DataProvider (+8 more)
+### Community 13 - "Tests\TestCase"
+Cohesion: 0.20
+Nodes (4): PHPUnit\Framework\Attributes\DataProvider, AdminPanelSmokeTest, SalesPanelTest, Tests\TestCase
 
 ### Community 14 - "logging.php"
 Cohesion: 0.40
@@ -176,16 +178,16 @@ Cohesion: 0.15
 Nodes (12): 1. Yang sudah ada (verifikasi, jangan bongkar), 2.1 Sales hanya melihat dokumentasi miliknya, 2.2 Sales tidak bisa mengaitkan dokumen ke sales lain, 2.3 Sales tidak bisa mengubah field terlarang, 2.4 Navigasi panel sesuai peran, 2. Yang perlu dipastikan bekerja, 3. Test (WAJIB), 4. Larangan (+4 more)
 
 ### Community 46 - "Design Brief — UI/UX"
-Cohesion: 0.20
-Nodes (10): 10. Kriteria Penerimaan Desain, 1. Prinsip Desain, 2. Design Tokens, 6. Aturan Responsif, 7. Aksesibilitas, 8. Mikro-interaksi & Motion, 9. Deliverable Desain, Design Brief — UI/UX (+2 more)
+Cohesion: 0.10
+Nodes (21): 10. Kriteria Penerimaan Desain, 1. Prinsip Desain, 2. Design Tokens, 3.1 Sudah ada (perluas, jangan bongkar), 3.2 Baru (dibuat untuk fitur ini), 3.3 Aturan state (wajib di semua komponen interaktif), 3. Inventaris Komponen, 4.1 Peta situs (+13 more)
 
 ### Community 47 - "AdminPanelProvider.php"
 Cohesion: 0.11
 Nodes (17): AdminPanelProvider, Filament\Http\Middleware\Authenticate, Filament\Http\Middleware\AuthenticateSession, Filament\Http\Middleware\DisableBladeIconComponents, Filament\Http\Middleware\DispatchServingFilamentEvent, Filament\Pages\Dashboard, Filament\Panel, Filament\PanelProvider (+9 more)
 
 ### Community 48 - "Arsitektur — Hyundai Dealer Makassar (Multi-Sales)"
-Cohesion: 0.12
-Nodes (17): 10. Risiko Arsitektur & Mitigasi, 11. Jalan Keluar Skala (fase lanjut, bukan sekarang), 12. Keputusan Arsitektur (ADR ringkas), 1. Gambaran Sistem, 2. Lapisan & Tanggung Jawab, 3. Struktur Direktori (target), 4. Model Data & Relasi, 5. Otorisasi (dua lapis) (+9 more)
+Cohesion: 0.04
+Nodes (41): 10. Risiko Arsitektur & Mitigasi, 11. Jalan Keluar Skala (fase lanjut, bukan sekarang), 12. Keputusan Arsitektur (ADR ringkas), 1. Gambaran Sistem, 2. Lapisan & Tanggung Jawab, 3. Struktur Direktori (target), 4. Model Data & Relasi, 5. Otorisasi (dua lapis) (+33 more)
 
 ### Community 49 - "SPEC F1 — Model & Migrasi Data Sales"
 Cohesion: 0.12
@@ -219,29 +221,29 @@ Nodes (10): 1. Storage, 2. Validasi Upload, 3. Pembersihan File (penting), 4. Ta
 Cohesion: 0.32
 Nodes (3): PHPUnit\Framework\TestCase, ExampleTest, WhatsappNormalizationTest
 
-### Community 59 - "3. Inventaris Komponen"
-Cohesion: 0.50
-Nodes (4): 3.1 Sudah ada (perluas, jangan bongkar), 3.2 Baru (dibuat untuk fitur ini), 3.3 Aturan state (wajib di semua komponen interaktif), 3. Inventaris Komponen
+### Community 59 - "Sales"
+Cohesion: 0.14
+Nodes (4): Sales, Illuminate\Database\Eloquent\Relations\HasMany, SalesAuthorizationTest, StorageCleanupTest
 
-### Community 60 - "5. Desain Layar"
-Cohesion: 0.50
-Nodes (4): 5.1 `/sales/{slug}` — Halaman sales (halaman terpenting), 5.2 Seksi "Sales Kami" di homepage, 5.3 Panel admin (Filament), 5. Desain Layar
+### Community 60 - "Galeri"
+Cohesion: 0.19
+Nodes (6): Galeri, Illuminate\Database\Eloquent\Model, Illuminate\Database\Eloquent\Relations\BelongsTo, Illuminate\Database\Eloquent\SoftDeletes, Illuminate\Support\Facades\Storage, GalleryHomepageTest
 
-### Community 61 - "4. Arsitektur Informasi"
-Cohesion: 0.67
-Nodes (3): 4.1 Peta situs, 4.2 Hierarki homepage setelah perubahan, 4. Arsitektur Informasi
+### Community 61 - "ActiveSalesResolutionTest"
+Cohesion: 0.17
+Nodes (4): active_sales(), sales_route(), sales_url(), ActiveSalesResolutionTest
 
-### Community 62 - "Ringkasan Eksekusi (2026-09-20)"
-Cohesion: 0.67
-Nodes (3): Bug yang ditemukan & diperbaiki selama eksekusi, Ringkasan Eksekusi (2026-09-20), Sisa (butuh tindakan konten, bukan kode)
+### Community 62 - "Illuminate\Foundation\Testing\RefreshDatabase"
+Cohesion: 0.23
+Nodes (6): Illuminate\Foundation\Testing\RefreshDatabase, Illuminate\Foundation\Testing\TestCase, Illuminate\Support\Facades\Gate, Livewire\Livewire, ExampleTest, TestCase
 
-### Community 63 - "Sales"
-Cohesion: 0.05
-Nodes (23): Sales, User, SalesPolicy, active_sales(), sales_route(), sales_url(), DatabaseSeeder, GaleriSeeder (+15 more)
+### Community 63 - "User"
+Cohesion: 0.18
+Nodes (8): App\Models\User, User, SalesPolicy, Filament\Models\Contracts\FilamentUser, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Relations\HasOne, Illuminate\Foundation\Auth\User, Illuminate\Notifications\Notifiable
 
-### Community 64 - "Filament\Resources\Pages\CreateRecord"
-Cohesion: 0.43
-Nodes (4): CreateGaleri, CreateSales, CreateUser, Filament\Resources\Pages\CreateRecord
+### Community 64 - "UserResource"
+Cohesion: 0.21
+Nodes (7): App\Filament\Resources\Galeris\Pages\CreateGaleri, CreateGaleri, CreateSales, CreateUser, UnitEnum, UserResource, Filament\Resources\Pages\CreateRecord
 
 ### Community 66 - "1. Perilaku yang diinginkan"
 Cohesion: 0.10
@@ -255,9 +257,9 @@ Nodes (18): 0. Latar: apa yang salah dari arah sebelumnya, 1.1 Inti, 1.2 Yang be
 Cohesion: 0.15
 Nodes (12): 10. Laporan yang diminta, 1. Pemeriksaan tautan mati (paling penting), 2. Sweep link mati secara nyata (bukan hanya grep), 3. Matriks akses lengkap, 4. Isolasi antar-sales (keamanan), 5. Audit performa, 6. Kebersihan, 7. Aksesibilitas (pemeriksaan, bukan perbaikan besar) (+4 more)
 
-### Community 69 - "SalesResource.php"
-Cohesion: 0.18
-Nodes (10): GalerisTable, SalesTable, UnitEnum, UserResource, BackedEnum, Filament\Forms\Components\Select, Filament\Resources\Resource, Filament\Support\Icons\Heroicon (+2 more)
+### Community 69 - "App\Filament\Resources\Sales\SalesResource"
+Cohesion: 0.33
+Nodes (7): App\Filament\Resources\Sales\SalesResource, BackedEnum, Filament\Forms\Components\Select, Filament\Resources\Resource, Filament\Support\Icons\Heroicon, Filament\Tables\Columns\TextColumn, Illuminate\Database\Eloquent\SoftDeletingScope
 
 ### Community 70 - "SPEC G1 — Beranda Personal: Profil + Galeri + Kontak Sales"
 Cohesion: 0.17
@@ -276,20 +278,24 @@ Cohesion: 0.22
 Nodes (8): 1. Hapus, 2. Bersihkan referensi mati, 3. Pastikan tidak ada halaman publik lain yang lolos aturan 404, 4. Larangan, 5. Kriteria Selesai (jalankan, laporkan SEMUA keluaran), 6. Laporan yang diminta, SPEC G3 — Bongkar `/sales/{slug}` & Bersihkan Sisa, Tujuan
 
 ### Community 75 - "SalesResource"
-Cohesion: 0.33
+Cohesion: 0.29
 Nodes (3): UnitEnum, SalesResource, Illuminate\Database\Eloquent\Builder
 
 ### Community 76 - "Filament\Resources\Pages\ListRecords"
 Cohesion: 0.27
-Nodes (5): ListGaleris, ListSales, ListUsers, Filament\Actions\CreateAction, Filament\Resources\Pages\ListRecords
+Nodes (6): App\Filament\Resources\Galeris\Pages\ListGaleris, ListGaleris, ListSales, ListUsers, Filament\Actions\CreateAction, Filament\Resources\Pages\ListRecords
 
-### Community 81 - "TODO — Platform Multi-Sales"
-Cohesion: 0.20
-Nodes (10): Backlog (setelah F6), F0 — Fondasi (PANEL FILAMENT HIDUP)  ✅ SELESAI, F1 — Data & Model  ✅ SELESAI, F2 — Panel Admin: CRUD Sales  ✅ SELESAI, F3 — Role & Otorisasi (KRITIS — KEAMANAN)  ✅ SELESAI, F4 — Halaman Publik Sales + Homepage  ✅ SELESAI, F5 — Dokumentasi & Storage  ✅ SELESAI, F6 — Kualitas & Hardening  ✅ SELESAI (+2 more)
+### Community 77 - "Illuminate\Database\Seeder"
+Cohesion: 0.27
+Nodes (4): DatabaseSeeder, GaleriSeeder, SalesSeeder, Illuminate\Database\Seeder
 
-### Community 83 - "Workflow — Cara Kerja Proyek Ini"
-Cohesion: 0.18
-Nodes (11): 10. Checklist Ringkas Sebelum Menyatakan Fase Selesai, 1. Prinsip Inti, 2. Peran, 3. Siklus Kerja per Fase, 4. Aturan Delegasi ke OpenCode, 5. Verifikasi (definisi "selesai" yang sah), 6. Manajemen Lingkungan, 7. Git (+3 more)
+### Community 80 - "GaleriResource"
+Cohesion: 0.28
+Nodes (3): GaleriResource, GaleriAccessTest, UnitEnum
+
+### Community 82 - "SalesStatsWidget.php"
+Cohesion: 0.40
+Nodes (3): SalesStatsWidget, Filament\Widgets\StatsOverviewWidget, Filament\Widgets\StatsOverviewWidget\Stat
 
 ### Community 84 - "verify-context.sh"
 Cohesion: 0.83
@@ -300,24 +306,24 @@ Cohesion: 0.83
 Nodes (3): code(), normalize(), verify-final.sh script
 
 ## Knowledge Gaps
-- **301 isolated node(s):** `$schema`, `plugin`, `name`, `type`, `description` (+296 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 458 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **301 isolated node(s):** `pestphp/pest-plugin`, `php-http/discovery`, `optimize-autoloader`, `preferred-install`, `sort-packages` (+296 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 457 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Sales` connect `Sales` to `Controller`, `Illuminate\Support\Str`, `SalesResource.php`, `MyProfile`, `Galeri`, `ResolveActiveSales.php`, `GaleriResource`, `SalesContextPropagationTest`, `PHPUnit\Framework\TestCase`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
-- **Why does `User` connect `Sales` to `Controller`, `SalesResource.php`, `Galeri`, `AdminPanelProvider.php`, `GaleriResource`, `SalesContextPropagationTest`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `Galeri` connect `Galeri` to `Sales`, `Illuminate\Support\Str`, `SalesResource.php`, `MyProfile`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **What connects `$schema`, `plugin`, `name` to the rest of the system?**
+- **Why does `Sales` connect `Sales` to `Controller`, `App\Filament\Resources\Sales\SalesResource`, `Illuminate\Support\Str`, `MyProfile`, `Illuminate\Database\Seeder`, `Tests\TestCase`, `ResolveActiveSales.php`, `GaleriResource`, `MyProfileGalleryTest`, `SalesContextPropagationTest`, `PHPUnit\Framework\TestCase`, `Galeri`, `ActiveSalesResolutionTest`, `Illuminate\Foundation\Testing\RefreshDatabase`, `User`?**
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `User` connect `User` to `Controller`, `App\Filament\Resources\Sales\SalesResource`, `SalesResource`, `Illuminate\Database\Seeder`, `Tests\TestCase`, `AdminPanelProvider.php`, `GaleriResource`, `MyProfileGalleryTest`, `SalesContextPropagationTest`, `Sales`, `ActiveSalesResolutionTest`, `Illuminate\Foundation\Testing\RefreshDatabase`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Why does `Galeri` connect `Galeri` to `App\Filament\Resources\Sales\SalesResource`, `MyProfile`, `Illuminate\Database\Seeder`, `Tests\TestCase`, `MyProfileGalleryTest`, `SalesStatsWidget.php`, `Sales`, `Illuminate\Foundation\Testing\RefreshDatabase`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Are the 4 inferred relationships involving `User` (e.g. with `.test_admin_dapat_membuka_setiap_halaman_panel()` and `.test_halaman_panel_tidak_error_untuk_sales()`) actually correct?**
+  _`User` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `pestphp/pest-plugin`, `php-http/discovery`, `optimize-autoloader` to the rest of the system?**
   _301 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.06439393939393939 - nodes in this community are weakly interconnected._
-- **Should `Controller` be split into smaller, more focused modules?**
-  _Cohesion score 0.1225071225071225 - nodes in this community are weakly interconnected._

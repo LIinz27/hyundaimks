@@ -16,5 +16,21 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
+        // User yang login tapi tertolak canAccessPanel() mendapat 403.
+        // Alihkan ke panel milik role-nya sendiri alih-alih tampil 403 mentah.
+        $exceptions->respond(function ($response, \Throwable $e, \Illuminate\Http\Request $request) {
+            if ($response->getStatusCode() === 403 && ($user = $request->user())) {
+                $target = match ($user->role) {
+                    'admin' => '/admin',
+                    'sales' => '/sales',
+                    default => '/',
+                };
+
+                if ($request->getPathInfo() !== $target) {
+                    return redirect($target);
+                }
+            }
+
+            return $response;
+        });
     })->create();
