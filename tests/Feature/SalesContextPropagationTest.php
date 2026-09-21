@@ -149,9 +149,9 @@ class SalesContextPropagationTest extends TestCase
         $this->assertStringContainsString($sales->name, $html);
     }
 
-    public function test_sales_without_photo_falls_back_to_default_dealer_photo(): void
+    public function test_sales_without_photo_renders_upload_placeholder(): void
     {
-        // Layout original memakai satu foto default, bukan avatar inisial.
+        // Tanpa foto, beranda menampilkan frame kosong bertuliskan "Upload foto Anda".
         $sales = $this->makeSales([
             'name' => 'Rukman Fadli',
             'photo_path' => null,
@@ -159,7 +159,8 @@ class SalesContextPropagationTest extends TestCase
 
         $html = $this->get('/?s='.$sales->slug)->assertOk()->getContent();
 
-        $this->assertStringContainsString('Fadli-Kuntuls.jpg', $html);
+        $this->assertStringContainsString('Upload foto Anda', $html);
+        $this->assertStringNotContainsString('Fadli-Kuntuls.jpg', $html);
         $this->assertStringNotContainsString('storage/sales/photos', $html);
     }
 

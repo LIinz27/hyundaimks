@@ -49,9 +49,6 @@
 
         <!-- Profil Sales Aktif — layout & CSS original (foto kiri, teks kanan) -->
         @php
-            $photoUrl = $sales->photo_path
-                ? Storage::disk('public')->url($sales->photo_path)
-                : asset('images/Fadli-Kuntuls.jpg');
             $waLink = $sales->whatsappLink();
             $phoneLink = $sales->phoneLink();
             // Label diambil dari kolomnya masing-masing: whatsapp dan phone bisa
@@ -62,8 +59,12 @@
         <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
             <div class="contact-container d-flex align-items-center justify-content-center">
                 <div class="contact-image">
-                    <img style="border-radius: 2%" src="{{ $photoUrl }}"
-                         alt="Foto {{ $sales->name }}" class="img-fluid">
+                    @if ($sales->photo_path)
+                        <img style="border-radius: 2%" src="{{ Storage::disk('public')->url($sales->photo_path) }}"
+                             alt="Foto {{ $sales->name }}" class="img-fluid">
+                    @else
+                        <div class="contact-image-empty">Upload foto Anda</div>
+                    @endif
                 </div>
                 <div class="contact-text">
                     <h3>{{ $sales->name }}</h3>
