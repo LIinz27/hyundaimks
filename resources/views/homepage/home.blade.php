@@ -31,7 +31,19 @@
             <h2 class="heading-title gallery-heading">GALERI DEALER HYUNDAI MAKASSAR</h2>
             <p class="heading-subtitle gallery-subtitle">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
             <div class="swiper newSwiper">
-                <div class="swiper-wrapper"></div>
+                @if($galeris->isEmpty())
+                    <div class="gallery-empty-frame">
+                        Upload foto galeri Anda
+                    </div>
+                @else
+                <div class="swiper-wrapper">
+                    @foreach($galeris as $g)
+                        <div class="swiper-slide">
+                            <img src="{{ Storage::disk('public')->url($g->image_path) }}" alt="{{ $g->caption }}" class="img-fluid">
+                        </div>
+                    @endforeach
+                </div>
+                @endif
                 <div class="swiper-pagination"></div>
             </div>
         </div>

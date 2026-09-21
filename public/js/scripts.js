@@ -146,28 +146,15 @@ function displayPromoImages() {
 document.addEventListener("DOMContentLoaded", displayPromoImages);
 
 // Gallery Images
-const galleryImages = [];
-const galleryImageCount = 7;
-
-for (let i = 1; i <= galleryImageCount; i++) {
-    galleryImages.push(`/images/Galeri/Galeri-Hyundai-${i}.png`);
-}
-
-function displayGalleryImages() {
+// Data slide galeri kini dirender server-side oleh Blade dari tabel `galeri`
+// (dikelola lewat panel admin). JS hanya menginisialisasi Swiper dengan
+// konfigurasi yang sama seperti sebelumnya, dan hanya jika ada slide.
+function initGallerySwiper() {
     const gallerySwiperWrapper = document.querySelector(
         ".newSwiper .swiper-wrapper"
     );
     if (!gallerySwiperWrapper) return;
-    gallerySwiperWrapper.innerHTML = "";
-
-    galleryImages.forEach((image, index) => {
-        const slide = document.createElement("div");
-        slide.classList.add("swiper-slide");
-        slide.innerHTML = `<img src="${image}" alt="Slide ${
-            index + 1
-        }" class="img-fluid">`;
-        gallerySwiperWrapper.appendChild(slide);
-    });
+    if (gallerySwiperWrapper.children.length === 0) return;
 
     new Swiper(".newSwiper", {
         autoplay: {
@@ -205,7 +192,7 @@ function displayGalleryImages() {
         },
     });
 }
-document.addEventListener("DOMContentLoaded", displayGalleryImages);
+document.addEventListener("DOMContentLoaded", initGallerySwiper);
 
 var PartnerSwiper = new Swiper(".PartnerSwiper", {
     autoplay: {

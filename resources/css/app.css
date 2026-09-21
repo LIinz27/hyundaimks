@@ -260,6 +260,19 @@ img {
     margin-bottom: 60px;
 }
 
+.gallery-empty-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 9/16;
+    max-height: 70vh;
+    border: 2px dashed rgba(var(--brand-rgb, 0, 44, 95), .4);
+    border-radius: 1rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
 .section-heading-spaced {
     margin-top: 100px;
 }
