@@ -51,4 +51,26 @@ class StorageCleanupTest extends TestCase
         Storage::disk('public')->assertMissing('sales/photos/old.jpg');
         Storage::disk('public')->assertExists('sales/photos/new.jpg');
     }
+
+    public function test_deleting_sales_removes_its_document_rows_and_files(): void
+    {
+        // Regresi: foreign key ON DELETE CASCADE menghapus baris sales_documents
+        // di level database SEBELUM event forceDeleted berjalan, sehingga file
+        // dokumen terlantar di disk. Pembersihan harus dilakukan di forceDeleting.
+        $sales = Sales::factory()->create();
+
+        Storage::disk('public')->put('sales/documents/x1.jpg', 'x');
+        Storage::disk('public')->put('sales/documents/x2.jpg', 'x');
+
+        $sales->documents()->create(['file_path' => 'sales/documents/x1.jpg']);
+        $sales->documents()->create(['file_path' => 'sales/documents/x2.jpg']);
+
+        $this->assertSame(2, $sales->documents()->count());
+
+        $sales->forceDelete();
+
+        $this->assertSame(0, SalesDocument::where('sales_id', $sales->id)->count());
+        $this->assertFalse(Storage::disk('public')->exists('sales/documents/x1.jpg'));
+        $this->assertFalse(Storage::disk('public')->exists('sales/documents/x2.jpg'));
+    }
 }

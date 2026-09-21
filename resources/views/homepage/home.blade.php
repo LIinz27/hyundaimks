@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 @extends('layouts.app')
 
 @section('title', 'Dealer Hyundai Makassar')
@@ -17,7 +21,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             <div class="text-center mt-4">
-                <a href="{{ url('/pricelist') }}" class="btn btn-brand btn-lg px-5">Klik di sini</a>
+                <a href="{{ sales_route('pricelist') }}" class="btn btn-brand btn-lg px-5">Klik di sini</a>
             </div>
         </div>
 
@@ -27,7 +31,19 @@
             <h2 class="heading-title gallery-heading">GALERI DEALER HYUNDAI MAKASSAR</h2>
             <p class="heading-subtitle gallery-subtitle">Segera konsultasikan harga mobil impian anda sekarang juga <strong>gratis</strong>.</p>
             <div class="swiper newSwiper">
-                <div class="swiper-wrapper"></div>
+                @if($galeris->isEmpty())
+                    <div class="gallery-empty-frame">
+                        Upload foto galeri Anda
+                    </div>
+                @else
+                <div class="swiper-wrapper">
+                    @foreach($galeris as $g)
+                        <div class="swiper-slide">
+                            <img src="{{ Storage::disk('public')->url($g->image_path) }}" alt="{{ $g->caption }}" class="img-fluid">
+                        </div>
+                    @endforeach
+                </div>
+                @endif
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -43,17 +59,54 @@
             </div>
         </div>
 
-        <!-- Tim Sales -->
-        @if ($salesList->isNotEmpty())
-            <div class="container mt-5 mb-4 sales-team-section">
-                <h2 class="text-center mb-2">TIM SALES KAMI</h2>
-                <p class="text-center text-muted mb-4">Hubungi sales resmi kami untuk konsultasi gratis.</p>
-                <div class="row g-4 {{ $salesList->count() === 1 ? 'justify-content-center sales-team-single' : '' }}">
-                    @foreach ($salesList as $sales)
-                        @include('homepage/sales-card', ['sales' => $sales])
-                    @endforeach
+        <!-- Profil Sales Aktif — layout & CSS original (foto kiri, teks kanan) -->
+        @php
+            $waLink = $sales->whatsappLink();
+            $phoneLink = $sales->phoneLink();
+            // Label diambil dari kolomnya masing-masing: whatsapp dan phone bisa
+            // berbeda, dan keduanya dapat diubah dari panel.
+            $waLabel = $sales->whatsapp ?: '0896-1688-0688';
+            $phoneLabel = $sales->phone ?: '0896-1688-0688';
+        @endphp
+        <div class="text-center mb-3 contact-bg d-flex align-items-center justify-content-center">
+            <div class="contact-container d-flex align-items-center justify-content-center">
+                <div class="contact-image">
+                    @if ($sales->photo_path)
+                        <img style="border-radius: 2%" src="{{ Storage::disk('public')->url($sales->photo_path) }}"
+                             alt="Foto {{ $sales->name }}" class="img-fluid">
+                    @else
+                        <div class="contact-image-empty">Upload foto Anda</div>
+                    @endif
+                </div>
+                <div class="contact-text">
+                    <h3>{{ $sales->name }}</h3>
+                    <p>{{ $sales->title ?: 'Profesional Sales Consultant' }}</p>
+                    <ul class="contact-details">
+                        <li>Melayani tukar tambah mobil lama dengan harga tinggi.</li>
+                        <li>Layanan Chat 24 Jam Fast Respon.</li>
+                        <li>Bisa konsultasi langsung ke dealer kami dengan finance langsung.</li>
+                        <li>Survey dibantu sampai approval.</li>
+                    </ul>
+                    <div class="button-group">
+                        @if ($waLink)
+                            <a class="wa-button text-decoration-none" href="{{ $waLink }}"
+                               target="_blank" rel="noopener"
+                               aria-label="Hubungi {{ $sales->name }} via WhatsApp"
+                               style="text-decoration: none;">
+                                <i class="bi bi-whatsapp" aria-hidden="true"></i>&nbsp;<strong>{{ $waLabel }}</strong>
+                            </a>
+                        @endif
+                        @if ($phoneLink)
+                            <a class="contact-button text-decoration-none" href="{{ $phoneLink }}"
+                               aria-label="Telepon {{ $sales->name }}"
+                               style="text-decoration: none;">
+                                <i class="bi bi-telephone-fill" aria-hidden="true"></i>&nbsp;<strong>{{ $phoneLabel }}</strong>
+                            </a>
+                        @endif
+                    </div>
                 </div>
             </div>
-        @endif
+        </div>
+
     </div>
 @endsection

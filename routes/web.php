@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\SalesPageController;
+use App\Http\Controllers\HomeController;
 
 Route::middleware('sales.context')->group(function () {
-    Route::view('/', 'homepage/home')->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::controller(Controller::class)->group(function () {
         Route::get('/pricelist', 'pricelist')->name('pricelist');
@@ -29,5 +29,3 @@ Route::middleware('sales.context')->group(function () {
         Route::get('/all-new-santa-fe', 'hyundai_all_new_santa_fe');
     });
 });
-
-Route::get('/sales/{slug}', [SalesPageController::class, 'show'])->name('sales.show');

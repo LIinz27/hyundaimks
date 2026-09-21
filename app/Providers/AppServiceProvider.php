@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Sales;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,10 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Homepage is served via Route::view(); inject sales data with a composer
-        // so no route changes are needed.
-        View::composer('homepage/home', function ($view) {
-            $view->with('salesList', Sales::active()->ordered()->get());
-        });
+        // Beranda kini dilayani HomeController dan menampilkan satu sales aktif
+        // (lihat docs/spec-beranda-personal-final.md). View composer lama yang
+        // memuat daftar semua sales sudah tidak dipakai dan telah dihapus agar
+        // tidak menjalankan query sia-sia di setiap kunjungan beranda.
     }
 }

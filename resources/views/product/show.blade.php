@@ -39,13 +39,16 @@
                     <p class="mb-4">*Harga tertera dapat berubah sewaktu-waktu. Klik Unduh Pricelist untuk melihat pricelist terbaru.</p>
 
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#" class="btn btn-brand d-inline-flex align-items-center">
-                            <i class="bi bi-whatsapp me-2"></i> Info Promo
-                        </a>
-                        <a href="{{ url('/pricelist') }}" class="btn btn-brand-light d-inline-flex align-items-center">
+                        @if (active_sales()?->whatsappLink())
+                            <a href="{{ active_sales()->whatsappLink() }}" target="_blank" rel="noopener"
+                               class="btn btn-brand d-inline-flex align-items-center">
+                                <i class="bi bi-whatsapp me-2"></i> Info Promo
+                            </a>
+                        @endif
+                        <a href="{{ sales_route('pricelist') }}" class="btn btn-brand-light d-inline-flex align-items-center">
                             <i class="bi bi-file-earmark-arrow-down-fill me-2"></i> Unduh Pricelist
                         </a>
-                        <a href="{{ url('/simulasi-kredit') }}" class="btn btn-dark d-inline-flex align-items-center">
+                        <a href="{{ sales_route('simulasi-kredit') }}" class="btn btn-dark d-inline-flex align-items-center">
                             <i class="bi bi-credit-card me-2"></i> Simulasi Kredit
                         </a>
                     </div>
@@ -58,9 +61,12 @@
                         Promo Khusus {{ \Carbon\Carbon::now()->translatedFormat('F Y') }}
                     </h4>
                     <div class="d-flex flex-column gap-4 mt-3">
-                        <a href="#" class="btn btn-brand fw-bold px-4 py-3">
-                            <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
-                        </a>
+                        @if (active_sales()?->whatsappLink())
+                            <a href="{{ active_sales()->whatsappLink() }}" target="_blank" rel="noopener"
+                               class="btn btn-brand fw-bold px-4 py-3">
+                                <i class="bi bi-whatsapp"></i> Dapatkan Promonya! Klik disini.
+                            </a>
+                        @endif
                         <a href="#" class="btn btn-dark fw-bold px-4 py-3">
                             <i class="bi bi-download"></i> Unduh E-Brosur {{ $car['brochure'] }}
                         </a>
@@ -144,9 +150,12 @@
             <div class="text-container">
                 <h3>Test Drive Hyundai</h3>
                 <p>Yuk Test Drive Sebelum Membeli, Rasakan Pengalaman Mengendarai <strong>Mobil Hyundai</strong>, Ajak Serta Keluarga Anda.</p>
-                <button class="testdrive-button">
-                    <i class="bi bi-whatsapp"></i> Daftar Test Drive
-                </button>
+                @if (active_sales()?->whatsappLink())
+                    <a href="{{ active_sales()->whatsappLink() }}" target="_blank" rel="noopener"
+                       class="testdrive-button text-decoration-none d-inline-block">
+                        <i class="bi bi-whatsapp"></i> Daftar Test Drive
+                    </a>
+                @endif
             </div>
         </div>
     </div>

@@ -69,17 +69,17 @@
         <div class="promo-item text-center col">
             <i class="bi bi-list-task promo-icon"></i>
             <h3>Pricelist Terbaru</h3>
-            <a href="{{ url('/pricelist') }}" class="promo-button">Selengkapnya &rarr;</a>
+            <a href="{{ sales_route('pricelist') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-credit-card promo-icon"></i>
             <h3>Proses Kredit</h3>
-            <a href="{{ url('/proses-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
+            <a href="{{ sales_route('proses-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
         <div class="promo-item text-center col">
             <i class="bi bi-pencil-square promo-icon"></i>
             <h3>Simulasi Kredit</h3>
-            <a href="{{ url('/simulasi-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
+            <a href="{{ sales_route('simulasi-kredit') }}" class="promo-button">Selengkapnya &rarr;</a>
         </div>
     </div>
 </div>
@@ -93,7 +93,7 @@
         <div class="text-container">
             <h3>Test Drive Hyundai</h3>
             <p>Yuk Test Drive Sebelum Membeli, Rasakan Pengalaman Mengendarai <strong>Mobil Hyundai</strong>, Ajak Serta Keluarga Anda.</p>
-            <a href="{{ url('/tes-drive') }}" class="testdrive-button text-decoration-none">
+            <a href="{{ sales_route('tes-drive') }}" class="testdrive-button text-decoration-none">
                 <i class="bi bi-whatsapp"></i> Daftar Test Drive
             </a>
         </div>
@@ -104,8 +104,14 @@
 <div class="pricelist-section">
     <div class="pricelist-heading">
         <h2>Segera konsultasikan harga mobil impian anda sekarang juga</h2>
+        @if (active_sales()?->whatsappLink())
+            <a href="{{ active_sales()->whatsappLink() }}" target="_blank" rel="noopener"
+               class="btn btn-success btn-lg mt-3">
+                <i class="bi bi-whatsapp me-2" aria-hidden="true"></i> Hubungi {{ active_sales()->name }}
+            </a>
+        @endif
         <div class="btn-container">
-            <a href="{{ url('/pricelist') }}" class="btn btn-download">
+            <a href="{{ sales_route('pricelist') }}" class="btn btn-download">
                 Unduh Pricelist <i class="bi bi-file-earmark-arrow-down"></i>
             </a>
         </div>

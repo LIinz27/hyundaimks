@@ -20,27 +20,27 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                 <h5>Tautan Cepat</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/">Beranda</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/pricelist">Pricelist Terbaru</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/proses-kredit">Proses Kredit</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/simulasi-kredit">Simulasi Kredit</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/tes-drive">Tes Drive</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/portofolio">Galeri</a></li>
-                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="/kontak">Kontak</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_url('/') }}">Beranda</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('pricelist') }}">Pricelist Terbaru</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('proses-kredit') }}">Proses Kredit</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('simulasi-kredit') }}">Simulasi Kredit</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('tes-drive') }}">Tes Drive</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('portofolio') }}">Galeri</a></li>
+                    <li><i class="bi bi-arrow-right-circle-fill"></i> <a href="{{ sales_route('kontak') }}">Kontak</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                 <h5>Tipe Mobil</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/stargazer">Hyundai Stargazer</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/creta">Hyundai Creta</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/santa-fe">Hyundai Santa Fe</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/palisade">Hyundai Palisade</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/staria">Hyundai Staria</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/ioniq-5">Hyundai Ioniq 5</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/hyundai-kona">Hyundai Kona Electric</a></li>
-                    <li><i class="bi bi-chevron-double-right"></i> <a href="/product/all-new-santa-fe">All New Santa Fe</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/stargazer') }}">Hyundai Stargazer</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/creta') }}">Hyundai Creta</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/santa-fe') }}">Hyundai Santa Fe</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/palisade') }}">Hyundai Palisade</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/staria') }}">Hyundai Staria</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/ioniq-5') }}">Hyundai Ioniq 5</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/hyundai-kona') }}">Hyundai Kona Electric</a></li>
+                    <li><i class="bi bi-chevron-double-right"></i> <a href="{{ sales_url('/product/all-new-santa-fe') }}">All New Santa Fe</a></li>
                 </ul>
             </div>
 
