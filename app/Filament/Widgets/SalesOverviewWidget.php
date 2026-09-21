@@ -3,8 +3,7 @@
 namespace App\Filament\Widgets;
 
 use App\Filament\Pages\MyProfile;
-use App\Filament\Resources\SalesDocuments\SalesDocumentResource;
-use App\Models\SalesDocument;
+use App\Models\Galeri;
 use Filament\Widgets\Widget;
 
 class SalesOverviewWidget extends Widget
@@ -25,18 +24,17 @@ class SalesOverviewWidget extends Widget
     {
         $salesId = auth()->user()?->sales?->id;
 
-        $dokumenTerbaru = $salesId
-            ? SalesDocument::query()
+        $fotoTerbaru = $salesId
+            ? Galeri::query()
                 ->where('sales_id', $salesId)
-                ->latest()
+                ->orderBy('sort_order')
                 ->limit(5)
                 ->get()
             : collect();
 
         return [
-            'dokumenTerbaru' => $dokumenTerbaru,
+            'fotoTerbaru' => $fotoTerbaru,
             'profilUrl' => MyProfile::getUrl(),
-            'dokumentasiUrl' => SalesDocumentResource::getUrl('index'),
         ];
     }
 }

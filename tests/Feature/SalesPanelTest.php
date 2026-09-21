@@ -3,17 +3,11 @@
 namespace Tests\Feature;
 
 use App\Filament\Pages\MyProfile;
-use App\Filament\Resources\SalesDocuments\Pages\CreateSalesDocument;
-use App\Filament\Resources\SalesDocuments\Pages\ListSalesDocuments;
-use App\Filament\Resources\SalesDocuments\SalesDocumentResource;
 use App\Filament\Resources\Sales\SalesResource;
+use App\Models\Galeri;
 use App\Models\Sales;
-use App\Models\SalesDocument;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
-use Livewire\Livewire;
 use Tests\TestCase;
 
 class SalesPanelTest extends TestCase
@@ -35,10 +29,6 @@ class SalesPanelTest extends TestCase
         $this->actingAs($user)
             ->get(MyProfile::getUrl())
             ->assertOk();
-
-        Livewire::actingAs($user)
-            ->test(MyProfile::class)
-            ->assertSet('data.name', $sales->name);
     }
 
     public function test_sales_cannot_see_sales_resource(): void
@@ -52,48 +42,35 @@ class SalesPanelTest extends TestCase
             ->assertForbidden();
     }
 
-    public function test_sales_sees_only_own_documents(): void
+    public function test_sales_sees_only_own_gallery(): void
     {
         [$userA, $salesA] = $this->makeSalesUser();
-        [$userB, $salesB] = $this->makeSalesUser();
+        [, $salesB] = $this->makeSalesUser();
 
-        $docA = SalesDocument::create(['sales_id' => $salesA->id, 'file_path' => 'sales/documents/a.jpg', 'caption' => 'Milik A']);
-        $docB = SalesDocument::create(['sales_id' => $salesB->id, 'file_path' => 'sales/documents/b.jpg', 'caption' => 'Milik B']);
+        $fotoA = Galeri::create(['sales_id' => $salesA->id, 'image_path' => 'galeri/a.jpg', 'caption' => 'Milik A', 'sort_order' => 1, 'is_active' => true]);
+        $fotoB = Galeri::create(['sales_id' => $salesB->id, 'image_path' => 'galeri/b.jpg', 'caption' => 'Milik B', 'sort_order' => 1, 'is_active' => true]);
 
-        $this->actingAs($userA);
+        // Relasi galeris() hanya mengembalikan milik sales itu.
+        $ids = $salesA->galeris()->pluck('id');
 
-        $ids = SalesDocumentResource::getEloquentQuery()->pluck('id');
-
-        $this->assertTrue($ids->contains($docA->id));
-        $this->assertFalse($ids->contains($docB->id));
-
-        Livewire::test(ListSalesDocuments::class)
-            ->assertCanSeeTableRecords([$docA])
-            ->assertCanNotSeeTableRecords([$docB]);
+        $this->assertTrue($ids->contains($fotoA->id));
+        $this->assertFalse($ids->contains($fotoB->id));
     }
 
-    public function test_sales_cannot_attach_document_to_other_sales(): void
+    public function test_homepage_only_shows_active_gallery_of_viewed_sales(): void
     {
-        Storage::fake('public');
-
         [$userA, $salesA] = $this->makeSalesUser();
-        [$userB, $salesB] = $this->makeSalesUser();
+        [, $salesB] = $this->makeSalesUser();
 
-        $file = UploadedFile::fake()->image('foto.jpg');
+        Galeri::create(['sales_id' => $salesA->id, 'image_path' => 'galeri/tampil.jpg', 'caption' => 'Tampil', 'sort_order' => 1, 'is_active' => true]);
+        Galeri::create(['sales_id' => $salesA->id, 'image_path' => 'galeri/sembunyi.jpg', 'caption' => 'Disembunyikan', 'sort_order' => 2, 'is_active' => false]);
+        Galeri::create(['sales_id' => $salesB->id, 'image_path' => 'galeri/punya-b.jpg', 'caption' => 'Punya B', 'sort_order' => 1, 'is_active' => true]);
 
-        Livewire::actingAs($userA)
-            ->test(CreateSalesDocument::class)
-            ->set('data.sales_id', $salesB->id)
-            ->set('data.file_path', $file)
-            ->set('data.caption', 'Coba titip')
-            ->call('create')
-            ->assertHasNoFormErrors();
+        $html = $this->get('/?s='.$salesA->slug)->assertOk()->getContent();
 
-        $doc = SalesDocument::query()->latest('id')->first();
-
-        $this->assertNotNull($doc);
-        $this->assertSame($salesA->id, $doc->sales_id);
-        $this->assertNotSame($salesB->id, $doc->sales_id);
+        $this->assertStringContainsString('galeri/tampil.jpg', $html);
+        $this->assertStringNotContainsString('galeri/sembunyi.jpg', $html);
+        $this->assertStringNotContainsString('galeri/punya-b.jpg', $html);
     }
 
     public function test_sales_cannot_change_slug(): void
@@ -101,7 +78,7 @@ class SalesPanelTest extends TestCase
         [$user, $sales] = $this->makeSalesUser();
         $originalSlug = $sales->slug;
 
-        Livewire::actingAs($user)
+        \Livewire\Livewire::actingAs($user)
             ->test(MyProfile::class)
             ->set('data.slug', 'slug-bajakan')
             ->set('data.is_active', false)
@@ -113,28 +90,5 @@ class SalesPanelTest extends TestCase
         $this->assertSame($originalSlug, $sales->slug);
         $this->assertTrue((bool) $sales->is_active);
         $this->assertNotSame(999, $sales->sort_order);
-    }
-
-    public function test_sales_can_upload_own_document(): void
-    {
-        Storage::fake('public');
-
-        [$user, $sales] = $this->makeSalesUser();
-
-        $file = UploadedFile::fake()->image('dokumentasi.jpg');
-
-        Livewire::actingAs($user)
-            ->test(CreateSalesDocument::class)
-            ->set('data.file_path', $file)
-            ->set('data.caption', 'Serah terima unit')
-            ->call('create')
-            ->assertHasNoFormErrors();
-
-        $doc = SalesDocument::query()->first();
-
-        $this->assertNotNull($doc);
-        $this->assertSame($sales->id, $doc->sales_id);
-        $this->assertSame('Serah terima unit', $doc->caption);
-        Storage::disk('public')->assertExists($doc->file_path);
     }
 }

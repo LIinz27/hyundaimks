@@ -23,7 +23,6 @@ class AdminPanelSmokeTest extends TestCase
         return [
             'dashboard' => ['/admin'],
             'sales' => ['/admin/sales'],
-            'dokumentasi' => ['/admin/sales-documents'],
             'galeri' => ['/admin/galeris'],
             'users' => ['/admin/users'],
         ];

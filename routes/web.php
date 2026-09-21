@@ -3,6 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
+use Filament\Facades\Filament;
+use Filament\Http\Middleware\SetUpPanel;
+
+// URL login kustom: /admin/login di-redirect ke /login/admin (link lama tidak mati).
+Route::middleware(SetUpPanel::class . ':admin')->group(function () {
+    Route::get('/login/admin', Filament::getPanel('admin')->getLoginRouteAction())
+        ->name('filament.admin.auth.login');
+
+    Route::get('/login/sales', \App\Filament\Pages\Auth\SalesLogin::class)
+        ->name('filament.admin.auth.login.sales');
+
+    Route::get('/admin/login', fn () => redirect('/login/admin'));
+});
 
 Route::middleware('sales.context')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');

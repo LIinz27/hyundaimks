@@ -27,7 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login()
+            ->login(\App\Filament\Pages\Auth\AdminLogin::class)
             ->brandName('Hyundai Makassar')
             ->colors([
                 'primary' => Color::hex('#1c4682'),

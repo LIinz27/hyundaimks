@@ -37,15 +37,15 @@ class Sales extends Model
     protected static function booted(): void
     {
         // Soft delete: jangan hapus file (bisa dipulihkan).
-        // Hapus file hanya saat force delete, dan sekalian dokumennya.
+        // Hapus file hanya saat force delete, dan sekalian foto galerinya.
         static::forceDeleting(function (Sales $sales) {
-            // PENTING: harus di forceDelETING (sebelum DELETE dijalankan), bukan
-            // forceDeleted. Foreign key ON DELETE CASCADE menghapus baris
-            // sales_documents di level database saat sales dihapus, sehingga di
-            // event forceDeleted relasinya sudah kosong dan file akan terlantar.
-            $sales->documents()->get()->each(function (SalesDocument $document) {
-                if ($document->file_path && Storage::disk('public')->exists($document->file_path)) {
-                    Storage::disk('public')->delete($document->file_path);
+            // PENTING: harus di forceDeleting (sebelum DELETE dijalankan), bukan
+            // forceDeleted. Foreign key ON DELETE CASCADE menghapus baris galeri
+            // di level database saat sales dihapus, sehingga di event
+            // forceDeleted relasinya sudah kosong dan file akan terlantar.
+            $sales->galeris()->get()->each(function (Galeri $foto) {
+                if ($foto->image_path && Storage::disk('public')->exists($foto->image_path)) {
+                    Storage::disk('public')->delete($foto->image_path);
                 }
             });
         });
@@ -72,9 +72,9 @@ class Sales extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function documents(): HasMany
+    public function galeris(): HasMany
     {
-        return $this->hasMany(SalesDocument::class)->orderBy('sort_order');
+        return $this->hasMany(Galeri::class)->orderBy('sort_order');
     }
 
     public function scopeActive($query)

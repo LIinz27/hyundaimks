@@ -26,6 +26,13 @@ class GaleriResource extends Resource
 
     protected static ?string $modelLabel = 'Galeri';
 
+    /**
+     * Galeri dikelola dari tab "Galeri" di dalam form Sales (galeri milik tiap
+     * sales), jadi menunya tidak lagi ditampilkan di sidebar. Resource dan
+     * halamannya tetap ada supaya URL lama dan test tidak mati.
+     */
+    protected static bool $shouldRegisterNavigation = false;
+
     public static function form(Schema $schema): Schema
     {
         return GaleriForm::configure($schema);

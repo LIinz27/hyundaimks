@@ -2,7 +2,7 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\SalesDocument;
+use App\Models\Galeri;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
@@ -20,14 +20,18 @@ class SalesStatsWidget extends StatsOverviewWidget
     {
         $salesId = auth()->user()?->sales?->id;
 
-        $totalDokumen = $salesId
-            ? SalesDocument::query()->where('sales_id', $salesId)->count()
+        $totalFoto = $salesId
+            ? Galeri::query()->where('sales_id', $salesId)->count()
+            : 0;
+
+        $totalAktif = $salesId
+            ? Galeri::query()->where('sales_id', $salesId)->where('is_active', true)->count()
             : 0;
 
         return [
-            Stat::make('Dokumen Saya', $totalDokumen)
-                ->description('Jumlah dokumentasi milik Anda')
-                ->icon('heroicon-o-document-text'),
+            Stat::make('Foto Galeri Saya', $totalFoto)
+                ->description($totalAktif.' tampil di beranda')
+                ->icon('heroicon-o-photo'),
         ];
     }
 }

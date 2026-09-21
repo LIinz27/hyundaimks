@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
 
 class Galeri extends Model
@@ -10,6 +11,7 @@ class Galeri extends Model
     protected $table = 'galeri';
 
     protected $fillable = [
+        'sales_id',
         'image_path',
         'caption',
         'sort_order',
@@ -19,6 +21,11 @@ class Galeri extends Model
     protected $casts = [
         'is_active' => 'boolean',
     ];
+
+    public function sales(): BelongsTo
+    {
+        return $this->belongsTo(Sales::class);
+    }
 
     protected static function booted(): void
     {
