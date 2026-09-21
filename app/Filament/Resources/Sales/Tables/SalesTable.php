@@ -51,7 +51,7 @@ class SalesTable
                     ->sortable()
                     ->toggleable(),
             ])
-            ->defaultSort(['sort_order' => 'asc', 'name' => 'asc'])
+            ->defaultSort('sort_order')
             ->filters([
                 SelectFilter::make('is_active')
                     ->label('Status')

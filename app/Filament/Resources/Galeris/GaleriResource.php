@@ -45,7 +45,11 @@ class GaleriResource extends Resource
 
     public static function canViewAny(): bool
     {
-        return (bool) auth()->user()?->isAdmin();
+        // Admin dan sales sama-sama boleh mengelola galeri.
+        // Cukup cek user terautentikasi: panel sudah dilindungi middleware auth,
+        // dan canCreate/canEdit/canDelete bawaan Filament mengikuti canViewAny
+        // (tidak ada policy Galeri, jadi default-nya mengizinkan).
+        return auth()->check();
     }
 
     public static function getPages(): array

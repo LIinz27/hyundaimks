@@ -4,24 +4,22 @@ namespace Database\Seeders;
 
 use App\Models\Galeri;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class GaleriSeeder extends Seeder
 {
     /**
-     * Isi data awal galeri dari 7 file PNG warisan di public/images/Galeri.
-     * File disalin (bukan dipindahkan) ke disk public agar file lama tetap ada.
+     * Isi data awal galeri (7 slide) pada disk public.
+     * File PNG warisan di folder public sudah dihapus;
+     * seeder ini hanya memastikan baris DB ada dan file sudah ada di storage.
      */
     public function run(): void
     {
         for ($i = 1; $i <= 7; $i++) {
-            $fileName = "Galeri-Hyundai-{$i}.png";
-            $source = public_path("images/Galeri/{$fileName}");
-            $target = "galeri/{$fileName}";
+            $target = "galeri/Galeri-Hyundai-{$i}.png";
 
-            if (File::exists($source) && ! Storage::disk('public')->exists($target)) {
-                Storage::disk('public')->put($target, File::get($source));
+            if (! Storage::disk('public')->exists($target)) {
+                $this->command?->warn("File {$target} tidak ditemukan di disk public; baris DB tetap dibuat.");
             }
 
             Galeri::firstOrCreate(
